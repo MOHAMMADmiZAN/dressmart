@@ -12,13 +12,19 @@ interface Auth {
 }
 
 const AuthModel: Auth = {
-    AuthToken: '',
+    AuthToken: " ",
     AuthUser: {},
-    AuthSet: action((state, payload) => {}),
-    AuthClear: action(state => {}),
-    Login: thunk(async (actions, payload) => {}),
-    Register: thunk(async (actions, payload) => {}),
-    Logout: thunk(async (actions, payload) => {})
+    AuthSet: action((state, payload) => {
+
+    }),
+    AuthClear: action(state => {
+    }),
+    Login: thunk(async (actions, payload) => {
+    }),
+    Register: thunk(async (actions, payload) => {
+    }),
+    Logout: thunk(async (actions, payload) => {
+    })
 }
 
 export default AuthModel

@@ -2,7 +2,7 @@ import {action, Action, thunk, Thunk} from "easy-peasy";
 
 interface Cart {
     CartId: string;
-    CartItems: [];
+    CartItems: Array<object>;
     AddProduct: Action<Cart, string | undefined>;
     RemoveProduct: Action<Cart, string | undefined>;
     AddProductThunk: Thunk<Cart, string | undefined>;
@@ -18,7 +18,7 @@ interface Cart {
 }
 
 
-const CartModel : Cart = {
+const CartModel: Cart = {
     CartId: "",
     CartItems: [],
     AddProduct: action((state, payload) => {
