@@ -1,8 +1,9 @@
 import {action, Action, State, thunk, Thunk} from "easy-peasy";
 
 
-type CartAction = Action<Cart, string>
-type CartThunk = Thunk<Cart, string | undefined>
+type CartAction = Action<Cart, string | object>
+type CartThunk = Thunk<Cart, string | object>
+type CartState = State<Cart>;
 
 interface Cart {
     CartId: string;
@@ -21,10 +22,10 @@ interface Cart {
 
 }
 
-type CartState = State<Cart>;
+
 
 const CartModel: Cart = {
-    CartId: "",
+    CartId: " ",
     CartItems: [],
     AddProduct: action((state: CartState, payload) => {
     }),
