@@ -1,43 +1,49 @@
-import {action, Action, thunk, Thunk} from "easy-peasy";
+import {action, Action, State, thunk, Thunk} from "easy-peasy";
+
+
+type CartAction = Action<Cart, string>
+type CartThunk = Thunk<Cart, string | undefined>
 
 interface Cart {
     CartId: string;
     CartItems: Array<object>;
-    AddProduct: Action<Cart, string | undefined>;
-    RemoveProduct: Action<Cart, string | undefined>;
-    AddProductThunk: Thunk<Cart, string | undefined>;
-    RemoveProductThunk: Thunk<Cart, string | undefined>;
-    incrementProductQuantity: Action<Cart, string | undefined>;
-    decrementProductQuantity: Action<Cart, string | undefined>;
-    ProductQuantityThunk: Thunk<Cart, string | undefined>;
-    SetDataBaseCart: Action<Cart, string | [] | undefined>;
-    ClearCart: Action<Cart, string | undefined>;
-    DeleteCartThunk: Thunk<Cart, string | undefined>;
+    AddProduct: CartAction;
+    RemoveProduct: CartAction;
+    AddProductThunk: CartThunk;
+    RemoveProductThunk: CartThunk;
+    incrementProductQuantity: CartAction;
+    decrementProductQuantity: CartAction;
+    ProductQuantityThunk: CartThunk;
+    SetDataBaseCart: CartAction;
+    ClearCart: CartAction;
+    DeleteCartThunk: CartThunk;
 
 
 }
 
+type CartState = State<Cart>;
 
 const CartModel: Cart = {
     CartId: "",
     CartItems: [],
-    AddProduct: action((state, payload) => {
+    AddProduct: action((state: CartState, payload) => {
     }),
-    RemoveProduct: action((state, payload) => {
+    RemoveProduct: action((state: CartState, payload) => {
     }),
     AddProductThunk: thunk(async (actions, payload) => {
+
     }),
     RemoveProductThunk: thunk(async (actions, payload) => {
     }),
-    incrementProductQuantity: action((state, payload) => {
+    incrementProductQuantity: action((state: CartState, payload) => {
     }),
-    decrementProductQuantity: action((state, payload) => {
+    decrementProductQuantity: action((state: CartState, payload) => {
     }),
     ProductQuantityThunk: thunk(async (actions, payload) => {
     }),
-    SetDataBaseCart: action((state, payload) => {
+    SetDataBaseCart: action((state: CartState, payload) => {
     }),
-    ClearCart: action((state, payload) => {
+    ClearCart: action((state: CartState, payload) => {
     }),
     DeleteCartThunk: thunk(async (actions, payload) => {
     }),

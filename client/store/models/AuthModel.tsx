@@ -1,23 +1,29 @@
-import {Action, action, Thunk, thunk} from 'easy-peasy';
+import {Action, action, State, Thunk, thunk} from 'easy-peasy';
+
+
+type AuthAction = Action<Auth, string>
+type AuthThunk = Thunk<Auth, string|undefined>
 
 interface Auth {
     AuthToken: string;
     AuthUser: object;
-    AuthSet: Action<Auth, string>;
-    AuthClear: Action<Auth, string>;
-    Login: Thunk<Auth, string | undefined>;
-    Register: Thunk<Auth, string | undefined>;
+    AuthSet: AuthAction;
+    AuthClear: AuthAction;
+    Login: AuthThunk;
+    Register: AuthThunk;
     Logout: Thunk<Auth, string | undefined>;
 
 }
+ // Auth State //
+type AuthState = State<Auth>;
 
 const AuthModel: Auth = {
     AuthToken: " ",
     AuthUser: {},
-    AuthSet: action((state, payload) => {
+    AuthSet: action((state: AuthState, payload) => {
 
     }),
-    AuthClear: action(state => {
+    AuthClear: action((state: AuthState) => {
     }),
     Login: thunk(async (actions, payload) => {
     }),
