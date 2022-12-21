@@ -4,7 +4,8 @@
   "info": {
     "singularName": "variant",
     "pluralName": "variants",
-    "displayName": "variant"
+    "displayName": "variant",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,32 +13,43 @@
   "pluginOptions": {},
   "attributes": {
     "color": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
       "type": "text"
     },
     "thumbnail": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "regular_price": {
-      "type": "float"
+      "type": "float",
+      "required": true
     },
-    "sell_price": {
+    "sale_price": {
       "type": "float"
     },
     "on_sale": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "stock_quantity": {
-      "type": "biginteger"
+      "type": "biginteger",
+      "required": true
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "variants"
     }
   }
 }

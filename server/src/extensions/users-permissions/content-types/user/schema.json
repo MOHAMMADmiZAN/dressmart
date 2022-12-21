@@ -49,7 +49,7 @@
     "confirmed": {
       "type": "boolean",
       "default": false,
-      "configurable": false
+      "configurable": true
     },
     "blocked": {
       "type": "boolean",
@@ -85,7 +85,7 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::order-item.order-item",
-      "mappedBy": "users_permissions_user"
+      "mappedBy": "user"
     }
   }
 }
