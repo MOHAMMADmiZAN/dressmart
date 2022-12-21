@@ -4,7 +4,8 @@
   "info": {
     "singularName": "coupon",
     "pluralName": "coupons",
-    "displayName": "coupon"
+    "displayName": "coupon",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,13 +13,16 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "value": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "validity": {
-      "type": "datetime"
+      "type": "datetime",
+      "required": true
     }
   }
 }

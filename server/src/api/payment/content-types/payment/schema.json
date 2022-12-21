@@ -22,16 +22,18 @@
       "enum": [
         "online",
         "cashOn"
-      ]
+      ],
+      "required": true
     },
     "status": {
       "type": "enumeration",
       "enum": [
         "paid",
         "unpaid"
-      ]
+      ],
+      "required": true
     },
-    "transtion_id": {
+    "transaction_id": {
       "type": "string",
       "required": true,
       "unique": true

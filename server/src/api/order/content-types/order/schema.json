@@ -25,7 +25,8 @@
       "inversedBy": "orders"
     },
     "sub_total": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "discount": {
       "type": "integer"
@@ -36,7 +37,8 @@
       "required": true
     },
     "total_price": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "order_items": {
       "type": "relation",
@@ -47,13 +49,14 @@
     "order_status": {
       "type": "enumeration",
       "enum": [
+        "Pending",
         "Process",
         "Ready For Delivery",
         "hand Over For Delivery",
         "On The Way",
         "Complete"
       ],
-      "default": "Process",
+      "default": "Pending",
       "required": true
     }
   }
