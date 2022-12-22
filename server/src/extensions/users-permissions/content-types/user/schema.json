@@ -24,7 +24,8 @@
       "type": "email",
       "minLength": 6,
       "configurable": false,
-      "required": true
+      "required": true,
+      "unique": true
     },
     "provider": {
       "type": "string",
@@ -46,11 +47,6 @@
       "configurable": false,
       "private": true
     },
-    "confirmed": {
-      "type": "boolean",
-      "default": false,
-      "configurable": true
-    },
     "blocked": {
       "type": "boolean",
       "default": false,
@@ -62,6 +58,10 @@
       "target": "plugin::users-permissions.role",
       "inversedBy": "users",
       "configurable": false
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false
     },
     "ratings": {
       "type": "relation",
@@ -86,6 +86,11 @@
       "relation": "oneToMany",
       "target": "api::order-item.order-item",
       "mappedBy": "user"
+    },
+    "phone": {
+      "type": "string",
+      "unique": true,
+      "configurable": false
     }
   }
 }
