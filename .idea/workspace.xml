@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="schema change">
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="example env change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/api/hello.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +62,7 @@
       <workItem from="1671535772857" duration="6259000" />
       <workItem from="1671563180448" duration="3451000" />
       <workItem from="1671623474191" duration="5654000" />
-      <workItem from="1671680097767" duration="3250000" />
+      <workItem from="1671680097767" duration="4557000" />
     </task>
     <task id="LOCAL-00001" summary="store, cloudinary add">
       <created>1671538297977</created>
@@ -170,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671703257793</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="example env change">
+      <created>1671731504813</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1671731504813</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +205,7 @@
     <MESSAGE value="gitignore add" />
     <MESSAGE value="react query init , matarial ui, form hook" />
     <MESSAGE value="schema change" />
-    <option name="LAST_COMMIT_MESSAGE" value="schema change" />
+    <MESSAGE value="example env change" />
+    <option name="LAST_COMMIT_MESSAGE" value="example env change" />
   </component>
 </project>

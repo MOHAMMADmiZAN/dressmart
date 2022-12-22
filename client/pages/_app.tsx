@@ -8,8 +8,8 @@ import {ReactQueryDevtools} from '@tanstack/react-query-devtools'
 
 const queryClient = new QueryClient()
 
-// @ts-ignore
-function WaitForStateRehydration({children}) {
+
+function WaitForStateRehydration({children}: any) {
     const isRehydrated = useStoreRehydrated()
     return isRehydrated ? children : null
 }
