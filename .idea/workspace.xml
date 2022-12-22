@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="diagram to starpi content">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/api/brand/content-types/brand/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/api/brand/content-types/brand/schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/api/category/content-types/category/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/api/category/content-types/category/schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/api/order-item/content-types/order-item/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/api/order-item/content-types/order-item/schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/api/order/content-types/order/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/api/order/content-types/order/schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/api/payment/content-types/payment/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/api/payment/content-types/payment/schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/api/product/content-types/product/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/api/product/content-types/product/schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/api/rating/content-types/rating/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/api/rating/content-types/rating/schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/api/variant/content-types/variant/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/api/variant/content-types/variant/schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/extensions/users-permissions/content-types/user/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/extensions/users-permissions/content-types/user/schema.json" afterDir="false" />
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="schema Change">
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +61,7 @@
       <updated>1671535769972</updated>
       <workItem from="1671535772857" duration="6259000" />
       <workItem from="1671563180448" duration="3451000" />
-      <workItem from="1671623474191" duration="2880000" />
+      <workItem from="1671623474191" duration="3668000" />
     </task>
     <task id="LOCAL-00001" summary="store, cloudinary add">
       <created>1671538297977</created>
@@ -127,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671627475846</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="schema Change">
+      <created>1671677201795</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671677201795</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +150,7 @@
     <MESSAGE value="minor issue fixed" />
     <MESSAGE value="model refactor" />
     <MESSAGE value="diagram to starpi content" />
-    <option name="LAST_COMMIT_MESSAGE" value="diagram to starpi content" />
+    <MESSAGE value="schema Change" />
+    <option name="LAST_COMMIT_MESSAGE" value="schema Change" />
   </component>
 </project>
