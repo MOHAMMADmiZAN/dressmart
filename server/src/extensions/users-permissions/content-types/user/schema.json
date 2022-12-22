@@ -91,6 +91,12 @@
       "type": "string",
       "unique": true,
       "configurable": false
+    },
+    "cart": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cart.cart",
+      "inversedBy": "user"
     }
   }
 }
