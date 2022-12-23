@@ -1,10 +1,33 @@
 import { Inter } from '@next/font/google'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import React, {useEffect, useState} from "react";
+import {postArray, postFetchData} from "../api/post.api";
 
 const inter = Inter({ subsets: ['latin'] })
 
+
+
+
+
+
+
+// post fetch
+
+
+
 export default function Home() {
+    const [posts, setPosts] = useState<postArray>([])
+    useEffect(() => {
+      postFetchData.then((res) => {
+          setPosts(res)
+
+      })
+
+    },[])
+
+
+
   return (
     <>
       <Head>
@@ -14,7 +37,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1>Hello</h1>
+
+          {posts?.map(post => {
+                return (
+                    <div key={post.id}>
+                        <h1>{post.title}</h1>
+                        <p>{post.body}</p>
+                    </div>
+                )
+          })}
+
       </main>
     </>
   )
