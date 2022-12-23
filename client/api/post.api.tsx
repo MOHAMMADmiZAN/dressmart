@@ -1,5 +1,3 @@
-
-
 import {jsonPlaceHolder} from "./api";
 type post = {
     userId: number;
