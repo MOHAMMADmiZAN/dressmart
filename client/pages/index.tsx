@@ -2,8 +2,8 @@ import {Inter} from '@next/font/google'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import React, {useEffect} from "react";
-import {postArray, postFetchData} from "../api/post.api";
-import {useQuery} from "@tanstack/react-query";
+import {post, postArray, postCreateData, postFetchData, postUpdateData} from "../api/post.api";
+import {useMutation, useQuery} from "@tanstack/react-query";
 
 const inter = Inter({subsets: ['latin']})
 
@@ -12,12 +12,44 @@ export default function Home() {
     // const [posts, setPosts] = useState<postArray>([])
 
     // data fetch with useQuery hook
-    const {data: posts, isLoading, isError, error} = useQuery<postArray, Error>(['posts'], () => postFetchData)
+    const {data: posts, isLoading, isError, error,} = useQuery<postArray, Error>(["posts"], () => postFetchData, {})
     useEffect(() => {
         console.log(posts)
         console.log(isLoading)
         console.log(isError)
         console.log(error)
+    }, [posts, isLoading, isError, error])
+
+    // postcreate data with useMutation hook and postCreateData function
+    const {
+        mutate: mutateCreate,
+        isLoading: isMutateLoading,
+        isError: isMutateError,
+        error: mutateError,
+    } = useMutation<number, Error, post>(["postCreate"], (data) => postCreateData(data), {
+        onSuccess: (data) => {
+
+            console.log(data)
+        },
+        onError: (error) => {
+            console.log(error)
+        }
+    })
+
+    //postUpdateData with useMutation hook and postUpdateData function
+    const {
+        mutate: mutateUpdate,
+        isLoading: isMutateUpdateLoading,
+        isError: isMutateUpdateError,
+        error: mutateUpdateError,
+    } = useMutation<number, Error, post>(["postUpdate"], (data) => postUpdateData(data), {
+        onSuccess: (data) => {
+
+            console.log(data)
+        },
+        onError: (error) => {
+            console.log(error)
+        }
     })
 
 
@@ -30,8 +62,11 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <main className={styles.main}>
-
-                {posts?.map(post => {
+                <button onClick={() => mutateUpdate({userId: 1, id: 1, title: "title", body: "body"})}>update Post
+                </button>
+                <button onClick={() => mutateCreate({userId: 1, id: 1, title: "title", body: "body"})}>create Post
+                </button>
+                {!isMutateLoading && posts?.map(post => {
                     return (
                         <div key={post.id}>
                             <h1>{post.title}</h1>
