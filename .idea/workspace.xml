@@ -5,16 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="`    Folder and code refactor`">
-      <change afterPath="$PROJECT_DIR$/client/components/Molecules/HeroImg/HeroImg.style.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Molecules/HeroImg/HeroImg.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Organisms/Shared/Footer/Footer.style.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Organisms/Shared/Footer/Footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/Organisms/Shared/Header/Header.style.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/templates/Base/Base.style.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/img/hero.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Molecules/LinkBtn/LinkBtn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/LinkBtn/LinkBtn.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/HeaderTopBar/HeaderTopBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/HeaderTopBar/HeaderTopBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/CartBadge/CartBadge.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/CartBadge/CartBadge.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Form/Search/Search.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Form/Search/Search.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/HeroImg/HeroImg.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/HeroImg/HeroImg.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/HeroImg/HeroImg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/HeroImg/HeroImg.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/LinkBtn/LinkBtn.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/LinkBtn/LinkBtn.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/LinkIcon/LinkIcon.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/LinkIcon/LinkIcon.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Logo/Logo.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Logo/Logo.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/HeaderTopBar/HeaderTop.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/HeaderTopBar/HeaderTop.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/NavBar/NavBar.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/NavBar/NavBar.style.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Organisms/NavBar/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/NavBar/NavBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/templates/Base/Base.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/templates/Base/Base.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Shared/Footer/Footer.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Hero/Hero.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Shared/Header/Header.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Hero/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/templates/Base/Base.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Shared/Footer/Footer.style.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/assets/img/Hero.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,23 +54,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "G:/Dressmart/client/public/assets/img",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "G:\\Dressmart\\client\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/Dressmart/client/public/assets/img&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;G:\\Dressmart\\client\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\Dressmart\client\public\assets\img" />
@@ -87,7 +96,8 @@
       <workItem from="1671623474191" duration="5654000" />
       <workItem from="1671680097767" duration="29433000" />
       <workItem from="1671876292455" duration="21129000" />
-      <workItem from="1671963718316" duration="13665000" />
+      <workItem from="1671963718316" duration="15041000" />
+      <workItem from="1671981674516" duration="1708000" />
     </task>
     <task id="LOCAL-00001" summary="store, cloudinary add">
       <created>1671538297977</created>
@@ -292,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671977157722</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="`    Folder and code refactor`">
+      <created>1671980388917</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1671980388917</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

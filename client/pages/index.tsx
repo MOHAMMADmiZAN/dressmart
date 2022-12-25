@@ -3,6 +3,7 @@ import Head from 'next/head'
 import React from "react";
 import Base from "../components/templates/Base/Base";
 import Logo from "../components/Molecules/Logo/Logo";
+import Hero from "../components/Organisms/Hero/Hero";
 
 
 const inter = Inter({subsets: ['latin']})
@@ -17,7 +18,7 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <Base inner={[]}/>
+            <Base inner={[<Hero key={1}/>]}/>
 
         </>
     )
