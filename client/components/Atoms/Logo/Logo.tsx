@@ -8,7 +8,7 @@ function Logo() {
         <>
             <Link href={`/`}>
                 <Button>
-                    <Image src={LogoImg} alt={`dressmartLogo`} width={150} height={140}/>
+                    <Image src={LogoImg} alt={`dressmartLogo`} width={140}/>
                 </Button>
             </Link>
         </>

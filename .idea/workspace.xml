@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="Folder and code refactor">
-      <change beforePath="$PROJECT_DIR$/client/components/Atoms/Logo/Logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Atoms/Logo/Logo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Molecules/NavBar/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/NavBar/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/NavBar/NavBar.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/NavBar/NavBar.style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/assets/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/assets/img/logo.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,11 +59,11 @@
       <recent name="G:\Dressmart\client\public\assets\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Dressmart\client\components\Organisms\Shared" />
       <recent name="G:\Dressmart\client\components\Atoms" />
       <recent name="G:\Dressmart\client\components\Molecules" />
       <recent name="G:\Dressmart\client\components\Organisms" />
       <recent name="G:\Dressmart\client\components\Shared" />
-      <recent name="G:\Dressmart\client\components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -78,7 +79,7 @@
       <workItem from="1671623474191" duration="5654000" />
       <workItem from="1671680097767" duration="29433000" />
       <workItem from="1671876292455" duration="21129000" />
-      <workItem from="1671963718316" duration="1840000" />
+      <workItem from="1671963718316" duration="2797000" />
     </task>
     <task id="LOCAL-00001" summary="store, cloudinary add">
       <created>1671538297977</created>
@@ -241,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671965207749</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Folder and code refactor">
+      <created>1671965843550</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1671965843550</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
