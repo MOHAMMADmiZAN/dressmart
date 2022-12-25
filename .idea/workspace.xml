@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="Folder and code refactor" />
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="Folder and code refactor">
+      <change afterPath="$PROJECT_DIR$/client/components/Atoms/Logo/Logo.style.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/Atoms/Logo/Logo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/img/Untitled-2-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/resource/assets.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/HeaderTopBar/HeaderTop.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/HeaderTopBar/HeaderTop.style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/HeaderTopBar/HeaderTopBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/HeaderTopBar/HeaderTopBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/LinkBtn/LinkBtn.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Atoms/LinkBtn/LinkBtn.style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/LinkBtn/LinkBtn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Atoms/LinkBtn/LinkBtn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/NavBar/NavBar.style.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/NavBar/NavBar.style.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/NavBar/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/NavBar/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/_app.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +56,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/Dressmart/client/public/assets/img&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -50,6 +67,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Dressmart\client\public\assets\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\Dressmart\client\components\Molecules" />
       <recent name="G:\Dressmart\client\components\Organisms" />
@@ -69,7 +89,8 @@
       <workItem from="1671563180448" duration="3451000" />
       <workItem from="1671623474191" duration="5654000" />
       <workItem from="1671680097767" duration="29433000" />
-      <workItem from="1671876292455" duration="16437000" />
+      <workItem from="1671876292455" duration="21129000" />
+      <workItem from="1671963718316" duration="1451000" />
     </task>
     <task id="LOCAL-00001" summary="store, cloudinary add">
       <created>1671538297977</created>
@@ -218,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671911300732</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Folder and code refactor">
+      <created>1671911335772</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1671911335772</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

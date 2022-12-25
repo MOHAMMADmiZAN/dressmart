@@ -5,6 +5,8 @@ import store from "../store/store";
 import {QueryClient} from "@tanstack/query-core";
 import {QueryClientProvider,Hydrate} from "@tanstack/react-query";
 import {ReactQueryDevtools} from '@tanstack/react-query-devtools'
+import CssBaseline from '@mui/material/CssBaseline';
+
 
 const queryClient = new QueryClient()
 
@@ -21,7 +23,8 @@ export default function App({Component, pageProps}: AppProps) {
             <WaitForStateRehydration>
                 <QueryClientProvider client={queryClient}>
                     <Hydrate state={pageProps.dehydratedState}>
-                    <Component {...pageProps} />
+                        <CssBaseline/>
+                        <Component {...pageProps} />
                     </Hydrate>
                     <ReactQueryDevtools initialIsOpen={false}/>
                 </QueryClientProvider>
