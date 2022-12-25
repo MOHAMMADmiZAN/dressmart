@@ -1,7 +1,7 @@
 import {Inter,} from '@next/font/google'
 import Head from 'next/head'
 import React, {useEffect} from "react";
-import Header from "../components/Organisms/Header/Header";
+import Header from "../components/Organisms/Shared/Header/Header";
 
 
 const inter = Inter({subsets: ['latin']})

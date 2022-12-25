@@ -1,6 +1,6 @@
 import React from 'react';
-import HeaderTopBar from "../../Molecules/HeaderTopBar/HeaderTopBar";
-import NavBar from "../../Molecules/NavBar/NavBar";
+import HeaderTopBar from "../../../Molecules/HeaderTopBar/HeaderTopBar";
+import NavBar from "../../../Molecules/NavBar/NavBar";
 
 
 function Header(): JSX.Element {

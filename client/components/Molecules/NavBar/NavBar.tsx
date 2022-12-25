@@ -1,8 +1,8 @@
 import React from 'react';
 import {Box, Container,Grid, Paper} from "@mui/material";
 import {navBarStyle} from './NavBar.style'
-import Image from "next/image";
-import Logo from '../../../public/assets/img/logo.png'
+import Logo from "../../Atoms/Logo/Logo";
+
 
 function NavBar() {
     return (
@@ -11,7 +11,7 @@ function NavBar() {
               <Container maxWidth={`xl`}>
                   <Grid container={true} >
                       <Grid item={true} xl={2}>
-                        <Image src={Logo} alt={`dressmartLogo`} width={150} height={140}/>
+                        <Logo/>
                       </Grid>
                   </Grid>
               </Container>
