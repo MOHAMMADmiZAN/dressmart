@@ -8,7 +8,7 @@ import ContactSupportIcon from "@mui/icons-material/ContactSupport";
 import LoginIcon from "@mui/icons-material/Login";
 import {exclusiveLinkBtn} from "../../Molecules/LinkBtn/LinkBtn.style";
 
-function HeaderTopBar() {
+function HeaderTopBar() : JSX.Element {
 
     return (
         <>

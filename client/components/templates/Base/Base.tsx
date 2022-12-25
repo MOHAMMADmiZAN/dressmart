@@ -2,6 +2,7 @@ import React from 'react';
 import Header from "../../Organisms/Shared/Header/Header";
 import Footer from "../../Organisms/Shared/Footer/Footer";
 import {Paper,Box} from "@mui/material";
+import {memo}  from "react";
 
 interface BaseProps {
     inner?: React.ReactNode[];
@@ -23,4 +24,4 @@ function Base(BaseProps: BaseProps): JSX.Element {
     );
 }
 
-export default Base;
+export default memo(Base);

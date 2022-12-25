@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link, Typography} from '@mui/material';
 import {exclusiveLinkBtn} from "./LinkBtn.style";
+// import memo from react
+import {memo} from 'react';
 
 
 // metarial ui icon type
@@ -37,4 +39,4 @@ function LinkBtn(props: LinkBtnProps): JSX.Element {
     );
 }
 
-export default LinkBtn;
+export default memo(LinkBtn);

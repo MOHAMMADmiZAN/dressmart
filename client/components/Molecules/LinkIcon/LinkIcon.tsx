@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link,Button} from '@mui/material';
+// import memo
+import {memo} from 'react';
 
 interface LinkIconProps {
     href: string;
@@ -16,4 +18,4 @@ function LinkIcon(LinkIconProps: LinkIconProps): JSX.Element {
     );
 }
 
-export default LinkIcon;
+export default memo(LinkIcon);
