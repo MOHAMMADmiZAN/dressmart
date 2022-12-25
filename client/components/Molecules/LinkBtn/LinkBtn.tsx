@@ -16,7 +16,7 @@ interface LinkBtnProps {
     rightIcon?: reactNode;
     label: string;
     children?: reactNode;
-    className?: object;
+    styles?: object;
     onClick?: () => void;
 
 
@@ -25,7 +25,7 @@ interface LinkBtnProps {
 function LinkBtn(props: LinkBtnProps): JSX.Element {
     return (
         <>
-            <Link underline="hover" href={props.href} sx={{...exclusiveLinkBtn, ...props.className}}>
+            <Link underline="hover" href={props.href} sx={{...exclusiveLinkBtn, ...props.styles}}>
                 {props.leftIcon && props.leftIcon}
                 <Typography variant="button" sx={{margin: '0 5px',fontWeight:'700'}}>
                     {props.label}

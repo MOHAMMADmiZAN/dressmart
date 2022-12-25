@@ -13,20 +13,19 @@ function NavBar() {
     return (
         <>
             <Paper component={`div`} sx={{...navBarStyle}}>
-              <Container maxWidth={`xl`}>
+
                   <Grid container={true} justifyContent={`space-between`} alignItems={`center`} >
-                      <Grid item={true} md={2}>
+                      <Grid item={true} md={2} sx={{ml:5}}>
                         <Logo/>
                       </Grid>
                       <Grid item={true} md={6} >
                       <Search/>
                       </Grid>
-                      <Grid item={true} md={2}>
+                      <Grid item={true} md={1} sm={2}>
                           <LinkIcon href={`/`} icon={<FavoriteBorderIcon/>}/>
                           <CartBadge/>
                       </Grid>
                   </Grid>
-              </Container>
             </Paper>
         </>
     );

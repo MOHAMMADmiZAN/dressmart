@@ -14,8 +14,7 @@ function HeaderTopBar() {
         <>
             <Grid container={true} justifyContent={`space-between`} sx={{...HeaderTopBar}}>
                 <Grid item sm={4}>
-                    <LinkBtn href={`/`} label={`Exclusive Party Wear Dresses`} leftIcon={<BoltIcon/>}
-                             rightIcon={<ArrowCircleRightRoundedIcon/>}/>
+                    <LinkBtn href={`/`} label={`Exclusive Party Wear Dresses`} leftIcon={<BoltIcon/>} rightIcon={<ArrowCircleRightRoundedIcon/>} styles={{justifyContent: 'flex-start'}}/>
                 </Grid>
                 <Grid item sm={4}>
                     <LinkBtn href={`/`} label={`Order Bulk & Get 10% Discount`} leftIcon={<DeliveryDiningIcon/>}/>
@@ -24,7 +23,7 @@ function HeaderTopBar() {
                     <LinkBtn href={`/`} label={`Help`} leftIcon={<ContactSupportIcon/>}/>
                 </Grid>
                 <Grid item sm={2}>
-                    <Button startIcon={<LoginIcon/>} sx={{...exclusiveLinkBtn}}>Login</Button>
+                    <Button startIcon={<LoginIcon/>} sx={{...exclusiveLinkBtn,justifyContent: 'flex-end'}}>Login</Button>
                 </Grid>
             </Grid>
         </>
