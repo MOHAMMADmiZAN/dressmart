@@ -1,7 +1,7 @@
 import React from 'react';
 import {Box, Container,Grid, Paper} from "@mui/material";
 import {navBarStyle} from './NavBar.style'
-import Logo from "../../Atoms/Logo/Logo";
+import Logo from "../../Molecules/Logo/Logo";
 
 
 function NavBar() {
