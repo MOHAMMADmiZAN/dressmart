@@ -1,9 +1,14 @@
 import React from 'react';
 import FooterTopBar from "../../FooterTopBar/FooterTopBar";
-function Footer(): JSX.Element  {
+import FooterMain from "../../FooterMain/FooterMain";
+import FooterBottom from "../../FooterBottom/FooterBottom";
+
+function Footer(): JSX.Element {
     return (
         <>
-           <FooterTopBar/>
+            <FooterTopBar/>
+            <FooterMain/>
+            <FooterBottom/>
         </>
     );
 }
