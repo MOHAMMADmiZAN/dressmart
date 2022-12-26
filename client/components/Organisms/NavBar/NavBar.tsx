@@ -8,19 +8,20 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import CartBadge from "../../Molecules/CartBadge/CartBadge";
 
 
+
 function NavBar() {
     return (
         <>
             <Paper component={`div`} sx={{...navBarStyle}}>
 
                   <Grid container={true} justifyContent={`space-between`} alignItems={`center`} >
-                      <Grid item={true} md={2} sx={{ml:5}}>
+                      <Grid item={true} md={2} ml={5}>
                         <Logo/>
                       </Grid>
                       <Grid item={true} md={6} >
                       <Search/>
                       </Grid>
-                      <Grid item={true} md={1} sm={2}>
+                      <Grid item={true}  sm={2} textAlign={`right`} mr={5}>
                           <LinkIcon href={`/`} icon={<FavoriteBorderIcon/>}/>
                           <CartBadge/>
                       </Grid>

@@ -8,6 +8,7 @@ export const exclusiveLinkBtn = {
     justifyContent: 'center',
     padding: '10px 20px',
     width: '100%',
+    transition: 'all 0.1s ease-in-out 0.1s',
     '&:hover': {
         backgroundColor: 'rgba(0,0,0,0.9)',
         backdropFilter: 'blur(5px)',

@@ -13,16 +13,16 @@ function HeaderTopBar() : JSX.Element {
     return (
         <>
             <Grid container={true} justifyContent={`space-between`} sx={{...HeaderTopBar}}>
-                <Grid item sm={4}>
+                <Grid item xs={4}>
                     <LinkBtn href={`/`} label={`Exclusive Party Wear Dresses`} leftIcon={<BoltIcon/>} rightIcon={<ArrowCircleRightRoundedIcon/>} styles={{justifyContent: 'flex-start'}}/>
                 </Grid>
-                <Grid item sm={4}>
+                <Grid item xs={4}>
                     <LinkBtn href={`/`} label={`Order Bulk & Get 10% Discount`} leftIcon={<DeliveryDiningIcon/>}/>
                 </Grid>
-                <Grid item sm={2}>
+                <Grid item xs={2}>
                     <LinkBtn href={`/`} label={`Help`} leftIcon={<ContactSupportIcon/>}/>
                 </Grid>
-                <Grid item sm={2}>
+                <Grid item xs={2}>
                     <Button startIcon={<LoginIcon/>} sx={{...exclusiveLinkBtn,justifyContent: 'flex-end'}}>Login</Button>
                 </Grid>
             </Grid>

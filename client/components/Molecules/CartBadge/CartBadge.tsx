@@ -7,7 +7,7 @@ function CartBadge(): JSX.Element {
         <>
 
             <Button>
-                <Badge badgeContent={1} color="error">
+                <Badge badgeContent={0} color={`error`} showZero={true}>
                     <ShoppingCartIcon sx={{color: '#D4AF37'}}/>
                 </Badge>
             </Button>
