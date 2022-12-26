@@ -4,25 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="folder fixed">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/FooterBottom/FooterBottom.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Footer/FooterBottom/FooterBottom.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/FooterBottom/FooterBottom.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Footer/FooterBottom/FooterBottom.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/FooterMain/FooterMain.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Footer/FooterMain/FooterMain.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/FooterMain/FooterMain.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Footer/FooterMain/FooterMain.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/FooterTopBar/FooterTopBar.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Footer/FooterTopBar/FooterTopBar.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/FooterTopBar/FooterTopBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Footer/FooterTopBar/FooterTopBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/HeaderTopBar/HeaderTop.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Header/HeaderTopBar/HeaderTop.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/HeaderTopBar/HeaderTopBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Header/HeaderTopBar/HeaderTopBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/NavBar/NavBar.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Header/NavBar/NavBar.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/NavBar/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Header/NavBar/NavBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Ui/Footer/Footer.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Footer/Footer.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Ui/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Ui/Header/Header.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Header/Header.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Ui/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/templates/Base/Base.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/templates/Base/Base.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/login/index.tsx" afterDir="false" />
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="folder refactor">
+      <change beforePath="$PROJECT_DIR$/client/styles/Home.module.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +79,7 @@
       <workItem from="1671680097767" duration="29433000" />
       <workItem from="1671876292455" duration="21129000" />
       <workItem from="1671963718316" duration="15041000" />
-      <workItem from="1671981674516" duration="31615000" />
+      <workItem from="1671981674516" duration="32253000" />
     </task>
     <task id="LOCAL-00001" summary="store, cloudinary add">
       <created>1671538297977</created>
@@ -385,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672074696892</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="folder refactor">
+      <created>1672078141091</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1672078141091</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,6 +413,7 @@
     <MESSAGE value="footerTopBarAdd" />
     <MESSAGE value="footer fixted" />
     <MESSAGE value="folder fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="folder fixed" />
+    <MESSAGE value="folder refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="folder refactor" />
   </component>
 </project>
