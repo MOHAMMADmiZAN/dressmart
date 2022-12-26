@@ -10,13 +10,14 @@ interface BaseProps {
 }
 
 function Base(BaseProps: BaseProps): JSX.Element {
+     const {inner,children} = BaseProps;
     return (
         <>
             <Header/>
-            {BaseProps.inner?.map((child, index) => (
+            {inner?.map((child, index) => (
                 <Box key={index + 1}>{child}</Box>
             ))}
-            {BaseProps.children}
+            {children}
             <Footer/>
 
 
