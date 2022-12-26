@@ -20,6 +20,7 @@ export default function Home() {
             </Head>
             <Base inner={[<Hero key={1}/>]}/>
 
+
         </>
     )
 }

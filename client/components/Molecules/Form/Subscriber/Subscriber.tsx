@@ -8,7 +8,7 @@ function Subscriber() {
         <>
 
             <Box component={`form`} sx={{...SubscribeFormStyle}}>
-                <OutlinedInput sx={{ml: 1, flex: 1,}} placeholder="Enter email to Get Offer and More"/>
+                <OutlinedInput sx={{ flex: 1}} placeholder="Enter email to Get Offer and More"/>
                 <Button sx={{...SubscribeButtonStyle}}>Subscribe</Button>
             </Box>
 
