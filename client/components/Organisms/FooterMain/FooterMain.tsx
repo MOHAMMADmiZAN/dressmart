@@ -2,7 +2,7 @@ import React, {useId} from 'react';
 import {Container, Grid, Paper, Typography} from "@mui/material";
 import {FooterMainStyle, FooterMainTypographyStyle} from "./FooterMain.style";
 import Subscriber from "../../Molecules/Form/Subscriber/Subscriber";
-import TitleIcon from "../../Molecules/TitleWithIcon/TitleIcon";
+import TitleIcon from "../../Molecules/Shared/TitleWithIcon/TitleIcon";
 import MailIcon from "@mui/icons-material/Mail";
 import {IconColor} from "../../Molecules/Form/Subscriber/Subscriber.style";
 import CallIcon from '@mui/icons-material/Call';

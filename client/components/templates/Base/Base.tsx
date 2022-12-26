@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from "../../Organisms/Shared/Header/Header";
-import Footer from "../../Organisms/Shared/Footer/Footer";
+import Header from "../../Ui/Header/Header";
+import Footer from "../../Ui/Footer/Footer";
 import {Paper,Box} from "@mui/material";
 import {memo}  from "react";
 

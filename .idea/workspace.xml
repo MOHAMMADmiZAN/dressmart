@@ -4,17 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="footerTopBarAdd">
-      <change afterPath="$PROJECT_DIR$/client/components/Molecules/Form/Subscriber/Subscriber.style.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Molecules/Form/Subscriber/Subscriber.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Molecules/TitleWithIcon/TitleIcon.style.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Molecules/TitleWithIcon/TitleIcon.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Organisms/FooterBottom/FooterBottom.style.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Organisms/FooterBottom/FooterBottom.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Organisms/FooterMain/FooterMain.style.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Organisms/FooterMain/FooterMain.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Shared/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Shared/Footer/Footer.tsx" afterDir="false" />
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="footer fixted">
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/CartBadge/CartBadge.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Shared/CartBadge/CartBadge.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/CartBadge/CartBadge.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Shared/CartBadge/CartBadge.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/FooterTopbarSection/FooterTopbarSection.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Shared/FooterTopbarSection/FooterTopbarSection.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/FooterTopbarSection/FooterTopbarSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Shared/FooterTopbarSection/FooterTopbarSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/LinkBtn/LinkBtn.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Shared/LinkBtn/LinkBtn.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/LinkBtn/LinkBtn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Shared/LinkBtn/LinkBtn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/LinkIcon/LinkIcon.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Shared/LinkIcon/LinkIcon.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/LinkIcon/LinkIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Shared/LinkIcon/LinkIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/TitleWithIcon/TitleIcon.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Shared/TitleWithIcon/TitleIcon.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/TitleWithIcon/TitleIcon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Shared/TitleWithIcon/TitleIcon.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/FooterMain/FooterMain.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/FooterMain/FooterMain.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/FooterTopBar/FooterTopBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/FooterTopBar/FooterTopBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/HeaderTopBar/HeaderTopBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/HeaderTopBar/HeaderTopBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/NavBar/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/NavBar/NavBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Shared/Footer/Footer.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Ui/Footer/Footer.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Shared/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Ui/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Shared/Header/Header.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Ui/Header/Header.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Shared/Header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Ui/Header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/templates/Base/Base.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/templates/Base/Base.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,11 +76,11 @@
       <recent name="G:\Dressmart\client\public\assets\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Dressmart\client\components\Molecules\Shared" />
+      <recent name="G:\Dressmart\client\components\Ui" />
       <recent name="G:\Dressmart\client\components" />
       <recent name="G:\Dressmart\client\components\Organisms" />
       <recent name="G:\Dressmart\client\components\Molecules" />
-      <recent name="G:\Dressmart\client\components\Organisms\Shared" />
-      <recent name="G:\Dressmart\client\components\Atoms" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -88,7 +97,7 @@
       <workItem from="1671680097767" duration="29433000" />
       <workItem from="1671876292455" duration="21129000" />
       <workItem from="1671963718316" duration="15041000" />
-      <workItem from="1671981674516" duration="25573000" />
+      <workItem from="1671981674516" duration="26028000" />
     </task>
     <task id="LOCAL-00001" summary="store, cloudinary add">
       <created>1671538297977</created>
@@ -349,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672063269347</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="footer fixted">
+      <created>1672071199106</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1672071199106</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,6 +401,7 @@
     <MESSAGE value="`    Folder and code refactor`" />
     <MESSAGE value="memo add for re render" />
     <MESSAGE value="footerTopBarAdd" />
-    <option name="LAST_COMMIT_MESSAGE" value="footerTopBarAdd" />
+    <MESSAGE value="footer fixted" />
+    <option name="LAST_COMMIT_MESSAGE" value="footer fixted" />
   </component>
 </project>
