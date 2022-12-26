@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="memo add for re render">
+      <change afterPath="$PROJECT_DIR$/client/components/Molecules/FooterTopbarSection/FooterTopbarSection.style.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/Molecules/FooterTopbarSection/FooterTopbarSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/Organisms/FooterTopBar/FooterTopBar.style.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/Organisms/FooterTopBar/FooterTopBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/img/delivery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/img/sslcommerz.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Shared/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Shared/Footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +87,7 @@
       <workItem from="1671680097767" duration="29433000" />
       <workItem from="1671876292455" duration="21129000" />
       <workItem from="1671963718316" duration="15041000" />
-      <workItem from="1671981674516" duration="10853000" />
+      <workItem from="1671981674516" duration="18068000" />
     </task>
     <task id="LOCAL-00001" summary="store, cloudinary add">
       <created>1671538297977</created>
@@ -319,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672053472168</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="memo add for re render">
+      <created>1672054753487</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1672054753487</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,9 +1,9 @@
 import React from 'react';
-
+import FooterTopBar from "../../FooterTopBar/FooterTopBar";
 function Footer(): JSX.Element  {
     return (
         <>
-            <h1>Footer</h1>
+           <FooterTopBar/>
         </>
     );
 }
