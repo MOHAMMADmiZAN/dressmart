@@ -21,7 +21,6 @@ function FooterTopbarSection(FooterTopBarSectionProps: FooterTopbarSectionProps)
         <>
             <Box sx={{...FooterTopbarSectionViewStyle}}>
                 {FooterTopbarSectionIcon}
-                {/*<HttpsRoundedIcon sx={{color: '#D4AE3A'}}/>*/}
                 <Typography variant={`h4`} sx={{...TypographyStyle}}>
                     {FooterTopbarSectionTitle}
                 </Typography>

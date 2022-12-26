@@ -11,7 +11,6 @@ function Subscriber() {
                 <OutlinedInput sx={{ flex: 1}} placeholder="Enter email to Get Offer and More"/>
                 <Button sx={{...SubscribeButtonStyle}}>Subscribe</Button>
             </Box>
-
         </>
     );
 }

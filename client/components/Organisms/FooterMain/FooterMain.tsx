@@ -11,7 +11,7 @@ function FooterMain(): JSX.Element {
     return (
         <>
             <Paper sx={{...FooterMainStyle}}>
-                <Container>
+                <Container maxWidth={`xl`}>
                     <Grid container={true}>
                         <Grid item={true} xs={12} md={6}>
                             <TitleIcon TitleIconIcon={<MailIcon sx={{...IconColor}}/>} TitleIconTitle={`GET SPECIAL DISCOUNTS IN YOUR INBOX`} key={useId()}/>
