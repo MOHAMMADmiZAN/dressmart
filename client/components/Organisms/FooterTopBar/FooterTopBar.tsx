@@ -1,12 +1,13 @@
 import React from 'react';
 import {Container, Grid, Paper} from "@mui/material";
-import {FooterTopBarStyle} from "./FooterTopBar.style";
+import {FooterTopBarStyle, IconColor} from "./FooterTopBar.style";
 import FooterTopbarSection from "../../Molecules/FooterTopbarSection/FooterTopbarSection";
 import HttpsRoundedIcon from "@mui/icons-material/HttpsRounded";
 import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
 import sslcommerzImage from '../../../public/assets/img/sslcommerz.png';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import deliveryImage from '../../../public/assets/img/delivery.png';
+import SatisfactionImage from '../../../public/assets/img/satisfaction.jpg';
 
 function FooterTopBar(): JSX.Element {
     return (
@@ -14,19 +15,20 @@ function FooterTopBar(): JSX.Element {
             <Paper sx={{...FooterTopBarStyle}}>
                 <Container maxWidth={`xl`}>
                     <Grid container={true} justifyContent={`space-between`} alignItems={`center`}>
-                        <Grid item={true} xs={12} sm={5}>
-                            <FooterTopbarSection FooterTopbarSectionIcon={<HttpsRoundedIcon sx={{color: '#D4AE3A'}}/>}
+                        <Grid item={true} xs={12} sm={4}>
+                            <FooterTopbarSection FooterTopbarSectionIcon={<HttpsRoundedIcon sx={{...IconColor}}/>}
                                                  FooterTopbarSectionTitle={`All secure payment methods`}
                                                  FooterTopbarSectionImage={sslcommerzImage}/>
                         </Grid>
-                        <Grid item={true} xs={12} sm={2}>
+                        <Grid item={true} xs={12} sm={4}>
                             <FooterTopbarSection
-                                FooterTopbarSectionIcon={<SentimentVerySatisfiedIcon sx={{color: '#D4AE3A'}}/>}
+                                FooterTopbarSectionIcon={<SentimentVerySatisfiedIcon sx={{...IconColor}}/>}
                                 FooterTopbarSectionTitle={`Satisfaction guaranteed`}
-                                FooterTopBarSectionText={`Made with premium quality materials.Cozy yet lasts the test of time `}/>
+                                FooterTopbarSectionImage={SatisfactionImage}
+                            />
                         </Grid>
-                        <Grid item={true} xs={12} sm={5}>
-                            <FooterTopbarSection FooterTopbarSectionIcon={<LocalShippingIcon sx={{color: '#D4AE3A'}}/>}
+                        <Grid item={true} xs={12} sm={4}>
+                            <FooterTopbarSection FooterTopbarSectionIcon={<LocalShippingIcon sx={{...IconColor}}/>}
                                                  FooterTopbarSectionTitle={`Worldwide delivery`}
                                                  FooterTopbarSectionImage={deliveryImage}/>
                         </Grid>

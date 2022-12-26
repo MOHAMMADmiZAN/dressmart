@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="memo add for re render">
-      <change afterPath="$PROJECT_DIR$/client/components/Molecules/FooterTopbarSection/FooterTopbarSection.style.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Molecules/FooterTopbarSection/FooterTopbarSection.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Organisms/FooterTopBar/FooterTopBar.style.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Organisms/FooterTopBar/FooterTopBar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/assets/img/delivery.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/assets/img/sslcommerz.png" afterDir="false" />
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="footerTopBarAdd">
+      <change afterPath="$PROJECT_DIR$/client/public/assets/img/Satisfaction.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Shared/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Shared/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/FooterTopbarSection/FooterTopbarSection.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/FooterTopbarSection/FooterTopbarSection.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/FooterTopbarSection/FooterTopbarSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/FooterTopbarSection/FooterTopbarSection.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/FooterTopBar/FooterTopBar.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/FooterTopBar/FooterTopBar.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/FooterTopBar/FooterTopBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/FooterTopBar/FooterTopBar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +84,7 @@
       <workItem from="1671680097767" duration="29433000" />
       <workItem from="1671876292455" duration="21129000" />
       <workItem from="1671963718316" duration="15041000" />
-      <workItem from="1671981674516" duration="18068000" />
+      <workItem from="1671981674516" duration="19333000" />
     </task>
     <task id="LOCAL-00001" summary="store, cloudinary add">
       <created>1671538297977</created>
@@ -334,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672054753487</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="footerTopBarAdd">
+      <created>1672062035135</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1672062035135</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,6 +373,7 @@
     <MESSAGE value="Folder and code refactor" />
     <MESSAGE value="`    Folder and code refactor`" />
     <MESSAGE value="memo add for re render" />
-    <option name="LAST_COMMIT_MESSAGE" value="memo add for re render" />
+    <MESSAGE value="footerTopBarAdd" />
+    <option name="LAST_COMMIT_MESSAGE" value="footerTopBarAdd" />
   </component>
 </project>

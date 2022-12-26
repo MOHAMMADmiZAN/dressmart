@@ -12,7 +12,9 @@ export const TypographyStyle = {
     p: '15px'
 }
 export const ImageStyle = {
-    maxWidth:'493px',
+    maxWidth:'450px',
     width:'100%',
-    height:"auto"
+    height:"auto",
+    maxHeight:'200px',
+    borderRadius: '20px',
 }

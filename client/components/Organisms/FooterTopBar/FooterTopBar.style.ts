@@ -4,3 +4,6 @@ export const FooterTopBarStyle = {
     borderBottom: '1px solid #D4AF37',
     p: '30px ',
 }
+ export const IconColor = {
+    color: '#D4AE3A',
+ }
