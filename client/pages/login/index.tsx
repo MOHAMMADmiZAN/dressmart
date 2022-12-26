@@ -1,8 +1,10 @@
 import React from 'react'
-
-function Login() {
+import Base from "../../components/templates/Base/Base";
+function Login() : JSX.Element {
     return (
-        <div>Login</div>
+       <>
+              <Base inner={[]} />
+       </>
     )
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import FooterTopBar from "../../Organisms/FooterTopBar/FooterTopBar";
-import FooterMain from "../../Organisms/FooterMain/FooterMain";
-import FooterBottom from "../../Organisms/FooterBottom/FooterBottom";
+import FooterTopBar from "./FooterTopBar/FooterTopBar";
+import FooterMain from "./FooterMain/FooterMain";
+import FooterBottom from "./FooterBottom/FooterBottom";
 
 function Footer(): JSX.Element {
     return (

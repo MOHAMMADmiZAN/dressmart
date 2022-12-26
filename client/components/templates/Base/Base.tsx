@@ -1,8 +1,7 @@
-import React from 'react';
-import Header from "../../Ui/Header/Header";
-import Footer from "../../Ui/Footer/Footer";
-import {Paper,Box} from "@mui/material";
-import {memo}  from "react";
+import React, {memo} from 'react';
+import Header from "../../Organisms/Header/Header";
+import Footer from "../../Organisms/Footer/Footer";
+import {Box} from "@mui/material";
 
 interface BaseProps {
     inner?: React.ReactNode[];
@@ -10,7 +9,7 @@ interface BaseProps {
 }
 
 function Base(BaseProps: BaseProps): JSX.Element {
-     const {inner,children} = BaseProps;
+    const {inner, children} = BaseProps;
     return (
         <>
             <Header/>
@@ -19,8 +18,6 @@ function Base(BaseProps: BaseProps): JSX.Element {
             ))}
             {children}
             <Footer/>
-
-
         </>
     );
 }

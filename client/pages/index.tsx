@@ -2,7 +2,6 @@ import {Inter,} from '@next/font/google'
 import Head from 'next/head'
 import React from "react";
 import Base from "../components/templates/Base/Base";
-import Logo from "../components/Molecules/Logo/Logo";
 import Hero from "../components/Organisms/Hero/Hero";
 
 
@@ -19,8 +18,6 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <Base inner={[<Hero key={1}/>]}/>
-
-
         </>
     )
 }

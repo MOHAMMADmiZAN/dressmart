@@ -1,13 +1,13 @@
 import React from 'react';
 import {Container, Grid, Paper} from "@mui/material";
 import {FooterTopBarStyle, IconColor} from "./FooterTopBar.style";
-import FooterTopbarSection from "../../Molecules/Shared/FooterTopbarSection/FooterTopbarSection";
+import FooterTopbarSection from "../../../Molecules/Shared/FooterTopbarSection/FooterTopbarSection";
 import HttpsRoundedIcon from "@mui/icons-material/HttpsRounded";
 import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
-import sslcommerzImage from '../../../public/assets/img/sslcommerz.png';
+import sslcommerzImage from '../../../../public/assets/img/sslcommerz.png';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
-import deliveryImage from '../../../public/assets/img/delivery.png';
-import SatisfactionImage from '../../../public/assets/img/satisfaction.jpg';
+import deliveryImage from '../../../../public/assets/img/delivery.png';
+import SatisfactionImage from '../../../../public/assets/img/Satisfaction.jpg';
 
 function FooterTopBar(): JSX.Element {
     return (
