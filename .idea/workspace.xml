@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="some change">
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment=" folder refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/api/Product.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Product.api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Login/Login.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Auth/Login/Login.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Auth/Login/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Organisms/Products/ByRecentProduct/ByRecentProduct.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Products/ByRecentProduct/ByRecentProduct.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Register/Register.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Auth/Register/Register.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Register/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Auth/Register/Register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/login/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/register/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/register/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +83,7 @@
       <workItem from="1671963718316" duration="15041000" />
       <workItem from="1671981674516" duration="37356000" />
       <workItem from="1672140028810" duration="43000" />
-      <workItem from="1672140103243" duration="5684000" />
+      <workItem from="1672140103243" duration="9093000" />
     </task>
     <task id="LOCAL-00001" summary="store, cloudinary add">
       <created>1671538297977</created>
@@ -413,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672148250314</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary=" folder refactor">
+      <created>1672150419583</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1672150419583</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,6 +454,7 @@
     <MESSAGE value="folder fixed" />
     <MESSAGE value="folder refactor" />
     <MESSAGE value="some change" />
-    <option name="LAST_COMMIT_MESSAGE" value="some change" />
+    <MESSAGE value=" folder refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value=" folder refactor" />
   </component>
 </project>
