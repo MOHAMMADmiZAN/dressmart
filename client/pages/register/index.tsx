@@ -1,9 +1,15 @@
 import React from 'react'
+import Base from '../../components/templates/Base/Base'
+import Register from '../../components/Organisms/Register/Register'
 
-function Register() {
+function Reg() {
     return (
-        <div>Register</div>
+        <>
+            <Base>
+                <Register />
+            </Base>
+        </>
     )
 }
 
-export default Register
+export default Reg

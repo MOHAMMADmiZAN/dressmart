@@ -1,10 +1,14 @@
 import React from 'react'
 import Base from "../../components/templates/Base/Base";
-function Login() : JSX.Element {
+import LogIn from '../../components/Organisms/Login/Login';
+
+function Login(): JSX.Element {
     return (
-       <>
-              <Base inner={[]} />
-       </>
+        <>
+            <Base >
+                <LogIn />
+            </Base>
+        </>
     )
 }
 
