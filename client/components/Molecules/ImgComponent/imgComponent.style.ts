@@ -16,11 +16,11 @@ export const imgStyle = {
 }
 export const TitleTypography = {
     fontSize: '12px',
-    fontWeight: 400,
+    fontWeight: 600,
     lineHeight: '24px',
     color: '#000000',
     margin: '0px',
-    padding: '5px 10px',
+    padding: '5px',
     position: 'absolute',
     top: '0px',
     left: '50%',
@@ -28,15 +28,17 @@ export const TitleTypography = {
     bgcolor: '#ffffff',
     borderBottomLeftRadius: '10px',
     borderBottomRightRadius: '10px',
+    minWidth: '150px',
+    textAlign: 'center',
 
 }
 export const PriceTypography = {
     fontSize: '12px',
-    fontWeight: 400,
+    fontWeight: 600,
     lineHeight: '24px',
     color: '#000000',
     margin: '0px',
-    padding: '5px 10px',
+    padding: '5px',
     position: 'absolute',
     bottom: '0px',
     left: '50%',
@@ -44,5 +46,7 @@ export const PriceTypography = {
     borderTopLeftRadius: '10px',
     borderTopRightRadius: '10px',
     bgcolor: '#ffffff',
+    minWidth: '150px',
+    textAlign: 'center',
 
 }
