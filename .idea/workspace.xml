@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="folder refactor">
-      <change afterPath="$PROJECT_DIR$/client/api/Product.api.ts" afterDir="false" />
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="some change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/Product.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Product.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Login/Login.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Auth/Login/Login.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Auth/Login/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Organisms/Products/ByRecentProduct/ByRecentProduct.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Products/ByRecentProduct/ByRecentProduct.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/api/product/content-types/product/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/api/product/content-types/product/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Register/Register.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Auth/Register/Register.style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Register/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Auth/Register/Register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/login/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/register/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/register/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,11 +66,11 @@
       <recent name="G:\Dressmart\client\public\assets\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Dressmart\client\components\Organisms\Auth" />
       <recent name="G:\Dressmart\client\components\Organisms\Products" />
       <recent name="G:\Dressmart\client\components\Molecules\Shared" />
       <recent name="G:\Dressmart\client\components\Organisms\Header" />
       <recent name="G:\Dressmart\client\components\Organisms" />
-      <recent name="G:\Dressmart\client\components\Organisms\Footer" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -85,7 +89,7 @@
       <workItem from="1671963718316" duration="15041000" />
       <workItem from="1671981674516" duration="37356000" />
       <workItem from="1672140028810" duration="43000" />
-      <workItem from="1672140103243" duration="3470000" />
+      <workItem from="1672140103243" duration="5684000" />
     </task>
     <task id="LOCAL-00001" summary="store, cloudinary add">
       <created>1671538297977</created>
@@ -402,7 +406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672141130355</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="some change">
+      <created>1672148250314</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1672148250314</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,6 +452,7 @@
     <MESSAGE value="footer fixted" />
     <MESSAGE value="folder fixed" />
     <MESSAGE value="folder refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="folder refactor" />
+    <MESSAGE value="some change" />
+    <option name="LAST_COMMIT_MESSAGE" value="some change" />
   </component>
 </project>

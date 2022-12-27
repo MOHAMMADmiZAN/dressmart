@@ -1,6 +1,6 @@
 import React from 'react'
 import Base from '../../components/templates/Base/Base'
-import Register from '../../components/Organisms/Register/Register'
+import Register from '../../components/Organisms/Auth/Register/Register'
 
 function Reg() {
     return (

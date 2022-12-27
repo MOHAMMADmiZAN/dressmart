@@ -6,7 +6,10 @@ function ByRecentProduct() {
     useEffect(() => {
         // fetch Products
         fetchProducts().then((res) => {
-            console.log(res)
+            res.data.reduce((acc:Array<object>, cur:Array<object>) => {
+                console.log(acc, cur);
+
+            },[])
         })
 
     })
