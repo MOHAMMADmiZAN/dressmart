@@ -1,38 +1,43 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import SectionTitle from "../../../Molecules/Shared/SectionTitle/SectionTitle";
 import {fetchProducts, recentProduct, recentProductArray} from "../../../../api/Product.api";
-import {useQuery} from "@tanstack/react-query";
+import {dehydrate, useQuery} from "@tanstack/react-query";
+import ImgComponent from "../../../Molecules/ImgComponent/ImgComponent";
+import {Container, Grid} from "@mui/material";
+import {QueryClient} from "@tanstack/query-core";
+
+export async function getStaticProps() {
+    const queryClient = new QueryClient()
+
+    await queryClient.prefetchQuery(['recentProducts'], fetchProducts)
+
+    return {
+        props: {
+            dehydratedState: dehydrate(queryClient),
+        },
+    }
+}
 
 function ByRecentProduct() {
-     // fetch products by react query
-     const {data, isLoading, isError, error} = useQuery<recentProductArray,Error>(["recentProducts"], fetchProducts);
-
-    useEffect(() => {
-       fetchProducts().then(
-              (res) => {
-                  console.log(res);
-                  res.map((product:recentProduct) => {
-                      console.log(product.variants[0].image.src.url);
-                  })
-              }
-       )
-
-    },[data]);
-
-
-
+    // fetch products by react query
+    const {data, isLoading, isError, error} = useQuery<recentProductArray, Error>(["recentProducts"], fetchProducts);
     return (
         <>
             <SectionTitle SectionTitleTitle={`Most Recent Products`}/>
-            {isLoading && <p>Loading...</p>}
-            {data && data.map((product:recentProduct) => {
-                return (
-                    <div key={product.id}>
-                        <img src={product.variants[0].image.src.url} alt={product.name} width={150} height={150}/>
-                        <p>{product.name}</p>
-                    </div>
-                )
-            })}
+            <Container>
+                <Grid container={true} sx={{p:'20px'}}>
+                    {data && data.map((product: recentProduct) => {
+                        return (
+                        <Grid item={true} xs={12} sm={6} md={4} lg={3} key={product.id}>
+                            <ImgComponent src={product.variants[0].image.src.url} alt={product.variants[0].image.src.url} title={product.name} key={product.id} price={product.variants[0].salePrice}/>
+                        </Grid>
+                        )
+
+                    })}
+                </Grid>
+            </Container>
+
+
 
 
         </>
