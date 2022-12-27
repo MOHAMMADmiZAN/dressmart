@@ -1,11 +1,15 @@
 import axios, {AxiosInstance} from "axios";
 
- export const jsonPlaceHolder: AxiosInstance = axios.create({
+const baseURL = "http://localhost:1337/api/";
+export const jsonPlaceHolder: AxiosInstance = axios.create({
     baseURL: "https://jsonplaceholder.typicode.com",
- });
+});
 
- // posts fetch
+export const ProductApi: AxiosInstance = axios.create({
+    baseURL: `${baseURL}products`,
+});
 
+// posts fetch
 
 
 // post fetch

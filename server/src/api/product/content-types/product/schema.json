@@ -24,11 +24,6 @@
       "target": "api::brand.brand",
       "inversedBy": "products"
     },
-    "product": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::variant.variant"
-    },
     "name": {
       "type": "string",
       "required": true
