@@ -16,7 +16,7 @@ export const imgStyle = {
 }
 export const TitleTypography = {
     fontSize: '12px',
-    fontWeight: 600,
+    fontWeight: 400,
     lineHeight: '24px',
     color: '#000000',
     margin: '0px',
@@ -32,7 +32,7 @@ export const TitleTypography = {
 }
 export const PriceTypography = {
     fontSize: '12px',
-    fontWeight: 600,
+    fontWeight: 400,
     lineHeight: '24px',
     color: '#000000',
     margin: '0px',

@@ -9,7 +9,7 @@ import {QueryClient} from "@tanstack/query-core";
 export async function getStaticProps() {
     const queryClient = new QueryClient()
 
-    await queryClient.prefetchQuery(['recentProducts'], fetchProducts)
+    await queryClient.prefetchQuery<recentProductArray, Error>(['recentProducts'], fetchProducts)
 
     return {
         props: {

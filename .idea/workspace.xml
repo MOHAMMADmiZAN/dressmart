@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="refactor">
-      <change afterPath="$PROJECT_DIR$/client/components/Molecules/ImgComponent/ImgComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Molecules/ImgComponent/imgComponent.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="getStaticProps add testing">
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/ImgComponent/imgComponent.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/ImgComponent/imgComponent.style.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Organisms/Products/ByRecentProduct/ByRecentProduct.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Products/ByRecentProduct/ByRecentProduct.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/next.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,14 +82,7 @@
       <workItem from="1671963718316" duration="15041000" />
       <workItem from="1671981674516" duration="37356000" />
       <workItem from="1672140028810" duration="43000" />
-      <workItem from="1672140103243" duration="21969000" />
-    </task>
-    <task id="LOCAL-00002" summary="CartModel issue fixed">
-      <created>1671563476270</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1671563476270</updated>
+      <workItem from="1672140103243" duration="22553000" />
     </task>
     <task id="LOCAL-00003" summary="minor issue fixed">
       <created>1671563815918</created>
@@ -430,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672161241965</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="getStaticProps add testing">
+      <created>1672169420608</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1672169420608</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,6 +470,7 @@
     <MESSAGE value=" folder refactor" />
     <MESSAGE value="product Data refactor" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="getStaticProps add testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="getStaticProps add testing" />
   </component>
 </project>
