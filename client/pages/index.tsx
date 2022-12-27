@@ -3,7 +3,7 @@ import Head from 'next/head'
 import React from "react";
 import Base from "../components/templates/Base/Base";
 import Hero from "../components/Organisms/Hero/Hero";
-import RecentProduct from "../components/Organisms/RecentProduct/RecentProduct";
+import Products from "../components/Organisms/Products/Products";
 
 
 const inter = Inter({subsets: ['latin']})
@@ -18,7 +18,7 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
-            <Base inner={[<Hero key={1}/>,<RecentProduct key={2}/>]}/>
+            <Base inner={[<Hero key={1}/>, <Products key={2}/>]}/>
         </>
     )
 }
