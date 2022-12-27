@@ -1,7 +1,7 @@
 // product fetch api
 import {ProductApi} from "./api";
 
-type Product = {
+export type recentProduct = {
     id: number;
     name: string;
     variants: VariantArray
@@ -26,7 +26,7 @@ type src = {
     id: number;
 }
 
-export interface productArray extends Array<Product> {
+export interface recentProductArray extends Array<recentProduct> {
 
 }
 
@@ -46,7 +46,7 @@ export const fetchProducts = async () => {
                 const {id, attributes} = cur;
                 acc['src'] = {
                     id,
-                    src: attributes.url,
+                    url: attributes.url,
                 }
                 return acc;
 
