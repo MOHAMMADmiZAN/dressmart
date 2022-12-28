@@ -1,6 +1,7 @@
 import React, {memo} from 'react';
 import {Card, CardContent, CardMedia} from "@mui/material";
 import Star from "../../Star/Star";
+import {productCardStyle} from "./ProductCars.style";
 
 interface ProductCardProps {
     ProductCardTitle: string,
@@ -26,7 +27,7 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
     } = ProductCardProps;
     return (
         <>
-            <Card>
+            <Card sx={{...productCardStyle}}>
                 <CardMedia
                     component={`img`}
                     sx={{height: '200px', width: '100%'}}

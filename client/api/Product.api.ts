@@ -8,6 +8,8 @@ export type recentProduct = {
     model: string;
     thumbnail: string;
     rating: number;
+    regularPrice: number;
+    salePrice: number;
 
 }
 
@@ -42,19 +44,24 @@ export interface VariantArray extends Array<variant> {
 // recent products fetch api
 export const fetchProducts = async () => {
     const res = await ProductApi.get("?populate=thumbnail");
-    return res.data.data.reduce((acc: any, cur: any) => {
+    const ProductData = res.data.data.reduce((acc: any, cur: any) => {
         const {id, attributes} = cur;
+
         acc.push({
             id,
             name: attributes.name,
             model: attributes.model,
             slug: attributes.slug,
+            regularPrice: attributes.regular_price,
+            salePrice: attributes.sell_price,
             thumbnail: attributes.thumbnail.data[0].attributes.url,
             rating: attributes.avarage_rating
 
         })
-        console.log(acc);
+
         return acc;
 
     }, []);
+    console.log(ProductData);
+    return ProductData;
 }
