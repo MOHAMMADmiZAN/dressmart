@@ -55,11 +55,6 @@
       "target": "api::order-item.order-item",
       "mappedBy": "product"
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "name",
-      "required": true
-    },
     "variants": {
       "type": "relation",
       "relation": "oneToMany",
@@ -82,6 +77,10 @@
     },
     "model": {
       "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
     }
   }
 }

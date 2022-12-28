@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="RatingStarViewComponent add">
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="schema change">
+      <change afterPath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCars.style.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/Product.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Product.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/ImgComponent/ImgComponent.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/ImgComponent/imgComponent.style.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Molecules/Star/Star.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Star/Star.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Theme/Theme.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Theme/Theme.style.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Organisms/Products/ByBrandProduct/ByBrandProduct.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Products/ByBrandProduct/ByBrandProduct.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Products/ByRecentProduct/ByRecentProduct.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Products/ByRecentProduct/ByRecentProduct.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/api/product/content-types/product/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/api/product/content-types/product/schema.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,14 +91,7 @@
       <workItem from="1671963718316" duration="15041000" />
       <workItem from="1671981674516" duration="37356000" />
       <workItem from="1672140028810" duration="43000" />
-      <workItem from="1672140103243" duration="27644000" />
-    </task>
-    <task id="LOCAL-00006" summary="model refactor">
-      <created>1671566652532</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1671566652532</updated>
+      <workItem from="1672140103243" duration="38195000" />
     </task>
     <task id="LOCAL-00007" summary="diagram to starpi content">
       <created>1671623590010</created>
@@ -429,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672224836178</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="schema change">
+      <created>1672225640848</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1672225640848</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +463,6 @@
     <MESSAGE value="lock deleted" />
     <MESSAGE value="gitignore add" />
     <MESSAGE value="react query init , matarial ui, form hook" />
-    <MESSAGE value="schema change" />
     <MESSAGE value="example env change" />
     <MESSAGE value="hello typescript" />
     <MESSAGE value=" react query set check" />
@@ -473,6 +479,7 @@
     <MESSAGE value="refactor" />
     <MESSAGE value="getStaticProps add testing" />
     <MESSAGE value="RatingStarViewComponent add" />
-    <option name="LAST_COMMIT_MESSAGE" value="RatingStarViewComponent add" />
+    <MESSAGE value="schema change" />
+    <option name="LAST_COMMIT_MESSAGE" value="schema change" />
   </component>
 </project>

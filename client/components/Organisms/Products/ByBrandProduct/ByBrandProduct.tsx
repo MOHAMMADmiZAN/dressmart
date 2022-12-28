@@ -6,7 +6,7 @@ function ByBrandProduct() {
     return (
         <>
             <SectionTitle SectionTitleTitle={` Most Popular Brands `}/>
-            <Star rating={0}/>
+            <Star rating={2.1}/>
         </>
     );
 }
