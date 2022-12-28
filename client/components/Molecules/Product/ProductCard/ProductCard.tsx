@@ -1,7 +1,7 @@
 import React, {memo} from 'react';
-import {Card, CardContent, CardMedia} from "@mui/material";
+import {Box, Card, CardContent, CardMedia} from "@mui/material";
 import Star from "../../Star/Star";
-import {productCardStyle} from "./ProductCars.style";
+import {cardOrderOverLay, productCardStyle} from "./ProductCad.style";
 
 interface ProductCardProps {
     ProductCardTitle: string,
@@ -22,7 +22,6 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
         ProductCardPrice,
         ProductCardImage,
         ProductCardRating,
-        ProductCardDiscount,
         ProductCardDiscountPrice
     } = ProductCardProps;
     return (
@@ -39,6 +38,9 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
                     <Star rating={ProductCardRating}/>
                     <p>{ProductCardPrice}</p>
                 </CardContent>
+                <Box sx={{...cardOrderOverLay}}>
+
+                </Box>
             </Card>
 
         </>
