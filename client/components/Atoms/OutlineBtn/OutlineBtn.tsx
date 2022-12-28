@@ -23,7 +23,7 @@ function OutlineBtn(OutlineBtnProps: OutlineBtnProps): JSX.Element {
     } = OutlineBtnProps;
 
     return (
-        <Button size={"small"} sx={{color: 'primary.main'}} variant={`outlined`} onClick={OutlineBtnOnClick} disabled={isDisable}>
+        <Button size={"small"} sx={[{color:'primary.main'}]} variant={`outlined`} onClick={OutlineBtnOnClick} disabled={isDisable}>
             {OutlineBtnIcon}
             {OutlineBtnText}
         </Button>
