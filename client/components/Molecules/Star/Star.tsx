@@ -8,14 +8,9 @@ interface StarProps {
     rating: number,
 }
 
-interface StarState {
-    rating: number,
-    starArray: Array<React.ReactNode>,
-}
-
 function Star(starProps: StarProps): JSX.Element {
-    const [StarState] = useState<StarState>({rating: starProps.rating, starArray: []});
-    const {rating, starArray} = StarState;
+    const {rating} = starProps;
+    const starArray: Array<React.ReactNode> = [];
 
     for (let i = 1; i <= 5; i++) {
         if (i <= rating) {

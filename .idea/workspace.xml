@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="getStaticProps add testing">
-      <change afterPath="$PROJECT_DIR$/client/components/Molecules/Star/Star.style.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Molecules/Star/Star.tsx" afterDir="false" />
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="RatingStarViewComponent add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Star/Star.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Star/Star.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Organisms/Products/ByBrandProduct/ByBrandProduct.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Products/ByBrandProduct/ByBrandProduct.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Products/ByRecentProduct/ByRecentProduct.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Products/ByRecentProduct/ByRecentProduct.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/api/product/content-types/product/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/api/product/content-types/product/schema.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,14 +84,7 @@
       <workItem from="1671963718316" duration="15041000" />
       <workItem from="1671981674516" duration="37356000" />
       <workItem from="1672140028810" duration="43000" />
-      <workItem from="1672140103243" duration="26712000" />
-    </task>
-    <task id="LOCAL-00005" summary="model refactor">
-      <created>1671566238545</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1671566238545</updated>
+      <workItem from="1672140103243" duration="27644000" />
     </task>
     <task id="LOCAL-00006" summary="model refactor">
       <created>1671566652532</created>
@@ -430,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672170398814</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="RatingStarViewComponent add">
+      <created>1672224836178</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1672224836178</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,7 +448,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="store, cloudinary add" />
     <MESSAGE value="CartModel issue fixed" />
     <MESSAGE value="minor issue fixed" />
     <MESSAGE value="model refactor" />
@@ -474,6 +472,7 @@
     <MESSAGE value="product Data refactor" />
     <MESSAGE value="refactor" />
     <MESSAGE value="getStaticProps add testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="getStaticProps add testing" />
+    <MESSAGE value="RatingStarViewComponent add" />
+    <option name="LAST_COMMIT_MESSAGE" value="RatingStarViewComponent add" />
   </component>
 </project>

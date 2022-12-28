@@ -37,7 +37,11 @@
       "required": true
     },
     "avarage_rating": {
-      "type": "float"
+      "type": "float",
+      "required": true,
+      "default": 0,
+      "max": 5,
+      "min": 0
     },
     "ratings": {
       "type": "relation",
@@ -61,6 +65,23 @@
       "relation": "oneToMany",
       "target": "api::variant.variant",
       "mappedBy": "product"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "fabric_details": {
+      "type": "text"
+    },
+    "model": {
+      "type": "string"
     }
   }
 }
