@@ -1,7 +1,10 @@
-import React, {memo} from 'react';
-import {Box, Card, CardContent, CardMedia} from "@mui/material";
+import React, {memo, useState} from 'react';
+import {Box, Card, CardContent, CardMedia, Typography} from "@mui/material";
 import Star from "../../Star/Star";
-import {cardOrderOverLay, productCardStyle} from "./ProductCad.style";
+import {cardOrderOverLay, CardOrderOverLayContent, productCardStyle} from "./ProductCad.style";
+import OutlineBtn from "../../../Atoms/OutlineBtn/OutlineBtn";
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 
 interface ProductCardProps {
     ProductCardTitle: string,
@@ -16,6 +19,7 @@ interface ProductCardProps {
 
 }
 
+
 function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
     const {
         ProductCardTitle,
@@ -24,6 +28,18 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
         ProductCardRating,
         ProductCardDiscountPrice
     } = ProductCardProps;
+
+    const [orderCount, setOrderCount] = useState(0);
+
+    const increaseOrderCount = () => {
+        setOrderCount((prevCount) => prevCount + 1);
+        console.log(orderCount);
+    }
+    const decreaseOrderCount = () => {
+        setOrderCount((prevCount) => prevCount - 1);
+        console.log(orderCount);
+    }
+
     return (
         <>
             <Card sx={{...productCardStyle}}>
@@ -39,7 +55,12 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
                     <p>{ProductCardPrice}</p>
                 </CardContent>
                 <Box sx={{...cardOrderOverLay}}>
-
+                    <CardOrderOverLayContent>
+                        <OutlineBtn OutlineBtnIcon={<AddIcon/>} OutlineBtnOnClick={increaseOrderCount}/>
+                        <Typography variant={`h6`} sx={{m: 2, color: 'primary.main'}}>{orderCount}</Typography>
+                        <OutlineBtn OutlineBtnIcon={<RemoveIcon/>} OutlineBtnOnClick={decreaseOrderCount}
+                                    isDisable={orderCount === 0}/>
+                    </CardOrderOverLayContent>
                 </Box>
             </Card>
 

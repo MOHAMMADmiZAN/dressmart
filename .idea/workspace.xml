@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="some Change">
+      <change afterPath="$PROJECT_DIR$/client/components/Atoms/OutlineBtn/OutlineBtn.style.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/Atoms/OutlineBtn/OutlineBtn.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCad.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCad.style.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCars.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCad.style.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,11 +62,11 @@
       <recent name="G:\Dressmart\client\public\assets\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Dressmart\client\components\Atoms" />
+      <recent name="G:\Dressmart\client\components\Molecules\Shared" />
       <recent name="G:\Dressmart\client\components\Organisms\Auth" />
       <recent name="G:\Dressmart\client\components\Organisms\Products" />
-      <recent name="G:\Dressmart\client\components\Molecules\Shared" />
       <recent name="G:\Dressmart\client\components\Organisms\Header" />
-      <recent name="G:\Dressmart\client\components\Organisms" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -83,14 +85,7 @@
       <workItem from="1671963718316" duration="15041000" />
       <workItem from="1671981674516" duration="37356000" />
       <workItem from="1672140028810" duration="43000" />
-      <workItem from="1672140103243" duration="43601000" />
-    </task>
-    <task id="LOCAL-00011" summary="gitignore add">
-      <created>1671678181819</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1671678181819</updated>
+      <workItem from="1672140103243" duration="48290000" />
     </task>
     <task id="LOCAL-00012" summary="gitignore add">
       <created>1671678417715</created>
@@ -428,7 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672248512691</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="some Change">
+      <created>1672250358577</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1672250358577</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
