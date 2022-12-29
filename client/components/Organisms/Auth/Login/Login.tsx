@@ -7,8 +7,10 @@ import {loginSchema} from '../../../../utils/validation';
 import Input from '../../../Molecules/Form/Input/Input';
 import MapItems from '../../../Molecules/MapItems/MapItems';
 import {BoxStyle} from './Login.style';
-import {Auth} from "../../../../api/Auth.api";
-import {useState} from "react";
+import {Actions, useStoreActions} from "easy-peasy";
+import AuthModel from "../../../../store/models/AuthModel";
+
+
 
 
 let inputs = [
@@ -21,6 +23,7 @@ let inputs = [
         type: 'password',
     }
 ]
+
 
 type IFormInput = {
     email: string;
@@ -37,9 +40,13 @@ const LogIn = () => {
         }, resolver: yupResolver(loginSchema)
     });
 
+
+    const LogIn = useStoreActions((actions: Actions<typeof AuthModel> )=>actions.Login);
+
+
     const onSubmit: SubmitHandler<IFormInput> = async data => {
-        const user = await Auth.login(data.email, data.password)
-        console.log(user)
+        await LogIn(data)
+
     };
 
 
