@@ -85,8 +85,6 @@ const AuthModel: Auth = {
     }),
     Logout: thunk(async (actions, payload) => {
         actions.AuthClear()
-
-
     })
 }
 
