@@ -33,10 +33,10 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
 
     const [orderCount, setOrderCount] = useState(0);
 
-    const increaseOrderCount = () => {
+    const increaseOrderCount = (id:number) => {
         setOrderCount((prevCount) => prevCount + 1);
     }
-    const decreaseOrderCount = () => {
+    const decreaseOrderCount = (id:number) => {
         setOrderCount((prevCount) => prevCount - 1);
     }
 
@@ -58,7 +58,7 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
                         ৳{ProductCardPrice}
                     </Typography>
                 </CardContent>
-                <Box sx={{...cardOrderOverLay}} onClick={() => !orderCount && increaseOrderCount()}>
+                <Box sx={{...cardOrderOverLay}} onClick={() => !orderCount && increaseOrderCount(ProductID)}>
                     {!orderCount ?
                         <CardOrderOverLayContent sx={{width: '100%', textAlign: `center`, flexDirection: 'column'}}>
                             <Typography variant={`h6`} sx={{color: '#fff', width: '100%', fontSize: '16px'}}>
@@ -66,9 +66,9 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
                             </Typography>
                         </CardOrderOverLayContent> :
                         <CardOrderOverLayContent>
-                            <OutlineBtn OutlineBtnIcon={<AddIcon/>} OutlineBtnOnClick={increaseOrderCount}/>
+                            <OutlineBtn OutlineBtnIcon={<AddIcon/>} OutlineBtnOnClick={()=>increaseOrderCount(ProductID)}/>
                             <Typography variant={`h6`} sx={{m: 2, color: 'primary.main'}}>{orderCount}</Typography>
-                            <OutlineBtn OutlineBtnIcon={<RemoveIcon/>} OutlineBtnOnClick={decreaseOrderCount}
+                            <OutlineBtn OutlineBtnIcon={<RemoveIcon/>} OutlineBtnOnClick={()=>decreaseOrderCount(ProductID)}
                                         isDisable={orderCount === 0}/>
                         </CardOrderOverLayContent>}
                 </Box>

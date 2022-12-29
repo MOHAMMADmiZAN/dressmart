@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="order overLay btn change=">
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="some change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Theme/Theme.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Theme/Theme.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Products/ByRecentProduct/ByRecentProduct.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Products/ByRecentProduct/ByRecentProduct.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,21 +82,7 @@
       <workItem from="1671963718316" duration="15041000" />
       <workItem from="1671981674516" duration="37356000" />
       <workItem from="1672140028810" duration="43000" />
-      <workItem from="1672140103243" duration="51778000" />
-    </task>
-    <task id="LOCAL-00014" summary="react query init , matarial ui, form hook">
-      <created>1671680519450</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1671680519450</updated>
-    </task>
-    <task id="LOCAL-00015" summary="schema change">
-      <created>1671703257793</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1671703257793</updated>
+      <workItem from="1672140103243" duration="52285000" />
     </task>
     <task id="LOCAL-00016" summary="example env change">
       <created>1671731504813</created>
@@ -429,7 +413,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672255791436</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="some change">
+      <created>1672286311258</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1672286311258</updated>
+    </task>
+    <task id="LOCAL-00064" summary="some change">
+      <created>1672286551630</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1672286551630</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,7 +461,6 @@
     <MESSAGE value="footer fixted" />
     <MESSAGE value="folder fixed" />
     <MESSAGE value="folder refactor" />
-    <MESSAGE value="some change" />
     <MESSAGE value=" folder refactor" />
     <MESSAGE value="product Data refactor" />
     <MESSAGE value="refactor" />
@@ -473,6 +470,7 @@
     <MESSAGE value="some Change" />
     <MESSAGE value="order overLay btn change" />
     <MESSAGE value="order overLay btn change=" />
-    <option name="LAST_COMMIT_MESSAGE" value="order overLay btn change=" />
+    <MESSAGE value="some change" />
+    <option name="LAST_COMMIT_MESSAGE" value="some change" />
   </component>
 </project>
