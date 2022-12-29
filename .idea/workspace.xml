@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="some change">
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="some change in  api">
+      <change afterPath="$PROJECT_DIR$/client/api/Auth.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Auth/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Auth/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Auth/Register/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Auth/Register/Register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/login/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,21 +88,7 @@
       <workItem from="1671963718316" duration="15041000" />
       <workItem from="1671981674516" duration="37356000" />
       <workItem from="1672140028810" duration="43000" />
-      <workItem from="1672140103243" duration="53438000" />
-    </task>
-    <task id="LOCAL-00018" summary="hello typescript">
-      <created>1671797824484</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1671797824484</updated>
-    </task>
-    <task id="LOCAL-00019" summary=" react query set check">
-      <created>1671823208492</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1671823208492</updated>
+      <workItem from="1672140103243" duration="59360000" />
     </task>
     <task id="LOCAL-00020" summary=" react query set check">
       <created>1671872895541</created>
@@ -426,7 +419,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672287858376</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="some change in product api">
+      <created>1672288001371</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1672288001371</updated>
+    </task>
+    <task id="LOCAL-00068" summary="some change in  api">
+      <created>1672288061256</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1672288061256</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,8 +452,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="diagram to starpi content" />
-    <MESSAGE value="schema Change" />
     <MESSAGE value="lock deleted" />
     <MESSAGE value="gitignore add" />
     <MESSAGE value="react query init , matarial ui, form hook" />
@@ -470,6 +475,8 @@
     <MESSAGE value="order overLay btn change" />
     <MESSAGE value="order overLay btn change=" />
     <MESSAGE value="some change" />
-    <option name="LAST_COMMIT_MESSAGE" value="some change" />
+    <MESSAGE value="some change in product api" />
+    <MESSAGE value="some change in  api" />
+    <option name="LAST_COMMIT_MESSAGE" value="some change in  api" />
   </component>
 </project>

@@ -76,6 +76,7 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
                 </Box>
             </Card>
 
+
         </>
     );
 }
