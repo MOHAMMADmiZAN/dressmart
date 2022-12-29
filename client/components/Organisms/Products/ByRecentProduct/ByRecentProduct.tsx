@@ -30,7 +30,9 @@ function ByRecentProduct() {
                     {data && data.map((product: recentProduct) => {
                         return (
                         <Grid item={true} xs={12} sm={6} md={4} lg={3} key={product.id}>
-                         <ProductCard ProductCardImage={product.thumbnail} ProductCardRating={product.rating} ProductCardTitle={product.name}/>
+                         <ProductCard ProductCardImage={product.thumbnail} ProductCardRating={product.rating}
+                                      ProductCardTitle={product.name} ProductCardPrice={product.regularPrice}
+                                      ProductID={product.id} />
                         </Grid>
                         )
 

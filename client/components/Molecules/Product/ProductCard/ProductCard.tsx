@@ -1,4 +1,4 @@
-import React, {memo, useState} from 'react';
+import React, {memo, useCallback, useEffect, useState} from 'react';
 import {Box, Card, CardContent, CardMedia, Typography} from "@mui/material";
 import Star from "../../Star/Star";
 import {cardOrderOverLay, CardOrderOverLayContent, productCardStyle} from "./ProductCad.style";
@@ -16,6 +16,7 @@ interface ProductCardProps {
     ProductCardDescription?: string,
     ProductCardLink?: string,
     ProductCardLinkText?: string,
+    ProductID: number,
 
 }
 
@@ -26,14 +27,16 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
         ProductCardPrice,
         ProductCardImage,
         ProductCardRating,
-        ProductCardDiscountPrice
+        ProductCardDiscountPrice,
+        ProductID
     } = ProductCardProps;
 
     const [orderCount, setOrderCount] = useState(0);
 
     const increaseOrderCount = () => {
         setOrderCount((prevCount) => prevCount + 1);
-        console.log(orderCount);
+        console.log(ProductID)
+
     }
     const decreaseOrderCount = () => {
         setOrderCount((prevCount) => prevCount - 1);
@@ -50,17 +53,26 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
                     alt={ProductCardTitle}
                 />
                 <CardContent>
-                    <h3>{ProductCardTitle}</h3>
+                    <Typography variant={`h6`} sx={{color: 'primary.contrastText', width: '100%', fontSize: '20px'}}>
+                        {ProductCardTitle.toLocaleUpperCase()}
+                    </Typography>
                     <Star rating={ProductCardRating}/>
-                    <p>{ProductCardPrice}</p>
+                    <Typography variant={`h6`} sx={{color: 'primary.main', width: '100%', fontSize: '13px'}}>
+                        ৳{ProductCardPrice}
+                    </Typography>
                 </CardContent>
-                <Box sx={{...cardOrderOverLay}}>
-                    <CardOrderOverLayContent>
-                        <OutlineBtn OutlineBtnIcon={<AddIcon/>} OutlineBtnOnClick={increaseOrderCount}/>
-                        <Typography variant={`h6`} sx={{m: 2, color: 'primary.main'}}>{orderCount}</Typography>
-                        <OutlineBtn OutlineBtnIcon={<RemoveIcon/>} OutlineBtnOnClick={decreaseOrderCount}
-                                    isDisable={orderCount === 0}/>
-                    </CardOrderOverLayContent>
+                <Box sx={{...cardOrderOverLay}} onClick={() => !orderCount && increaseOrderCount()}>
+                    {!orderCount ?
+                        <CardOrderOverLayContent sx={{width: '100%', textAlign: `center`, flexDirection: 'column'}}>
+                            <Typography variant={`h6`} sx={{color: '#fff', width: '100%', fontSize: '16px'}}>
+                                Add To Shopping Cart
+                            </Typography>
+                        </CardOrderOverLayContent> :
+                        <CardOrderOverLayContent>
+                            <OutlineBtn OutlineBtnIcon={<AddIcon/>} OutlineBtnOnClick={increaseOrderCount}/>
+                            <Typography variant={`h6`} sx={{m: 2, color: 'primary.main'}}>{orderCount}</Typography>
+                            <OutlineBtn OutlineBtnIcon={<RemoveIcon/>} OutlineBtnOnClick={decreaseOrderCount} isDisable={orderCount === 0}/>
+                        </CardOrderOverLayContent>}
                 </Box>
             </Card>
 
