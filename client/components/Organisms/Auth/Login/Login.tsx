@@ -7,9 +7,9 @@ import { loginSchema } from '../../../../utils/validation';
 import Input from '../../../Molecules/Form/Input/Input';
 import MapItems from '../../../Molecules/MapItems/MapItems';
 import { BoxStyle } from './Login.style';
-// import {Actions, useStoreActions} from "easy-peasy";
 import { AuthType } from "../../../../store/models/AuthModel";
 import { Actions, useStoreActions } from "easy-peasy";
+import { useRouter } from "next/router";
 
 
 let inputs = [
@@ -43,13 +43,15 @@ const LogIn = () => {
             password: ''
         }, resolver: yupResolver(loginSchema)
     });
-
-
     const LogIn = useStoreActions((actions: Actions<AuthType>) => actions.Auth.Login);
 
 
+    const Router = useRouter();
+
+
     const onSubmit: SubmitHandler<IFormInput> = async data => {
-        await LogIn(data)
+        await LogIn(data) && await Router.push(`/`);
+
 
     };
 
