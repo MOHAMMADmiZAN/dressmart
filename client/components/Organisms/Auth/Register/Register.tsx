@@ -84,10 +84,9 @@ const Register = () => {
 
                     <Button
                         variant="contained"
-                        color='secondary'
                         fullWidth={true}
                         sx={{
-                            margin: '10px 0px',
+                            margin: '10px 0px', bgcolor: 'primary.main', color: 'white'
                         }} type="submit">Submit</Button>
 
                     <Typography variant="body1" component="p">
