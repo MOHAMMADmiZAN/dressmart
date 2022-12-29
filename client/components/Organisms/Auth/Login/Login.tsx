@@ -1,5 +1,5 @@
 import {yupResolver} from '@hookform/resolvers/yup';
-import {Box, Button, Link, Typography} from "@mui/material";
+import {Box, Button, Typography} from "@mui/material";
 import Grid from '@mui/material/Grid';
 import NextLink from 'next/link';
 import {SubmitHandler, useForm} from "react-hook-form";
@@ -7,10 +7,9 @@ import {loginSchema} from '../../../../utils/validation';
 import Input from '../../../Molecules/Form/Input/Input';
 import MapItems from '../../../Molecules/MapItems/MapItems';
 import {BoxStyle} from './Login.style';
+// import {Actions, useStoreActions} from "easy-peasy";
+import  {AuthType} from "../../../../store/models/AuthModel";
 import {Actions, useStoreActions} from "easy-peasy";
-import AuthModel from "../../../../store/models/AuthModel";
-
-
 
 
 let inputs = [
@@ -41,7 +40,7 @@ const LogIn = () => {
     });
 
 
-    const LogIn = useStoreActions((actions: Actions<typeof AuthModel> )=>actions.Login);
+    const LogIn = useStoreActions((actions: Actions<AuthType>) => actions.Auth.Login);
 
 
     const onSubmit: SubmitHandler<IFormInput> = async data => {

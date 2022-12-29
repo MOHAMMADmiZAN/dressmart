@@ -7,8 +7,12 @@ import DeliveryDiningIcon from "@mui/icons-material/DeliveryDining";
 import ContactSupportIcon from "@mui/icons-material/ContactSupport";
 import LoginIcon from "@mui/icons-material/Login";
 import {exclusiveLinkBtn} from "../../../Molecules/Shared/LinkBtn/LinkBtn.style";
-
+import {State, useStoreState} from 'easy-peasy';
+import {AuthType} from "../../../../store/models/AuthModel";
 function HeaderTopBar() : JSX.Element {
+
+    const {isAuth} = useStoreState((state: State<AuthType>) => state.Auth);
+    console.log(isAuth)
 
     return (
         <>
