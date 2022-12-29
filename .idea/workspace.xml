@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="issue auth">
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="cart refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Shared/CartBadge/CartBadge.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Shared/CartBadge/CartBadge.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Shared/CartBadge/CartBadge.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Shared/CartBadge/CartBadge.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Auth/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Auth/Login/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Cart/CartDrawer/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Cart/CartDrawer/Cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Cart/GlobalCart/GlobalCart.style.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Cart/GlobalCart/GlobalCart.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/models/AuthModel.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/Auth.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Auth.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Auth/Register/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Auth/Register/Register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/models/AuthModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/models/AuthModel.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,14 +84,7 @@
       <workItem from="1671963718316" duration="15041000" />
       <workItem from="1671981674516" duration="37356000" />
       <workItem from="1672140028810" duration="43000" />
-      <workItem from="1672140103243" duration="77209000" />
-    </task>
-    <task id="LOCAL-00026" summary="Folder and code refactor">
-      <created>1671967307273</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1671967307273</updated>
+      <workItem from="1672140103243" duration="80151000" />
     </task>
     <task id="LOCAL-00027" summary="Folder and code refactor">
       <created>1671967612773</created>
@@ -436,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672327780447</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="cart refactor">
+      <created>1672333012036</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1672333012036</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,7 +448,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="react query init , matarial ui, form hook" />
     <MESSAGE value="example env change" />
     <MESSAGE value="hello typescript" />
     <MESSAGE value=" react query set check" />
@@ -480,6 +472,7 @@
     <MESSAGE value="some change in  api" />
     <MESSAGE value="some change in  ProductCad.style.ts" />
     <MESSAGE value="issue auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="issue auth" />
+    <MESSAGE value="cart refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="cart refactor" />
   </component>
 </project>

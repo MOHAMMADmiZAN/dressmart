@@ -1,5 +1,6 @@
 import {AuthApi} from "./api";
 import {authResponse} from "../store/models/AuthModel";
+import {RegisterFormInput} from "../components/Organisms/Auth/Register/Register";
 
 
 export class AuthRequest {
@@ -8,8 +9,9 @@ export class AuthRequest {
         return response.data;
     }
 
-    public static async register(userName: string, email: string, password: string) {
-        const response = await AuthApi.post("/register", {username: userName, email: email, password: password});
+    public static async register(data:RegisterFormInput) : Promise<authResponse> {
+        const response = await AuthApi.post("/register", data);
+
         return response.data;
 
     }

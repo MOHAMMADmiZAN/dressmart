@@ -1,20 +1,23 @@
-import { yupResolver } from '@hookform/resolvers/yup';
-import { Box, Button, Link, Typography } from "@mui/material";
+import {yupResolver} from '@hookform/resolvers/yup';
+import {Box, Button, Link, Typography} from "@mui/material";
 import Grid from '@mui/material/Grid';
 import NextLink from 'next/link';
-import { SubmitHandler, useForm } from "react-hook-form";
+import {SubmitHandler, useForm} from "react-hook-form";
 import Input from '../../../Molecules/Form/Input/Input';
 import MapItems from '../../../Molecules/MapItems/MapItems';
-import { BoxStyle } from './Register.style';
-import { registerSchema } from '../../../../utils/validation';
+import {BoxStyle} from './Register.style';
+import {registerSchema} from '../../../../utils/validation';
+import {AuthType} from "../../../../store/models/AuthModel";
+import {Actions, useStoreActions} from "easy-peasy";
+import {Router, useRouter} from "next/router";
 
 
-interface IFormInput {
+export interface RegisterFormInput {
     username: string;
     email: string;
     phone: string;
     password: string;
-    confirmPassword: string;
+    confirmPassword?: string;
 }
 
 
@@ -44,7 +47,7 @@ let inputs = [
 const Register = () => {
 
     //use of react hook from with validation by yup
-    const { control, handleSubmit, formState: { errors }, } = useForm({
+    const {control, handleSubmit, formState: {errors},} = useForm({
         defaultValues: {
             username: '',
             email: '',
@@ -53,12 +56,15 @@ const Register = () => {
             confirmPassword: ''
         }, resolver: yupResolver(registerSchema)
     });
+    const Router = useRouter();
+    const Register = useStoreActions((actions: Actions<AuthType>) => actions.Auth.Register);
 
 
-    const onSubmit: SubmitHandler<IFormInput> = data => {
+    const onSubmit: SubmitHandler<RegisterFormInput> = async data => {
         if (data.password === data.confirmPassword) {
-            // api call will be here by data
-            console.log(data)
+            await Register(data)&& await Router.push(`/`);
+
+
         } else {
             alert("Password don't match with confirm password")
         }
@@ -66,7 +72,7 @@ const Register = () => {
 
     return (
         <Grid container justifyContent="center"
-            alignItems="center">
+              alignItems="center">
             <Grid item xs={12} md={5} sm={9} lg={4}>
                 <Box
                     component="form"
@@ -80,7 +86,7 @@ const Register = () => {
                     </Typography>
 
                     {/* Input Items map through MapItems */}
-                    <MapItems items={inputs} ItemComponent={Input} other={control} />
+                    <MapItems items={inputs} ItemComponent={Input} other={control}/>
 
                     <Button
                         variant="contained"
@@ -90,10 +96,10 @@ const Register = () => {
                         }} type="submit">Submit</Button>
 
                     <Typography variant="body1" component="p">
-                        Already have an account? <NextLink href="/login" > <Link underline="hover" >
-                            Login
-                        </Link>
-                        </NextLink>
+                        Already have an account? <NextLink href="/login"> <Link underline="hover">
+                        Login
+                    </Link>
+                    </NextLink>
                     </Typography>
 
                 </Box>

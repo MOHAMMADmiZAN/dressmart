@@ -1,7 +1,7 @@
 import {Action, action, State, Thunk, thunk} from 'easy-peasy';
 import {AuthRequest} from "../../api/Auth.api";
 
- export  type AuthType = {
+export  type AuthType = {
     Auth: typeof AuthModel
 }
 
@@ -13,6 +13,8 @@ type registerPayload = {
     email: string;
     password: string;
     username: string;
+    phone: string;
+    confirmPassword?: string;
 }
 type User = {
     blocked: boolean;
@@ -75,8 +77,8 @@ const AuthModel: Auth = {
 
     }),
     Register: thunk(async (actions, payload) => {
-        const {email, password, username} = payload;
-        const data = await AuthRequest.register(email, password, username)
+        const {confirmPassword, ...rest} = payload
+        const data = await AuthRequest.register(rest)
         actions.AuthSet(data)
         return !!data
 
