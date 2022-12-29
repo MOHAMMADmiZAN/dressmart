@@ -4,7 +4,12 @@ import {ProductApi} from "./api";
 export type recentProduct = {
     id: number;
     name: string;
-    variants: VariantArray
+    slug: string;
+    model: string;
+    thumbnail: string;
+    rating: number;
+    regularPrice: number;
+    salePrice: number;
 
 }
 
@@ -27,6 +32,8 @@ type src = {
 }
 
 export interface recentProductArray extends Array<recentProduct> {
+    rating: number;
+    thumbnail: string;
 
 }
 
@@ -36,38 +43,25 @@ export interface VariantArray extends Array<variant> {
 
 // recent products fetch api
 export const fetchProducts = async () => {
-    const res = await ProductApi.get("?populate[variants][populate][0]=thumbnail");
-    return res.data.data.reduce((acc: any, cur: any) => {
+    const res = await ProductApi.get("?populate=thumbnail");
+    const ProductData = res.data.data.reduce((acc: any, cur: any) => {
         const {id, attributes} = cur;
 
-        const variantData = attributes.variants.data.reduce((acc: any, cur: any) => {
-            const {id, attributes} = cur;
-            const imageData = attributes.thumbnail.data.reduce((acc: any, cur: any) => {
-                const {id, attributes} = cur;
-                acc['src'] = {
-                    id,
-                    url: attributes.url,
-                }
-                return acc;
+        acc.push({
+            id,
+            name: attributes.name,
+            model: attributes.model,
+            slug: attributes.slug,
+            regularPrice: attributes.regular_price,
+            salePrice: attributes.sell_price,
+            thumbnail: attributes.thumbnail.data[0].attributes.url,
+            rating: attributes.avarage_rating
 
-            }, {})
-            acc.push({
-                id,
-                value: attributes.color,
-                description: attributes.description,
-                regularPrice: attributes.regular_price,
-                salePrice: attributes.sale_price,
-                stock: attributes.stock_quantity,
-                image: imageData
+        })
 
-
-            })
-            return acc;
-
-
-        }, [])
-        acc.push({id, name: attributes.name, variants: variantData});
         return acc;
 
     }, []);
+    console.log(ProductData);
+    return ProductData;
 }

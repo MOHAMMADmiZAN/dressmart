@@ -16,9 +16,6 @@
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "text"
-    },
     "thumbnail": {
       "type": "media",
       "multiple": true,
@@ -29,17 +26,6 @@
         "videos",
         "audios"
       ]
-    },
-    "regular_price": {
-      "type": "float",
-      "required": true
-    },
-    "sale_price": {
-      "type": "float"
-    },
-    "on_sale": {
-      "type": "boolean",
-      "default": false
     },
     "stock_quantity": {
       "type": "biginteger",

@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="RatingStarViewComponent add">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Star/Star.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Star/Star.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Products/ByBrandProduct/ByBrandProduct.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Products/ByBrandProduct/ByBrandProduct.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/api/product/content-types/product/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/api/product/content-types/product/schema.json" afterDir="false" />
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="order overLay btn change">
+      <change beforePath="$PROJECT_DIR$/client/components/Atoms/OutlineBtn/OutlineBtn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Atoms/OutlineBtn/OutlineBtn.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +58,11 @@
       <recent name="G:\Dressmart\client\public\assets\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Dressmart\client\components\Atoms" />
+      <recent name="G:\Dressmart\client\components\Molecules\Shared" />
       <recent name="G:\Dressmart\client\components\Organisms\Auth" />
       <recent name="G:\Dressmart\client\components\Organisms\Products" />
-      <recent name="G:\Dressmart\client\components\Molecules\Shared" />
       <recent name="G:\Dressmart\client\components\Organisms\Header" />
-      <recent name="G:\Dressmart\client\components\Organisms" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -84,56 +81,7 @@
       <workItem from="1671963718316" duration="15041000" />
       <workItem from="1671981674516" duration="37356000" />
       <workItem from="1672140028810" duration="43000" />
-      <workItem from="1672140103243" duration="27644000" />
-    </task>
-    <task id="LOCAL-00006" summary="model refactor">
-      <created>1671566652532</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1671566652532</updated>
-    </task>
-    <task id="LOCAL-00007" summary="diagram to starpi content">
-      <created>1671623590010</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1671623590010</updated>
-    </task>
-    <task id="LOCAL-00008" summary="diagram to starpi content">
-      <created>1671627475846</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1671627475846</updated>
-    </task>
-    <task id="LOCAL-00009" summary="schema Change">
-      <created>1671677201795</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1671677201795</updated>
-    </task>
-    <task id="LOCAL-00010" summary="lock deleted">
-      <created>1671678007384</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1671678007384</updated>
-    </task>
-    <task id="LOCAL-00011" summary="gitignore add">
-      <created>1671678181819</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1671678181819</updated>
-    </task>
-    <task id="LOCAL-00012" summary="gitignore add">
-      <created>1671678417715</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1671678417715</updated>
+      <workItem from="1672140103243" duration="48842000" />
     </task>
     <task id="LOCAL-00013" summary="gitignore add">
       <created>1671678634629</created>
@@ -429,7 +377,56 @@
       <option name="project" value="LOCAL" />
       <updated>1672224836178</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="schema change">
+      <created>1672225640848</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1672225640848</updated>
+    </task>
+    <task id="LOCAL-00056" summary="some Change">
+      <created>1672238543283</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1672238543283</updated>
+    </task>
+    <task id="LOCAL-00057" summary="some Change">
+      <created>1672247328103</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1672247328103</updated>
+    </task>
+    <task id="LOCAL-00058" summary="some Change">
+      <created>1672248397668</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1672248397668</updated>
+    </task>
+    <task id="LOCAL-00059" summary="some Change">
+      <created>1672248512691</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1672248512691</updated>
+    </task>
+    <task id="LOCAL-00060" summary="some Change">
+      <created>1672250358577</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1672250358577</updated>
+    </task>
+    <task id="LOCAL-00061" summary="order overLay btn change">
+      <created>1672255034287</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1672255034288</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,15 +445,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="CartModel issue fixed" />
-    <MESSAGE value="minor issue fixed" />
     <MESSAGE value="model refactor" />
     <MESSAGE value="diagram to starpi content" />
     <MESSAGE value="schema Change" />
     <MESSAGE value="lock deleted" />
     <MESSAGE value="gitignore add" />
     <MESSAGE value="react query init , matarial ui, form hook" />
-    <MESSAGE value="schema change" />
     <MESSAGE value="example env change" />
     <MESSAGE value="hello typescript" />
     <MESSAGE value=" react query set check" />
@@ -473,6 +467,9 @@
     <MESSAGE value="refactor" />
     <MESSAGE value="getStaticProps add testing" />
     <MESSAGE value="RatingStarViewComponent add" />
-    <option name="LAST_COMMIT_MESSAGE" value="RatingStarViewComponent add" />
+    <MESSAGE value="schema change" />
+    <MESSAGE value="some Change" />
+    <MESSAGE value="order overLay btn change" />
+    <option name="LAST_COMMIT_MESSAGE" value="order overLay btn change" />
   </component>
 </project>

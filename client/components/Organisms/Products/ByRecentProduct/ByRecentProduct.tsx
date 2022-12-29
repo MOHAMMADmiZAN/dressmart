@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import SectionTitle from "../../../Molecules/Shared/SectionTitle/SectionTitle";
 import {fetchProducts, recentProduct, recentProductArray} from "../../../../api/Product.api";
 import {dehydrate, useQuery} from "@tanstack/react-query";
-import ImgComponent from "../../../Molecules/ImgComponent/ImgComponent";
 import {Container, Grid} from "@mui/material";
 import {QueryClient} from "@tanstack/query-core";
+import ProductCard from "../../../Molecules/Product/ProductCard/ProductCard";
 
 export async function getStaticProps() {
     const queryClient = new QueryClient()
@@ -21,6 +21,7 @@ export async function getStaticProps() {
 function ByRecentProduct() {
     // fetch products by react query
     const {data, isLoading, isError, error} = useQuery<recentProductArray, Error>(["recentProducts"], fetchProducts);
+
     return (
         <>
             <SectionTitle SectionTitleTitle={`Most Recent Products`}/>
@@ -29,7 +30,7 @@ function ByRecentProduct() {
                     {data && data.map((product: recentProduct) => {
                         return (
                         <Grid item={true} xs={12} sm={6} md={4} lg={3} key={product.id}>
-                            <ImgComponent src={product.variants[0].image.src.url} alt={product.variants[0].image.src.url} title={product.name} key={product.id}/>
+                         <ProductCard ProductCardImage={product.thumbnail} ProductCardRating={product.rating} ProductCardTitle={product.name}/>
                         </Grid>
                         )
 

@@ -55,11 +55,6 @@
       "target": "api::order-item.order-item",
       "mappedBy": "product"
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "name",
-      "required": true
-    },
     "variants": {
       "type": "relation",
       "relation": "oneToMany",
@@ -69,7 +64,7 @@
     "thumbnail": {
       "type": "media",
       "multiple": true,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -82,6 +77,21 @@
     },
     "model": {
       "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
+    },
+    "regular_price": {
+      "type": "float",
+      "required": true
+    },
+    "sell_price": {
+      "type": "float",
+      "required": true
+    },
+    "on_sale": {
+      "type": "boolean"
     }
   }
 }
