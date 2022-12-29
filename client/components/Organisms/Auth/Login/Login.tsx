@@ -30,10 +30,6 @@ type IFormInput = {
 }
 
 
-type Auth = {
-    Auth: typeof AuthModel
-}
-
 
 const LogIn = () => {
     //use of react hook from with validation by yup
