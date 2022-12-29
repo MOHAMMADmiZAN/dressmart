@@ -1,8 +1,9 @@
 import {AuthApi} from "./api";
+import {authResponse} from "../store/models/AuthModel";
 
 
-export class Auth {
-    public static async login(email: string, password: string) {
+export class AuthRequest {
+    public static async login(email: string, password: string) : Promise<authResponse> {
         const response = await AuthApi.post("/", {identifier: email, password: password});
         return response.data;
     }
