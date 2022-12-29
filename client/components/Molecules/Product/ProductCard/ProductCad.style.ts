@@ -13,9 +13,11 @@ export const productCardStyle = {
     width: '90%',
     position: 'relative',
     transition: 'all 0.3s ease-in-out',
+    margin: '20px auto',
     '&:hover': {
         boxShadow: '0 0 10px 0 rgba(0,0,0,0.2)',
         transform: 'scale(1.1)',
+
         '& .MuiBox-root': {
             transform: 'scale(1)',
         }
