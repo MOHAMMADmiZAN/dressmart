@@ -35,6 +35,7 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
 
     const increaseOrderCount = () => {
         setOrderCount((prevCount) => prevCount + 1);
+        console.log(ProductID)
 
     }
     const decreaseOrderCount = () => {

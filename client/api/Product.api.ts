@@ -44,7 +44,7 @@ export interface VariantArray extends Array<variant> {
 // recent products fetch api
 export const fetchProducts = async () => {
     const res = await ProductApi.get("?populate=thumbnail");
-    const ProductData = res.data.data.reduce((acc: any, cur: any) => {
+    return res.data.data.reduce((acc: any, cur: any) => {
         const {id, attributes} = cur;
 
         acc.push({
@@ -62,6 +62,4 @@ export const fetchProducts = async () => {
         return acc;
 
     }, []);
-    console.log(ProductData);
-    return ProductData;
 }
