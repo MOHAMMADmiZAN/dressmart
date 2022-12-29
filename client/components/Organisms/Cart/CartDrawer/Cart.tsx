@@ -1,7 +1,6 @@
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { Drawer, IconButton } from '@mui/material';
 import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
 import { DrawerHeader, DrawerStyle } from './Cart.style';
 
 
@@ -15,7 +14,6 @@ export default function Cart({ open, handleDrawerClose }: AppPros) {
 
     return (
         <Box sx={{ display: 'flex' }}>
-
             <Drawer
                 sx={DrawerStyle}
                 variant="persistent"
@@ -31,6 +29,8 @@ export default function Cart({ open, handleDrawerClose }: AppPros) {
                 {/* { Drawer Body will be here which will render cart Items } */}
 
             </Drawer>
+
+
         </Box >
     );
 }

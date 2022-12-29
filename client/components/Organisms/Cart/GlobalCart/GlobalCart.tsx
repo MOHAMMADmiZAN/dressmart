@@ -1,12 +1,13 @@
-import { Box } from '@mui/material'
+import { Box, Drawer } from '@mui/material'
 import React from 'react'
-import { BoxStyle } from './GlobalCart.style';
+import { BoxStyle, CartIconStyle } from './GlobalCart.style';
 import { useState } from 'react';
-
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Cart from '../CartDrawer/Cart';
 
 function GlobalCart() {
 
-    const [open, setOpen] = useState<Boolean>(false);
+    const [open, setOpen] = useState<boolean>(false);
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -17,7 +18,12 @@ function GlobalCart() {
     };
 
     return (
-        <Box sx={BoxStyle} onClick={handleDrawerClose}>GlobalCart</Box>
+        <>
+            <Box sx={BoxStyle} onClick={handleDrawerOpen}>
+                <ShoppingCartIcon fontSize='large' sx={CartIconStyle} />
+            </Box>
+            <Cart handleDrawerClose={handleDrawerClose} open={open} />
+        </>
     )
 }
 

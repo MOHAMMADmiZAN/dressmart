@@ -8,7 +8,8 @@ import Input from '../../../Molecules/Form/Input/Input';
 import MapItems from '../../../Molecules/MapItems/MapItems';
 import { BoxStyle } from './Login.style';
 import { Actions, useStoreActions } from "easy-peasy";
-import AuthModel from "../../../../store/models/AuthModel";
+import AuthModel from '../../../../store/models/AuthModel';
+import { TypeOf } from 'yup';
 
 
 
@@ -31,9 +32,14 @@ type IFormInput = {
 }
 
 
+type Auth = {
+    Auth: typeof AuthModel
+}
+
+
 const LogIn = () => {
     //use of react hook from with validation by yup
-    const { control, handleSubmit, formState: { errors }, } = useForm({
+    const { control, handleSubmit, formState: { errors } } = useForm({
         defaultValues: {
             email: '',
             password: ''
@@ -41,7 +47,7 @@ const LogIn = () => {
     });
 
 
-    const LogIn = useStoreActions((actions: Actions<typeof AuthModel>) => actions.Login);
+    const LogIn = useStoreActions((actions: Actions<Auth>) => actions.Auth.Login)
 
 
     const onSubmit: SubmitHandler<IFormInput> = async data => {
