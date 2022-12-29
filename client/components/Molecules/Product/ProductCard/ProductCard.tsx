@@ -16,6 +16,7 @@ interface ProductCardProps {
     ProductCardDescription?: string,
     ProductCardLink?: string,
     ProductCardLinkText?: string,
+    ProductID: number,
 
 }
 
@@ -26,7 +27,8 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
         ProductCardPrice,
         ProductCardImage,
         ProductCardRating,
-        ProductCardDiscountPrice
+        ProductCardDiscountPrice,
+        ProductID
     } = ProductCardProps;
 
     const [orderCount, setOrderCount] = useState(0);
@@ -56,9 +58,7 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
                         ৳{ProductCardPrice}
                     </Typography>
                 </CardContent>
-                <Box sx={{...cardOrderOverLay}} onClick={() => {
-                    !orderCount && increaseOrderCount()
-                }}>
+                <Box sx={{...cardOrderOverLay}} onClick={() => !orderCount && increaseOrderCount()}>
                     {!orderCount ?
                         <CardOrderOverLayContent sx={{width: '100%', textAlign: `center`, flexDirection: 'column'}}>
                             <Typography variant={`h6`} sx={{color: '#fff', width: '100%', fontSize: '16px'}}>
