@@ -1,5 +1,4 @@
 export const BoxStyle = {
-    backgroundColor: 'red',
     width: '100px',
     height:'100px',
     position: 'fixed',
