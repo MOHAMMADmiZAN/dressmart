@@ -1,14 +1,14 @@
-import {yupResolver} from '@hookform/resolvers/yup';
-import {Box, Button, Link, Typography} from "@mui/material";
+import { yupResolver } from '@hookform/resolvers/yup';
+import { Box, Button, Link, Typography } from "@mui/material";
 import Grid from '@mui/material/Grid';
 import NextLink from 'next/link';
-import {SubmitHandler, useForm} from "react-hook-form";
-import {loginSchema} from '../../../../utils/validation';
+import { SubmitHandler, useForm } from "react-hook-form";
+import { loginSchema } from '../../../../utils/validation';
 import Input from '../../../Molecules/Form/Input/Input';
 import MapItems from '../../../Molecules/MapItems/MapItems';
-import {BoxStyle} from './Login.style';
-import {Auth} from "../../../../api/Auth.api";
-import {useState} from "react";
+import { BoxStyle } from './Login.style';
+import { Auth } from "../../../../api/Auth.api";
+import { useState } from "react";
 
 
 let inputs = [
@@ -30,7 +30,7 @@ type IFormInput = {
 
 const LogIn = () => {
     //use of react hook from with validation by yup
-    const {control, handleSubmit, formState: {errors},} = useForm({
+    const { control, handleSubmit, formState: { errors }, } = useForm({
         defaultValues: {
             email: '',
             password: ''
@@ -45,7 +45,7 @@ const LogIn = () => {
 
     return (
         <Grid container justifyContent="center"
-              alignItems="center">
+            alignItems="center">
             <Grid item xs={12} md={5} sm={9} lg={4}>
 
                 <Box
@@ -60,7 +60,7 @@ const LogIn = () => {
                     </Typography>
 
                     {/* Input Items map through MapItems */}
-                    <MapItems items={inputs} ItemComponent={Input} other={control}/>
+                    <MapItems items={inputs} ItemComponent={Input} other={control} />
 
 
                     <Button
@@ -78,8 +78,8 @@ const LogIn = () => {
 
                     <Typography component={'span'} variant='body2'>
                         Do not have an account? <NextLink href="/register">
-                        Register
-                    </NextLink>
+                            Register
+                        </NextLink>
                     </Typography>
 
                 </Box>
