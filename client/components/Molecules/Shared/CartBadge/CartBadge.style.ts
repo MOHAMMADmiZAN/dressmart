@@ -1,10 +1,11 @@
-export const BoxStyle =
+export const GlobalCartStyle =
     {
         backgroundColor: 'primary.main',
-        borderRadius:'10px 0px 0px 10px',
+        borderRadius: '10px 0px 0px 10px',
         position: 'fixed',
-        top: '45%',
+        top: '50%',
         right: 0,
+        transform: 'translateY(-50%)',
         cursor: 'pointer',
         zIndex: 100,
         display: 'flex',

@@ -1,8 +1,8 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import {Badge, Button} from "@mui/material";
-import React, {useState} from 'react';
+import React, {memo, useState} from 'react';
 import Cart from '../../../Organisms/Cart/CartDrawer/Cart';
-import {BoxStyle} from "./CartBadge.style";
+import {GlobalCartStyle} from "./CartBadge.style";
 
 
 interface cardBadgeProps {
@@ -25,7 +25,7 @@ function CartBadge(cardBadgeProps: cardBadgeProps): JSX.Element {
 
     return (
         <>
-            <Button onClick={handleDrawerOpen} sx={isGlobalCart ? BoxStyle : {}}>
+            <Button onClick={handleDrawerOpen} sx={isGlobalCart ? GlobalCartStyle : {}}>
                 <Badge badgeContent={0} color={`error`} showZero={true}>
                     <ShoppingCartIcon sx={{color: 'primary.main', ...styles}}/>
                 </Badge>
@@ -36,4 +36,4 @@ function CartBadge(cardBadgeProps: cardBadgeProps): JSX.Element {
     );
 }
 
-export default CartBadge;
+export default memo(CartBadge);
