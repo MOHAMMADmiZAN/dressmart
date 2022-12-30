@@ -16,22 +16,3 @@ export function generateUUID() {
     });
 }
 
-// localStorage helper functions
-export class LocalStorageHelper {
-    // set item to localStorage
-    static setItem<T>(key: string, value: T): void {
-        localStorage.setItem(key, JSON.stringify(value));
-
-    }
-
-    // get item from localStorage
-    static getItem<T>(key: string): T | null {
-        const item = localStorage.getItem(key);
-        if (item) {
-            return JSON.parse(item);
-        }
-        return null;
-    }
-}
-
-// env helper functions
