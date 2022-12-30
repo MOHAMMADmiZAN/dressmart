@@ -8,7 +8,8 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import CssBaseline from '@mui/material/CssBaseline';
 import { theme } from '../components/Molecules/Theme/Theme.style';
 import { ThemeProvider } from '@mui/material';
-import GlobalCart from '../components/Organisms/Cart/GlobalCart/GlobalCart';
+import CartBadge from "../components/Molecules/Shared/CartBadge/CartBadge";
+
 
 
 const queryClient = new QueryClient()
@@ -29,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
                         <Hydrate state={pageProps.dehydratedState}>
                             <CssBaseline />
                             <Component {...pageProps} />
-                            <GlobalCart />
+                            <CartBadge isGlobalCart={true} styles={{color:'#fff'}}/>
                         </Hydrate>
                         <ReactQueryDevtools initialIsOpen={false} />
                     </QueryClientProvider>

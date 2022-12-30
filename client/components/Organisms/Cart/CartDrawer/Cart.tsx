@@ -7,10 +7,11 @@ import { DrawerHeader, DrawerStyle } from './Cart.style';
 
 type AppPros = {
     open: boolean
-    handleDrawerClose: any
+    handleDrawerClose: () => void
 }
 
 export default function Cart({ open, handleDrawerClose }: AppPros) {
+
 
     return (
         <Box sx={{ display: 'flex' }}>

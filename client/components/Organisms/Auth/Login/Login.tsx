@@ -31,7 +31,6 @@ type IFormInput = {
 
 
 
-
 const LogIn = () => {
     //use of react hook from with validation by yup
     const { control, handleSubmit, formState: { errors } } = useForm({
