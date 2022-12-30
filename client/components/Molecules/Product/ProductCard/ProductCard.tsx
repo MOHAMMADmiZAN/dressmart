@@ -1,10 +1,13 @@
-import React, {memo, useCallback, useEffect, useState} from 'react';
+import React, {memo, useEffect, useState} from 'react';
 import {Box, Card, CardContent, CardMedia, Typography} from "@mui/material";
 import Star from "../../Star/Star";
-import {cardOrderOverLay, CardOrderOverLayContent, productCardStyle} from "./ProductCad.style";
+import {cardOrderOverLay, CardOrderOverLayContent, productCardStyle} from "./ProductCard.style";
 import OutlineBtn from "../../../Atoms/OutlineBtn/OutlineBtn";
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import {Actions, State, useStoreActions, useStoreState} from "easy-peasy";
+import {CartType} from "../../../../store/models/CartModel";
+import {any} from "prop-types";
 
 interface ProductCardProps {
     ProductCardTitle: string,
@@ -21,6 +24,11 @@ interface ProductCardProps {
 }
 
 
+ interface ProductState  {
+    ProductID: number,
+    ProductCount: number
+ }
+
 function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
     const {
         ProductCardTitle,
@@ -33,9 +41,15 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
 
     const [orderCount, setOrderCount] = useState(0);
 
+    const {AddProduct} = useStoreActions((actions: Actions<CartType>) => actions.Cart);
+
+
+
+
     const increaseOrderCount = () => {
         setOrderCount((prevCount) => prevCount + 1);
-        console.log(ProductID)
+        AddProduct({ProductID, ProductCount: orderCount + 1});
+
 
     }
     const decreaseOrderCount = () => {
@@ -71,7 +85,8 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
                         <CardOrderOverLayContent>
                             <OutlineBtn OutlineBtnIcon={<AddIcon/>} OutlineBtnOnClick={increaseOrderCount}/>
                             <Typography variant={`h6`} sx={{m: 2, color: 'primary.main'}}>{orderCount}</Typography>
-                            <OutlineBtn OutlineBtnIcon={<RemoveIcon/>} OutlineBtnOnClick={decreaseOrderCount} isDisable={orderCount === 0}/>
+                            <OutlineBtn OutlineBtnIcon={<RemoveIcon/>} OutlineBtnOnClick={decreaseOrderCount}
+                                        isDisable={orderCount === 0}/>
                         </CardOrderOverLayContent>}
                 </Box>
             </Card>

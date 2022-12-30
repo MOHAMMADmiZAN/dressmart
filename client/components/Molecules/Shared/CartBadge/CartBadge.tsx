@@ -3,6 +3,9 @@ import {Badge, Button} from "@mui/material";
 import React, {memo, useState} from 'react';
 import Cart from '../../../Organisms/Cart/CartDrawer/Cart';
 import {GlobalCartStyle} from "./CartBadge.style";
+import {State, useStoreState} from "easy-peasy";
+import {CartType} from "../../../../store/models/CartModel";
+import {generateUUID} from "../../../../utils/Helper";
 
 
 interface cardBadgeProps {
@@ -12,6 +15,8 @@ interface cardBadgeProps {
 
 function CartBadge(cardBadgeProps: cardBadgeProps): JSX.Element {
     const {styles, isGlobalCart} = cardBadgeProps;
+     const cartItemCount = useStoreState((state: State<CartType>) => state.Cart.CartItems.length);
+
 
     const [open, setOpen] = useState<boolean>(false);
 
@@ -26,7 +31,7 @@ function CartBadge(cardBadgeProps: cardBadgeProps): JSX.Element {
     return (
         <>
             <Button onClick={handleDrawerOpen} sx={isGlobalCart ? GlobalCartStyle : {}}>
-                <Badge badgeContent={0} color={`error`} showZero={true}>
+                <Badge badgeContent={cartItemCount} color={`error`} showZero={true}>
                     <ShoppingCartIcon sx={{color: 'primary.main', ...styles}}/>
                 </Badge>
             </Button>

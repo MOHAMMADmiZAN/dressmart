@@ -1,8 +1,18 @@
 import {action, Action, State, thunk, Thunk} from "easy-peasy";
+import {generateUUID} from "../../utils/Helper";
 
 
-type CartAction = Action<Cart, string | object>
-type CartThunk = Thunk<Cart, string | object>
+export type CartType = {
+    Cart: typeof CartModel
+}
+
+ type AddProductThunkPayload = {
+    productId: number;
+    quantity: number;
+ }
+
+type CartAction = Action<Cart, any>
+type CartThunk = Thunk<Cart,any>
 type CartState = State<Cart>;
 
 interface Cart {
@@ -10,7 +20,7 @@ interface Cart {
     CartItems: Array<object>;
     AddProduct: CartAction;
     RemoveProduct: CartAction;
-    AddProductThunk: CartThunk;
+    AddProductThunk: Thunk<Cart,AddProductThunkPayload>;
     RemoveProductThunk: CartThunk;
     incrementProductQuantity: CartAction;
     decrementProductQuantity: CartAction;
@@ -23,18 +33,23 @@ interface Cart {
 }
 
 
-
 const CartModel: Cart = {
     CartId: " ",
     CartItems: [],
     AddProduct: action((state: CartState, payload) => {
+        state.CartItems.push(payload);
+        if (state.CartId === " ") {
+            state.CartId = generateUUID();
+        }
     }),
     RemoveProduct: action((state: CartState, payload) => {
     }),
     AddProductThunk: thunk(async (actions, payload) => {
 
+
     }),
     RemoveProductThunk: thunk(async (actions, payload) => {
+
     }),
     incrementProductQuantity: action((state: CartState, payload) => {
     }),
