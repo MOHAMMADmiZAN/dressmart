@@ -30,9 +30,6 @@ type IFormInput = {
 }
 
 
-type Auth = {
-    Auth: typeof AuthModel
-}
 
 
 const LogIn = () => {
