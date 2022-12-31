@@ -2,6 +2,7 @@ import axios, {AxiosInstance} from "axios";
 import jwt from "../utils/GetJwt";
 
 
+
 const baseURL = process.env.NODE_ENV === "development" ? "http://localhost:1337/api/" : "https://api.example.com/api/"
 
 
@@ -24,5 +25,4 @@ export const ProductApi: AxiosInstance = axios.create({
 
 
 // posts fetch
-
 // post fetch
