@@ -4,7 +4,7 @@ import React from 'react'
 type AppProps = {
     items: Array<object>,
     ItemComponent: any,
-    other: any
+    other?: any
 
 }
 

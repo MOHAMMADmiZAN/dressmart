@@ -80,7 +80,9 @@ const LogIn = () => {
                         }} type="submit">Submit</Button>
 
                     <Typography component={'span'} variant='body2'>
-                        Forget your password? Reset
+                        <NextLink href={'/'}>
+                            Forget your password?
+                        </NextLink>
                     </Typography>
 
                     <Typography component={'span'} variant='body2'>Or</Typography>
