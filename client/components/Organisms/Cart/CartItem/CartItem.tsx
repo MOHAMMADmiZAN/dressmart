@@ -1,40 +1,52 @@
-import React from 'react'
-import Grid from '@mui/material/Grid';
-import { useQuery } from '@tanstack/react-query';
-import { fetchProducts, recentProductArray } from '../../../../api/Product.api';
-import Image from 'next/image';
-import { CartItemStyle } from './CartItem.style';
-import GridRow from './GridRow';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import { Divider, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import Grid from '@mui/material/Grid';
+import { Actions, useStoreActions } from 'easy-peasy';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import { AddProductThunkPayload, CartType } from '../../../../store/models/CartModel';
+import { CartItemStyle } from './CartItem.style';
+import GridRow from './GridRow';
 
 
 
 type AppProps = {
-    item: {
-        name: string,
-        model: string,
-        thumbnail: string,
-
-    }
+    item: AddProductThunkPayload
 }
 
 function CartItem({ item }: AppProps) {
 
+    const { AddProduct, decrementProductQuantity, RemoveProduct } = useStoreActions((actions: Actions<CartType>) => actions.Cart);
+
+
+    const handleIncrease = () => {
+        AddProduct(item)
+    }
+
+    const handleDecrease = () => {
+        decrementProductQuantity(item)
+    }
+
+    const handleRemove = () => {
+        RemoveProduct(item)
+    }
+
+
+
+
     return (
         <Grid container sx={CartItemStyle} direction="column" >
-            <GridRow>
+            <GridRow >
                 <Grid
                     item
-                    sx={{ maxWidth: '70%' }}
                     direction='column'
                     container
                     justifyContent="flex-start" >
-                    <Typography variant='h6'> {item.name}</Typography> <Typography variant='caption' >{item.model}</Typography>
+                    <Typography variant='h6'> {item.productName}</Typography> <Typography variant='caption' >{item.productModel}</Typography>
                 </Grid>
                 <Grid item >
-                    <Image height={70} width={70} src={item.thumbnail} alt='thumbnail' />
+                    <Image height={70} width={70} src={item.thumbnailUrl} alt='thumbnail' />
                 </Grid >
             </GridRow>
             <Divider />
@@ -43,7 +55,7 @@ function CartItem({ item }: AppProps) {
                     price:
                 </Typography>
                 <Typography variant='subtitle2'>
-                    7515 /=
+                    {item.price}/=
                 </Typography>
             </GridRow>
             <Divider />
@@ -53,9 +65,10 @@ function CartItem({ item }: AppProps) {
                 </Typography>
 
                 <Grid item>
-                    <Button sx={{ padding: '0px' }} >-</Button>
-                    <Typography sx={{ display: 'inline' }} variant='subtitle2'> 2 </Typography>
-                    <Button sx={{ padding: '0px' }} size='small'>+</Button> <Button sx={{ padding: '0px' }} size='small'><DeleteForeverIcon sx={{ color: 'red' }} /> </Button>
+                    <Button onClick={handleDecrease} sx={{ padding: '0px' }} >-</Button>
+                    <Typography sx={{ display: 'inline' }} variant='subtitle2'> {item.quantity} </Typography>
+                    <Button onClick={handleIncrease} sx={{ padding: '0px' }} size='small'>+</Button>
+                    <Button onClick={handleRemove} sx={{ padding: '0px' }} size='small'><DeleteForeverIcon sx={{ color: 'red' }} /> </Button>
                 </Grid>
             </GridRow >
             <Divider />
@@ -64,7 +77,7 @@ function CartItem({ item }: AppProps) {
                     SubTotal :
                 </Typography>
                 <Typography variant='subtitle2'>
-                    8500 /=
+                    {item.price * item.quantity} /=
                 </Typography>
             </GridRow>
         </Grid >
