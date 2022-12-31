@@ -4,16 +4,36 @@ import { styled } from "@mui/material";
 
 export const DrawerHeader = styled('div')(() => ({
     backgroundColor: '#D4AF11',
-    height:'30px',
+    height:'40px',
     display: 'flex',
     alignItems: 'center',
 }));
 
+export const HeadTitleStyle = {
+    marginLeft: '110px',
+    color:'white'
+}
+
 
 export const DrawerStyle = {
-    width: 350,
+      width: 350,
     '& .MuiDrawer-paper': {
         width: 350,
         backgroundColor: 'primary.light',
+        border:'0px',
     },
+}
+
+
+export const CheckOutButtonStyle = {
+    backgroundColor: 'primary.main',
+    color: 'white',
+    maxWidth: '340px',
+    margin:'5px',
+    borderRadius:'5px',
+    position: 'fixed',
+    bottom:'0px',
+    '&:hover': {
+        backgroundColor: 'primary.dark',
+    }
 }

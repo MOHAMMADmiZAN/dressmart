@@ -22,9 +22,6 @@ type AppProps = {
 
 function CartItem({ item }: AppProps) {
 
-
-
-
     return (
         <Grid container sx={CartItemStyle} direction="column" >
             <GridRow>
@@ -32,57 +29,43 @@ function CartItem({ item }: AppProps) {
                     item
                     sx={{ maxWidth: '70%' }}
                     direction='column'
+                    container
                     justifyContent="flex-start" >
-
                     <Typography variant='h6'> {item.name}</Typography> <Typography variant='caption' >{item.model}</Typography>
-
                 </Grid>
-
                 <Grid item >
                     <Image height={70} width={70} src={item.thumbnail} alt='thumbnail' />
                 </Grid >
-
             </GridRow>
-
             <Divider />
-
             <GridRow>
-                <Grid item>
+                <Typography variant='subtitle2' >
                     price:
-                </Grid>
-                <Grid item>
+                </Typography>
+                <Typography variant='subtitle2'>
                     7515 /=
-                </Grid>
+                </Typography>
             </GridRow>
-
             <Divider />
-
             <GridRow>
-
-                <Grid item>
+                <Typography variant='subtitle2'>
                     quantity:
-                </Grid>
+                </Typography>
 
                 <Grid item>
                     <Button sx={{ padding: '0px' }} >-</Button>
-                    2
+                    <Typography sx={{ display: 'inline' }} variant='subtitle2'> 2 </Typography>
                     <Button sx={{ padding: '0px' }} size='small'>+</Button> <Button sx={{ padding: '0px' }} size='small'><DeleteForeverIcon sx={{ color: 'red' }} /> </Button>
                 </Grid>
-
             </GridRow >
-
             <Divider />
-
             <GridRow>
-
-                <Grid item>
+                <Typography variant='subtitle2'>
                     SubTotal :
-                </Grid>
-
-                <Grid item>
+                </Typography>
+                <Typography variant='subtitle2'>
                     8500 /=
-                </Grid>
-
+                </Typography>
             </GridRow>
         </Grid >
     )
