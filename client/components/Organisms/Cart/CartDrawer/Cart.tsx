@@ -1,11 +1,12 @@
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { Button, Drawer, IconButton, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
-import { CheckOutButtonStyle, DrawerHeader, DrawerStyle, HeadTitleStyle } from './Cart.style';
-import CartItem from '../CartItem/CartItem';
-import { useQuery } from '@tanstack/react-query';
-import { fetchProducts, recentProductArray } from '../../../../api/Product.api';
+import { State, useStoreState } from 'easy-peasy';
+import { useEffect, useState } from 'react';
+import { CartType } from '../../../../store/models/CartModel';
 import MapItems from '../../../Molecules/MapItems/MapItems';
+import CartItem from '../CartItem/CartItem';
+import { CheckOutButtonStyle, DrawerHeader, DrawerStyle, HeadTitleStyle } from './Cart.style';
 import EmptyCart from './EmptyCart';
 
 
@@ -17,13 +18,15 @@ type AppPros = {
 
 export default function Cart({ open, handleDrawerClose }: AppPros) {
 
-    // Temporarily recent products data used here , After cart store connection cart store data will be here
-    const { data, isLoading, isError, error } = useQuery<recentProductArray, Error>(["recentProducts"], fetchProducts);
+    const { CartItems } = useStoreState((state: State<CartType>) => state.Cart)
 
+    const [Items, setCartItem] = useState(CartItems)
 
-    if (isLoading || !data) {
-        return <div>Loading</div>
-    }
+    useEffect(() => {
+        console.log(CartItems)
+        setCartItem(CartItems)
+    }, [CartItems])
+
 
     return (
         <Box sx={{ display: 'flex' }}>
@@ -41,15 +44,12 @@ export default function Cart({ open, handleDrawerClose }: AppPros) {
                 </DrawerHeader>
 
                 {/* Cart items map through MapItems component*/}
-                {data.length > 0 ?
-                    < MapItems ItemComponent={CartItem} items={data} /> :
+                {CartItems.length > 0 ?
+                    < MapItems ItemComponent={CartItem} items={Items} /> :
                     <EmptyCart />
                 }
-
                 <Button fullWidth={true} sx={CheckOutButtonStyle}>Procced To CheckOut</Button>
             </Drawer>
-
-
         </Box >
     );
 }
