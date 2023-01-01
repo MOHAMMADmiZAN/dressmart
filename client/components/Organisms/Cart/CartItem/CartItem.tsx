@@ -4,8 +4,8 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import { Actions, useStoreActions } from 'easy-peasy';
 import Image from 'next/image';
-import React, {memo, useEffect, useState} from 'react';
-import {CartType, ProductPayload} from '../../../../store/models/CartModel';
+import React, { memo } from 'react';
+import { CartType, ProductPayload } from '../../../../store/models/CartModel';
 import { CartItemStyle } from './CartItem.style';
 import GridRow from './GridRow';
 
@@ -20,21 +20,17 @@ function CartItem({ item }: CartItemProps): JSX.Element {
 
     const { AddProduct, decrementProductQuantity, RemoveProduct } = useStoreActions((actions: Actions<CartType>) => actions.Cart);
 
-
-    const handleIncrease = () => {
-        AddProduct(item)
+    const increaseOrderCount = () => {
+        AddProduct(item);
     }
 
-    const handleDecrease = () => {
-        decrementProductQuantity(item)
+    const decreaseOrderCount = () => {
+        decrementProductQuantity(item);
     }
 
     const handleRemove = () => {
         RemoveProduct(item)
     }
-
-
-
 
     return (
         <Grid container sx={CartItemStyle} direction="column" >
@@ -66,9 +62,9 @@ function CartItem({ item }: CartItemProps): JSX.Element {
                 </Typography>
 
                 <Grid item>
-                    <Button onClick={handleDecrease} sx={{ padding: '0px' }} >-</Button>
+                    <Button onClick={decreaseOrderCount} sx={{ padding: '0px' }} >-</Button>
                     <Typography sx={{ display: 'inline' }} variant='subtitle2'> {item.quantity} </Typography>
-                    <Button onClick={handleIncrease} sx={{ padding: '0px' }} size='small'>+</Button>
+                    <Button onClick={increaseOrderCount} sx={{ padding: '0px' }} size='small'>+</Button>
                     <Button onClick={handleRemove} sx={{ padding: '0px' }} size='small'><DeleteForeverIcon sx={{ color: 'red' }} /> </Button>
                 </Grid>
             </GridRow >

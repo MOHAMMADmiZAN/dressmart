@@ -28,9 +28,8 @@ export const DrawerStyle = {
 export const CheckOutButtonStyle = {
     backgroundColor: 'primary.main',
     color: 'white',
-    maxWidth: '340px',
-    margin:'5px',
-    borderRadius:'5px',
+    maxWidth: '350px',
+    borderRadius:'0px',
     position: 'fixed',
     bottom:'0px',
     '&:hover': {

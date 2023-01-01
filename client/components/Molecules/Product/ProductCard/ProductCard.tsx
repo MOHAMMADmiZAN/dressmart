@@ -6,7 +6,7 @@ import OutlineBtn from "../../../Atoms/OutlineBtn/OutlineBtn";
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import { Actions, State, useStoreActions, useStoreState } from "easy-peasy";
-import {CartType, ProductPayload} from "../../../../store/models/CartModel";
+import { CartType, ProductPayload } from "../../../../store/models/CartModel";
 
 interface ProductCardProps {
     ProductCardTitle: string,
@@ -37,11 +37,11 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
     } = ProductCardProps;
     const { CartItems } = useStoreState((state: State<CartType>) => state.Cart)
     const item = CartItems.filter((item: ProductPayload) => item.productId === ProductID)
-    useEffect(()=>{
+
+    useEffect(() => {
         item.length > 0 ? setOrderCount(item[0].quantity) : setOrderCount(0)
 
-    },[item])
-
+    }, [item])
 
 
     const [orderCount, setOrderCount] = useState<number>(0);
@@ -56,19 +56,25 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
 
     })
 
+
+
+
     const { AddProduct, decrementProductQuantity } = useStoreActions((actions: Actions<CartType>) => actions.Cart);
 
 
     const increaseOrderCount = () => {
-        setOrderCount((prev) =>  prev + 1 );
+        setOrderCount((prev) => prev + 1);
         AddProduct(productState);
 
 
     }
     const decreaseOrderCount = () => {
-        setOrderCount((prev) =>  prev - 1);
+        setOrderCount((prev) => prev - 1);
         decrementProductQuantity(productState);
     }
+
+
+
 
     return (
         <>
