@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="some change in pkg">
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="some change in cart and product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Cart/CartDrawer/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Cart/CartDrawer/Cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Cart/CartItem/CartItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Cart/CartItem/CartItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/models/CartModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/models/CartModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/MapItems/MapItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/MapItems/MapItems.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,14 +83,7 @@
       <workItem from="1671981674516" duration="37356000" />
       <workItem from="1672140028810" duration="43000" />
       <workItem from="1672140103243" duration="94323000" />
-      <workItem from="1672425040742" duration="12213000" />
-    </task>
-    <task id="LOCAL-00033" summary="memo add for re render">
-      <created>1671988372351</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1671988372351</updated>
+      <workItem from="1672425040742" duration="13699000" />
     </task>
     <task id="LOCAL-00034" summary="memo add for re render">
       <created>1672053472168</created>
@@ -432,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672424888586</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="some change in cart and product">
+      <created>1672584012742</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1672584012742</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,7 +447,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Folder and code refactor" />
     <MESSAGE value="`    Folder and code refactor`" />
     <MESSAGE value="memo add for re render" />
     <MESSAGE value="footerTopBarAdd" />
@@ -476,6 +471,7 @@
     <MESSAGE value="login register finalize" />
     <MESSAGE value="cart init demo" />
     <MESSAGE value="some change in pkg" />
-    <option name="LAST_COMMIT_MESSAGE" value="some change in pkg" />
+    <MESSAGE value="some change in cart and product" />
+    <option name="LAST_COMMIT_MESSAGE" value="some change in cart and product" />
   </component>
 </project>

@@ -1,20 +1,21 @@
 import React from 'react'
 
 
-type AppProps = {
+type MapItemsProps = React.PropsWithChildren<{
     items: Array<object>,
-    ItemComponent: any,
+    ItemComponent: React.ElementType,
     other?: any
+}>
 
-}
-
-function MapItems({ items, ItemComponent, ...other }: AppProps) {
+function MapItems({ items, ItemComponent, ...other }: MapItemsProps) : JSX.Element {
     return (
         <div>
             <ul>
-                {items.map((item: Object, i: number) => {
-                    return <ItemComponent key={i} item={item} {...other} />
-                })}
+                {items.map((item, i) => (
+                    <ItemComponent key={i} item={item} {...other} />
+                    )
+
+                )}
             </ul>
         </div>
     )
