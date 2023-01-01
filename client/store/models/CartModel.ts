@@ -54,8 +54,7 @@ const CartModel: Cart = {
             payload.quantity = 1
             state.CartItems.push(payload);
         } else {
-            payload.quantity = state.CartItems[index].quantity + 1
-            state.CartItems[index] = payload;
+            state.CartItems[index].quantity = state.CartItems[index].quantity + 1
             state.CartItems = [...state.CartItems]
         }
 
@@ -65,7 +64,6 @@ const CartModel: Cart = {
     }),
 
     RemoveProduct: action((state: CartState, payload) => {
-        console.log(payload)
         state.CartItems = state.CartItems.filter(item => item.productId != payload.productId)
     }),
 
@@ -82,8 +80,7 @@ const CartModel: Cart = {
         const index = IsInCart(state.CartItems, payload)
 
         if (state.CartItems[index].quantity > 1) {
-            payload.quantity = state.CartItems[index].quantity - 1
-            state.CartItems[index] = payload;
+            state.CartItems[index].quantity = state.CartItems[index].quantity - 1
             state.CartItems = [...state.CartItems]
         } else {
             state.CartItems = state.CartItems.filter(item => item.productId != payload.productId)
