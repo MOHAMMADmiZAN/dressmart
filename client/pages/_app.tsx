@@ -14,7 +14,7 @@ import CartBadge from "../components/Molecules/Shared/CartBadge/CartBadge";
 const queryClient = new QueryClient()
 
 
-function WaitForStateRehydration({children}: any) {
+function WaitForStateRehydration({children}: any): any {
     const isRehydrated = useStoreRehydrated()
     return isRehydrated ? children : null
 }

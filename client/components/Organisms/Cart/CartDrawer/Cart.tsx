@@ -20,14 +20,6 @@ export default function Cart({ open, handleDrawerClose }: AppPros) {
 
     const { CartItems } = useStoreState((state: State<CartType>) => state.Cart)
 
-    const [Items, setCartItem] = useState(CartItems)
-
-    useEffect(() => {
-        console.log(CartItems)
-        setCartItem(CartItems)
-    }, [CartItems])
-
-
     return (
         <Box sx={{ display: 'flex' }}>
             <Drawer
@@ -45,7 +37,7 @@ export default function Cart({ open, handleDrawerClose }: AppPros) {
 
                 {/* Cart items map through MapItems component*/}
                 {CartItems.length > 0 ?
-                    < MapItems ItemComponent={CartItem} items={Items} /> :
+                    < MapItems ItemComponent={CartItem} items={CartItems} /> :
                     <EmptyCart />
                 }
                 <Button fullWidth={true} sx={CheckOutButtonStyle}>Procced To CheckOut</Button>

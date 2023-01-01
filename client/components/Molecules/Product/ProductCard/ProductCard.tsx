@@ -6,13 +6,12 @@ import OutlineBtn from "../../../Atoms/OutlineBtn/OutlineBtn";
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import { Actions, State, useStoreActions, useStoreState } from "easy-peasy";
-import { CartType } from "../../../../store/models/CartModel";
-import { any } from "prop-types";
+import {CartType, ProductPayload} from "../../../../store/models/CartModel";
 
 interface ProductCardProps {
     ProductCardTitle: string,
     ProductCardModel: string,
-    ProductCardPrice?: number,
+    ProductCardPrice: number,
     ProductCardImage: string,
     ProductCardRating: number,
     ProductCardDiscount?: number,
@@ -25,10 +24,6 @@ interface ProductCardProps {
 }
 
 
-interface ProductState {
-    ProductID: number,
-    ProductCount: number
-}
 
 function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
     const {
@@ -40,33 +35,39 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
         ProductCardDiscountPrice,
         ProductID
     } = ProductCardProps;
+    const { CartItems } = useStoreState((state: State<CartType>) => state.Cart)
+    const item = CartItems.filter((item: ProductPayload) => item.productId === ProductID)
+    useEffect(()=>{
+        item.length > 0 ? setOrderCount(item[0].quantity) : setOrderCount(0)
 
-    const [orderCount, setOrderCount] = useState(0);
+    },[item])
+
+
+
+    const [orderCount, setOrderCount] = useState<number>(0);
+    const [productState, setProductState] = useState<ProductPayload>({
+        productId: ProductID,
+        productName: ProductCardTitle,
+        productModel: ProductCardModel,
+        thumbnailUrl: ProductCardImage,
+        price: ProductCardDiscountPrice ? ProductCardDiscountPrice : ProductCardPrice,
+        quantity: orderCount,
+
+
+    })
 
     const { AddProduct, decrementProductQuantity } = useStoreActions((actions: Actions<CartType>) => actions.Cart);
 
 
     const increaseOrderCount = () => {
-        setOrderCount((prevCount) => prevCount + 1);
-        AddProduct({
-            productId: ProductID,
-            productName: ProductCardTitle,
-            productModel: ProductCardModel,
-            thumbnailUrl: ProductCardImage,
-            price: ProductCardDiscountPrice ? ProductCardDiscountPrice : ProductCardPrice,
-        });
+        setOrderCount((prev) =>  prev + 1 );
+        AddProduct(productState);
 
 
     }
     const decreaseOrderCount = () => {
-        setOrderCount((prevCount) => prevCount - 1);
-        decrementProductQuantity({
-            productId: ProductID,
-            productName: ProductCardTitle,
-            productModel: ProductCardModel,
-            thumbnailUrl: ProductCardImage,
-            price: ProductCardDiscountPrice ? ProductCardDiscountPrice : ProductCardPrice,
-        })
+        setOrderCount((prev) =>  prev - 1);
+        decrementProductQuantity(productState);
     }
 
     return (

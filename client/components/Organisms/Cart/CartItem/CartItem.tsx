@@ -4,18 +4,19 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import { Actions, useStoreActions } from 'easy-peasy';
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
-import { AddProductThunkPayload, CartType } from '../../../../store/models/CartModel';
+import React, {memo, useEffect, useState} from 'react';
+import {CartType, ProductPayload} from '../../../../store/models/CartModel';
 import { CartItemStyle } from './CartItem.style';
 import GridRow from './GridRow';
 
 
 
-type AppProps = {
-    item: AddProductThunkPayload
-}
 
-function CartItem({ item }: AppProps) {
+type CartItemProps = React.PropsWithChildren<{
+    item: ProductPayload
+}>
+
+function CartItem({ item }: CartItemProps): JSX.Element {
 
     const { AddProduct, decrementProductQuantity, RemoveProduct } = useStoreActions((actions: Actions<CartType>) => actions.Cart);
 
@@ -84,4 +85,4 @@ function CartItem({ item }: AppProps) {
     )
 }
 
-export default CartItem
+export default memo(CartItem);
