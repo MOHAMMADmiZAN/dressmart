@@ -15,23 +15,23 @@ export type ProductPayload = {
     quantity: number;
 }
 
-type CartAction = Action<Cart, any>
-type CartThunk = Thunk<Cart, any>
+type CartAction<T> = Action<Cart, T>
+type CartThunk<T> = Thunk<Cart, T>
 type CartState = State<Cart>;
 
 interface Cart {
     CartId: string;
     CartItems: Array<ProductPayload>;
-    AddProduct: Action<Cart, ProductPayload>;
-    RemoveProduct: CartAction;
-    AddProductThunk: Thunk<Cart, ProductPayload>;
-    RemoveProductThunk: CartThunk;
-    incrementProductQuantity: CartAction;
-    decrementProductQuantity: CartAction;
-    ProductQuantityThunk: CartThunk;
-    SetDataBaseCart: CartAction;
-    ClearCart: CartAction;
-    DeleteCartThunk: CartThunk;
+    AddProduct: CartAction<ProductPayload>;
+    RemoveProduct: CartAction<ProductPayload>;
+    AddProductThunk: CartThunk<ProductPayload>;
+    RemoveProductThunk: CartThunk<ProductPayload>;
+    incrementProductQuantity: CartAction<ProductPayload>;
+    decrementProductQuantity: CartAction<ProductPayload>;
+    ProductQuantityThunk: CartThunk<ProductPayload>;
+    SetDataBaseCart: CartAction<ProductPayload>;
+    ClearCart: CartAction<ProductPayload>;
+    DeleteCartThunk: CartThunk<ProductPayload>;
 
 
 }
@@ -65,6 +65,7 @@ const CartModel: Cart = {
     }),
 
     RemoveProduct: action((state: CartState, payload) => {
+        console.log(payload)
         state.CartItems = state.CartItems.filter(item => item.productId != payload.productId)
     }),
 
