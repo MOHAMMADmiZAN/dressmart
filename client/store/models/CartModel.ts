@@ -1,6 +1,6 @@
 import {action, Action, State, thunk, Thunk} from "easy-peasy";
-import {generateUUID} from "../../utils/Helper";
 import {CartRequest} from "../../api/Cart.api";
+import {generateUUID} from "../../utils/Helper";
 
 
 export type CartType = {
@@ -33,6 +33,7 @@ interface Cart {
     SetDataBaseCart: CartAction<ProductPayload>;
     ClearCart: CartAction<ProductPayload>;
     DeleteCartThunk: CartThunk<ProductPayload>;
+    SetCartId: CartAction<string>;
 
 
 }
@@ -51,17 +52,15 @@ const CartModel: Cart = {
     AddProduct: action((state: CartState, payload) => {
 
         const index = IsInCart(state.CartItems, payload)
-
+        if (state.CartItems.length === 0) {
+            state.CartId = generateUUID()
+        }
         if (index === -1) {
             payload.quantity = 1
             state.CartItems.push(payload);
         } else {
             state.CartItems[index].quantity = state.CartItems[index].quantity + 1
             state.CartItems = [...state.CartItems]
-        }
-
-        if (state.CartId === " ") {
-            state.CartId = generateUUID();
         }
     }),
 
@@ -71,11 +70,19 @@ const CartModel: Cart = {
 
 
     AddProductThunk: thunk(async (actions, payload, {getState}) => {
-        console.log(payload)
-        let res = await CartRequest.createCart({products: [payload]})
-        actions.AddProduct(payload)
+        let state = getState();
+        let haveCartInDb = await CartRequest.getCart(state.CartId)
+        if (!haveCartInDb) {
+            let res = await CartRequest.createCart({products: [payload]})
+            actions.SetCartId(res.CartId.toString())
+            actions.AddProduct(res.ProductResponse)
+        }else{
+          let k = await CartRequest.updateCart(state.CartId, {products: [payload]})
+            console.log(`k`, k)
 
-        console.log(res)
+        }
+
+
 
 
         //  check is authenticated
@@ -117,6 +124,7 @@ const CartModel: Cart = {
 
     }),
     ProductQuantityThunk: thunk(async (actions, payload) => {
+
     }),
     SetDataBaseCart: action((state: CartState, payload) => {
     }),
@@ -125,6 +133,9 @@ const CartModel: Cart = {
     }),
     DeleteCartThunk: thunk(async (actions, payload) => {
     }),
+    SetCartId: action((state: CartState, payload) => {
+        state.CartId = payload
+    })
 
 }
 

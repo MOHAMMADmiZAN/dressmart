@@ -53,7 +53,7 @@ function CartItem({ item }: CartItemProps): JSX.Element {
                     price:
                 </Typography>
                 <Typography variant='subtitle2'>
-                    {item.price}/=
+                   ৳{item.price}
                 </Typography>
             </GridRow>
             <Divider />

@@ -4,13 +4,36 @@ import {ProductPayload} from "../store/models/CartModel";
 
 CartApi.defaults.headers.common['Authorization'] = `Bearer ${jwt}`;
 
+type  fetchCartPayload = {
+    productId: number;
+    productName: string,
+    productModel: string,
+    thumbnailUrl: string,
+    price: number,
+    quantity: number;
+}
+
 export class CartRequest {
-    static async createCart(data: { products: ProductPayload[] }) {
+    static async createCart(data: { products: ProductPayload[] }): Promise<any> {
         try {
             const cart = await CartApi.post("/", {data: data})
-            return cart.data
+            const ProductResponse = cart.data.products.reduce((acc: fetchCartPayload, cur: ProductPayload) => {
+                acc["productId"] = Number(cur.productId)
+                acc["productName"] = cur.productName
+                acc["productModel"] = cur.productModel
+                acc["thumbnailUrl"] = cur.thumbnailUrl
+                acc["price"] = Number(cur.price)
+                acc["quantity"] = Number(cur.quantity)
+
+                return acc
+            }, {})
+            return {
+                CartId: cart.data.id,
+                ProductResponse
+            }
+
         } catch (e) {
-            return e
+            console.log(e)
         }
     }
 
@@ -25,9 +48,9 @@ export class CartRequest {
     }
 
     // update a cart
-    static async updateCart<T>(id: string, data: T) {
+    static async updateCart(id: string, data: { products: ProductPayload[] }) {
         try {
-            const cart = await CartApi.put(`/${id}`, data)
+            const cart = await CartApi.put(`/${id}`,{data: data})
             return cart.data
         } catch (e) {
             return e
