@@ -71,19 +71,11 @@ const CartModel: Cart = {
 
 
     AddProductThunk: thunk(async (actions, payload, {getState}) => {
-
-
-        // array of json objects
-
-
-        const state = getState();
-        // await CartRequest.getCart(state.CartId)
-        //
+        console.log(payload)
         let res = await CartRequest.createCart({products: [payload]})
-        // state.CartId = res.data.id
-        // state.CartItems = res.data.attributes.products
+        actions.AddProduct(payload)
+
         console.log(res)
-        // console.log(res)
 
 
         //  check is authenticated
