@@ -7,6 +7,7 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import { Actions, State, useStoreActions, useStoreState } from "easy-peasy";
 import { CartType, ProductPayload } from "../../../../store/models/CartModel";
+import {AuthType} from "../../../../store/models/AuthModel";
 
 interface ProductCardProps {
     ProductCardTitle: string,
@@ -37,14 +38,8 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
     } = ProductCardProps;
     const { CartItems } = useStoreState((state: State<CartType>) => state.Cart)
     const item = CartItems.filter((item: ProductPayload) => item.productId === ProductID)
-
-    useEffect(() => {
-        item.length > 0 ? setOrderCount(item[0].quantity) : setOrderCount(0)
-
-    }, [item])
-
-
-    const [orderCount, setOrderCount] = useState<number>(0);
+    const [orderCount, setOrderCount] = useState<number>(item.length > 0 ? item[0].quantity : 0);
+    const isAuth = useStoreState((state: State<AuthType>) => state.Auth.isAuth)
     const [productState, setProductState] = useState<ProductPayload>({
         productId: ProductID,
         productName: ProductCardTitle,
@@ -59,12 +54,13 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
 
 
 
-    const { AddProduct, decrementProductQuantity } = useStoreActions((actions: Actions<CartType>) => actions.Cart);
+    const { AddProduct, decrementProductQuantity,AddProductThunk } = useStoreActions((actions: Actions<CartType>) => actions.Cart);
 
 
     const increaseOrderCount = () => {
         setOrderCount((prev) => prev + 1);
-        AddProduct(productState);
+        isAuth ? AddProductThunk(productState) : AddProduct(productState)
+
 
 
     }

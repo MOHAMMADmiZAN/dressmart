@@ -1,5 +1,6 @@
 import {action, Action, State, thunk, Thunk} from "easy-peasy";
 import {generateUUID} from "../../utils/Helper";
+import {CartRequest} from "../../api/Cart.api";
 
 
 export type CartType = {
@@ -36,6 +37,7 @@ interface Cart {
 
 }
 
+
 // To find the index of the product in the cart
 const IsInCart = (cartItems: Cart["CartItems"], payload: ProductPayload) => {
     return cartItems.findIndex((v) => v.productId === payload.productId)
@@ -68,12 +70,28 @@ const CartModel: Cart = {
     }),
 
 
-    AddProductThunk: thunk(async (actions, payload) => {
+    AddProductThunk: thunk(async (actions, payload, {getState}) => {
+
+
+        // array of json objects
+
+
+        const state = getState();
+        // await CartRequest.getCart(state.CartId)
+        //
+        // let res = await CartRequest.createCart({products: [payload]})
+        // state.CartId = res.data.id
+        // state.CartItems = res.data.attributes.products
+        // console.log(res)
+        // console.log(res)
+
+
         //  check is authenticated
+
         //  if authenticated
-         //  check if cart is in database
-            //  if cart is in database
-                //  add product to cart
+        //  check if cart is in database
+        //  if cart is in database
+        //  add product to cart
         // -> check product is in cart
         // -> if product is in cart
         // -> update product quantity
@@ -85,14 +103,6 @@ const CartModel: Cart = {
         //
 
 
-
-
-
-
-
-
-
-
     }),
     RemoveProductThunk: thunk(async (actions, payload) => {
     }),
@@ -100,6 +110,8 @@ const CartModel: Cart = {
     }),
 
     decrementProductQuantity: action((state: CartState, payload) => {
+        console.log("decrementProductQuantity")
+        console.log(payload)
 
         const index = IsInCart(state.CartItems, payload)
 

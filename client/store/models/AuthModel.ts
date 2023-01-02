@@ -1,5 +1,6 @@
 import {Action, action, State, Thunk, thunk} from 'easy-peasy';
 import {AuthRequest} from "../../api/Auth.api";
+import jwt from "../../utils/GetJwt";
 
 export  type AuthType = {
     Auth: typeof AuthModel
@@ -62,16 +63,19 @@ const AuthModel: Auth = {
         state.AuthUser = payload.user;
         state.isAuth = true;
 
+
     }),
     AuthClear: action((state: AuthState) => {
         state.AuthToken = " ";
         state.AuthUser = {};
         state.isAuth = false;
+
     }),
     Login: thunk(async (actions, payload) => {
         const {email, password} = payload;
         const data = await AuthRequest.login(email, password)
         actions.AuthSet(data)
+
         return !!data
 
 
@@ -80,6 +84,7 @@ const AuthModel: Auth = {
         const {confirmPassword, ...rest} = payload
         const data = await AuthRequest.register(rest)
         actions.AuthSet(data)
+
         return !!data
 
     }),

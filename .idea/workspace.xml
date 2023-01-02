@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="change in cart Model">
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="some change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Cart/CartDrawer/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Cart/CartDrawer/Cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Cart/CartItem/CartItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Cart/CartItem/CartItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/Cart.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Cart.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/models/AuthModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/models/AuthModel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/store/models/CartModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/models/CartModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/utils/Helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/utils/Helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/utils/GetJwt.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/utils/GetJwt.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/api/cart/controllers/cart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/api/cart/controllers/cart.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,14 +89,7 @@
       <workItem from="1671981674516" duration="37356000" />
       <workItem from="1672140028810" duration="43000" />
       <workItem from="1672140103243" duration="94323000" />
-      <workItem from="1672425040742" duration="22657000" />
-    </task>
-    <task id="LOCAL-00036" summary="footerTopBarAdd">
-      <created>1672062035135</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1672062035135</updated>
+      <workItem from="1672425040742" duration="31760000" />
     </task>
     <task id="LOCAL-00037" summary="footerTopBarAdd">
       <created>1672063269347</created>
@@ -431,7 +427,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672585980675</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="some change">
+      <created>1672657195880</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1672657195880</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,7 +466,6 @@
     <MESSAGE value="some Change" />
     <MESSAGE value="order overLay btn change" />
     <MESSAGE value="order overLay btn change=" />
-    <MESSAGE value="some change" />
     <MESSAGE value="some change in product api" />
     <MESSAGE value="some change in  api" />
     <MESSAGE value="some change in  ProductCad.style.ts" />
@@ -475,6 +477,7 @@
     <MESSAGE value="some change in cart and product" />
     <MESSAGE value="change in MapItems.tsx" />
     <MESSAGE value="change in cart Model" />
-    <option name="LAST_COMMIT_MESSAGE" value="change in cart Model" />
+    <MESSAGE value="some change" />
+    <option name="LAST_COMMIT_MESSAGE" value="some change" />
   </component>
 </project>
