@@ -3,7 +3,13 @@ import AuthModel from "./models/AuthModel";
 import CartModel from "./models/CartModel";
 
 
-const store =  createStore({
+ export interface StoreModel {
+    Auth: typeof AuthModel;
+    Cart: typeof CartModel;
+}
+
+
+const store =  createStore<StoreModel>({
     // ... Auth model //
     Auth: persist(AuthModel, {storage: "localStorage"}),
     // ... Cart model //

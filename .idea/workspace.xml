@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="some change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/api/Cart.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Cart.api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Cart/CartItem/CartItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Cart/CartItem/CartItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/store/models/AuthModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/models/AuthModel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/store/models/CartModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/models/CartModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/utils/GetJwt.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/utils/GetJwt.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/api/cart/controllers/cart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/api/cart/controllers/cart.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,14 +88,7 @@
       <workItem from="1671981674516" duration="37356000" />
       <workItem from="1672140028810" duration="43000" />
       <workItem from="1672140103243" duration="94323000" />
-      <workItem from="1672425040742" duration="31760000" />
-    </task>
-    <task id="LOCAL-00037" summary="footerTopBarAdd">
-      <created>1672063269347</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1672063269347</updated>
+      <workItem from="1672425040742" duration="38880000" />
     </task>
     <task id="LOCAL-00038" summary="footer fixted">
       <created>1672071199106</created>
@@ -434,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672657195880</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="some change">
+      <created>1672666312649</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1672666312650</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

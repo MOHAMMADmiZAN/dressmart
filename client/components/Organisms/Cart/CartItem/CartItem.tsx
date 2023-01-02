@@ -75,7 +75,7 @@ function CartItem({ item }: CartItemProps): JSX.Element {
                     SubTotal :
                 </Typography>
                 <Typography variant='subtitle2'>
-                    {item.price * item.quantity} /=
+                    ৳{item.price * item.quantity}
                 </Typography>
             </GridRow>
         </Grid >

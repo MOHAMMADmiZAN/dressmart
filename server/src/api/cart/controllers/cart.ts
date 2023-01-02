@@ -4,20 +4,19 @@
 
 import {factories} from '@strapi/strapi'
 
-export default factories.createCoreController('api::cart.cart', ({strapi}) =>( {
+export default factories.createCoreController('api::cart.cart', ({strapi}) => {
 
-  async create (ctx) {
-    // some logic here
-    const id = ctx.state.user.id
+  return {
+    async create(ctx) {
+      const id = ctx.state.user.id
+       // entry is the cart and published_at is the date of creation
 
-    const entries = await strapi.entityService.create('api::cart.cart', {
-      data: {
-        products: ctx.request.body.data.products,
-        user:id
-     }
-    })
-    // some more logic
-    return entries
-  },
-
-}))
+      return await strapi.entityService.create('api::cart.cart', {
+        data: {
+          products: ctx.request.body.data.products,
+          user: id
+        }
+      })
+    },
+  }
+})
