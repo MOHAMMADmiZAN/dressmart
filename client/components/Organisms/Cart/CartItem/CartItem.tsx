@@ -20,12 +20,13 @@ function CartItem({ item }: CartItemProps): JSX.Element {
 
     const { AddProduct, decrementProductQuantity, RemoveProduct } = useStoreActions((actions: Actions<CartType>) => actions.Cart);
 
-    const increaseOrderCount = () => {
-        AddProduct(item);
+
+    const handleIncrease = () => {
+        AddProduct(item)
     }
 
-    const decreaseOrderCount = () => {
-        decrementProductQuantity(item);
+    const handleDecrease = () => {
+        decrementProductQuantity(item)
     }
 
     const handleRemove = () => {
@@ -62,9 +63,9 @@ function CartItem({ item }: CartItemProps): JSX.Element {
                 </Typography>
 
                 <Grid item>
-                    <Button onClick={decreaseOrderCount} sx={{ padding: '0px' }} >-</Button>
+                    <Button onClick={handleDecrease} sx={{ padding: '0px' }} >-</Button>
                     <Typography sx={{ display: 'inline' }} variant='subtitle2'> {item.quantity} </Typography>
-                    <Button onClick={increaseOrderCount} sx={{ padding: '0px' }} size='small'>+</Button>
+                    <Button onClick={handleIncrease} sx={{ padding: '0px' }} size='small'>+</Button>
                     <Button onClick={handleRemove} sx={{ padding: '0px' }} size='small'><DeleteForeverIcon sx={{ color: 'red' }} /> </Button>
                 </Grid>
             </GridRow >

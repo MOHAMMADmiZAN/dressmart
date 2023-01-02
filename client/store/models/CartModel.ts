@@ -69,6 +69,30 @@ const CartModel: Cart = {
 
 
     AddProductThunk: thunk(async (actions, payload) => {
+        //  check is authenticated
+        //  if authenticated
+         //  check if cart is in database
+            //  if cart is in database
+                //  add product to cart
+        // -> check product is in cart
+        // -> if product is in cart
+        // -> update product quantity
+        // -> if product is not in cart
+        // -> add product to cart
+        // -> if cart is not in database
+        // -> create cart
+        // -> add product to cart
+        //
+
+
+
+
+
+
+
+
+
+
     }),
     RemoveProductThunk: thunk(async (actions, payload) => {
     }),
