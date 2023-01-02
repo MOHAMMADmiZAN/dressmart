@@ -79,10 +79,10 @@ const CartModel: Cart = {
         const state = getState();
         // await CartRequest.getCart(state.CartId)
         //
-        // let res = await CartRequest.createCart({products: [payload]})
+        let res = await CartRequest.createCart({products: [payload]})
         // state.CartId = res.data.id
         // state.CartItems = res.data.attributes.products
-        // console.log(res)
+        console.log(res)
         // console.log(res)
 
 
