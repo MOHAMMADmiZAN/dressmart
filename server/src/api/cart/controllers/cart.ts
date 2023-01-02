@@ -14,7 +14,8 @@ export default factories.createCoreController('api::cart.cart', ({strapi}) => {
       return await strapi.entityService.create('api::cart.cart', {
         data: {
           products: ctx.request.body.data.products,
-          user: id
+          user: id,
+          publishedAt: new Date()
         }
       })
     },
