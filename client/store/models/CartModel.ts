@@ -71,15 +71,23 @@ const CartModel: Cart = {
         let state = getState();
         let haveCartInDb = await CartRequest.getCart(state.CartId)
         if (!haveCartInDb) {
+            payload.quantity = 1
             let res = await CartRequest.createCart({products: [payload]})
             actions.AddProduct(res.ProductResponse)
             actions.SetCartId(res.CartId.toString())
             console.log("Cart Created")
         }
         if (haveCartInDb) {
-            let res = await CartRequest.updateCart(state.CartId, {products: [...state.CartItems.filter(item => item.productId != payload.productId), payload]})
-            console.log("res", res)
-            console.log("Cart Updated")
+            const index = IsInCart(state.CartItems ,payload)
+            console.log(index)
+            if (index === -1) {
+                payload.quantity = 1
+            } else {
+                state.CartItems[index].quantity = state.CartItems[index].quantity + 1
+            }
+       
+            let res = await CartRequest.updateCart(state.CartId, { products: [...state.CartItems.filter(item => item.productId != payload.productId), payload] })
+            console.log(res.data)
         }
 
 
