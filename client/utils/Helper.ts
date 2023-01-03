@@ -1,5 +1,3 @@
-
-
 // generate random unique uuid
 
 
@@ -16,6 +14,9 @@ export function generateUUID() {
     });
 }
 
-
+// random id generator
+export function generateId() {
+    return Math.floor(Math.random() * 1000000);
+}
 
 

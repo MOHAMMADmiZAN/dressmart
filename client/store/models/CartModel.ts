@@ -1,6 +1,5 @@
 import {action, Action, State, thunk, Thunk} from "easy-peasy";
 import {CartRequest} from "../../api/Cart.api";
-import {generateUUID} from "../../utils/Helper";
 
 
 export type CartType = {
@@ -52,9 +51,7 @@ const CartModel: Cart = {
     AddProduct: action((state: CartState, payload) => {
 
         const index = IsInCart(state.CartItems, payload)
-        if (state.CartItems.length === 0) {
-            state.CartId = generateUUID()
-        }
+
         if (index === -1) {
             payload.quantity = 1
             state.CartItems.push(payload);
@@ -66,6 +63,7 @@ const CartModel: Cart = {
 
     RemoveProduct: action((state: CartState, payload) => {
         state.CartItems = state.CartItems.filter(item => item.productId != payload.productId)
+        state.CartId = " "
     }),
 
 
@@ -74,15 +72,15 @@ const CartModel: Cart = {
         let haveCartInDb = await CartRequest.getCart(state.CartId)
         if (!haveCartInDb) {
             let res = await CartRequest.createCart({products: [payload]})
-            actions.SetCartId(res.CartId.toString())
             actions.AddProduct(res.ProductResponse)
-        }else{
-          let k = await CartRequest.updateCart(state.CartId, {products: [payload]})
-            console.log(`k`, k)
-
+            actions.SetCartId(res.CartId.toString())
+            console.log("Cart Created")
         }
-
-
+        if (haveCartInDb) {
+            let res = await CartRequest.updateCart(state.CartId, {products: [...state.CartItems.filter(item => item.productId != payload.productId), payload]})
+            console.log("res", res)
+            console.log("Cart Updated")
+        }
 
 
         //  check is authenticated

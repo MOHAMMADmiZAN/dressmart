@@ -38,19 +38,17 @@ export class CartRequest {
     }
 
     // get a cart
-    static async getCart(id: string) {
-        try {
-            const cart = await CartApi.get(`/${id}`)
-            return cart.data
-        } catch (e) {
-            return e
-        }
+    static async getCart(id: string): Promise<boolean> {
+        const cart = await CartApi.get(`/${id}`)
+        return cart.data.data.length !== 0;
+
+
     }
 
     // update a cart
     static async updateCart(id: string, data: { products: ProductPayload[] }) {
         try {
-            const cart = await CartApi.put(`/${id}`,{data: data})
+            const cart = await CartApi.put(`/${id}`, {data: data})
             return cart.data
         } catch (e) {
             return e
