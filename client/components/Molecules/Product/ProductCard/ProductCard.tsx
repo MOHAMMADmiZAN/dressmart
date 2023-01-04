@@ -36,8 +36,8 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
         ProductID
     } = ProductCardProps;
     const { CartItems } = useStoreState((state: State<CartType>) => state.Cart)
-    const item = CartItems.filter((item: ProductPayload) => item.productId === ProductID)
-    const [orderCount, setOrderCount] = useState<number>(item.length > 0 ? item[0].quantity : 0);
+    const index = CartItems.findIndex(item => item.productId === ProductID)
+    // const item = CartItems.filter((item: ProductPayload) => item.productId === ProductID)
     const isAuth = useStoreState((state: State<AuthType>) => state.Auth.isAuth)
     const [productState, setProductState] = useState<ProductPayload>({
         productId: ProductID,
@@ -45,32 +45,28 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
         productModel: ProductCardModel,
         thumbnailUrl: ProductCardImage,
         price: ProductCardDiscountPrice ? ProductCardDiscountPrice : ProductCardPrice,
-        quantity: orderCount,
+        quantity: index === -1 ? 0 : CartItems[index].quantity,
 
 
     })
 
-    console.log(item)
-
     const {
         AddProduct,
         decrementProductQuantity,
-        AddProductThunk
+        AddProductThunk,
+        RemoveProductThunk
     } = useStoreActions((actions: Actions<CartType>) => actions.Cart);
 
 
     const increaseOrderCount = () => {
-        setOrderCount((prev) => prev + 1);
-
         isAuth ? AddProductThunk(productState) : AddProduct(productState)
-
-
     }
+
     const decreaseOrderCount = () => {
-        setOrderCount((prev) => prev - 1);
-        decrementProductQuantity(productState);
+        isAuth ? RemoveProductThunk(productState) : decrementProductQuantity(productState)
     }
 
+    // console.log(item)
 
     return (
         <>
@@ -90,8 +86,8 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
                         ৳{ProductCardPrice}
                     </Typography>
                 </CardContent>
-                <Box sx={{ ...cardOrderOverLay }} onClick={() => !orderCount && increaseOrderCount()}>
-                    {!orderCount ?
+                <Box sx={{ ...cardOrderOverLay }} onClick={() => index === -1 && increaseOrderCount()}>
+                    {index === -1 ?
                         <CardOrderOverLayContent sx={{ width: '100%', textAlign: `center`, flexDirection: 'column' }}>
                             <Typography variant={`h6`} sx={{ color: '#fff', width: '100%', fontSize: '16px' }}>
                                 Add To Shopping Cart
@@ -99,9 +95,9 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
                         </CardOrderOverLayContent> :
                         <CardOrderOverLayContent>
                             <OutlineBtn OutlineBtnIcon={<AddIcon />} OutlineBtnOnClick={increaseOrderCount} />
-                            <Typography variant={`h6`} sx={{ m: 2, color: 'primary.main' }}>{orderCount}</Typography>
+                            <Typography variant={`h6`} sx={{ m: 2, color: 'primary.main' }}>{CartItems[index].quantity}</Typography>
                             <OutlineBtn OutlineBtnIcon={<RemoveIcon />} OutlineBtnOnClick={decreaseOrderCount}
-                                isDisable={orderCount === 0} />
+                                isDisable={CartItems[index].quantity === 0} />
                         </CardOrderOverLayContent>}
                 </Box>
             </Card>
