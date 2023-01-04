@@ -33,7 +33,7 @@ interface Cart {
     ClearCart: CartAction<ProductPayload>;
     DeleteCartThunk: CartThunk<ProductPayload>;
     SetCartId: CartAction<string>;
-
+    SetCartItem: CartAction<any>
 
 }
 
@@ -66,22 +66,36 @@ const CartModel: Cart = {
         state.CartId = " "
     }),
 
+    SetCartItem: action((state: CartState, payload) => {
+        state.CartItems = payload.products
+    }),
 
     AddProductThunk: thunk(async (actions, payload, {getState}) => {
         let state = getState();
         let haveCartInDb = await CartRequest.getCart(state.CartId)
         if (!haveCartInDb) {
+            payload.quantity = 1
             let res = await CartRequest.createCart({products: [payload]})
             actions.AddProduct(res.ProductResponse)
             actions.SetCartId(res.CartId.toString())
-            console.log("Cart Created")
         }
         if (haveCartInDb) {
-            let res = await CartRequest.updateCart(state.CartId, {products: [...state.CartItems.filter(item => item.productId != payload.productId), payload]})
-            console.log("res", res)
-            console.log("Cart Updated")
+            const index = IsInCart(state.CartItems ,payload)
+            console.log(index)
+            if (index === -1) {
+                payload.quantity = 1
+            } else {
+                payload.quantity = state.CartItems[index].quantity + 1
+            }
+    
+            let res = await CartRequest.updateCart(state.CartId, { products: [ payload,...state.CartItems.filter(item => item.productId != payload.productId)] })
+           
+            actions.SetCartItem(res.data.attributes)
+            
+           
         }
 
+        
 
         //  check is authenticated
 
@@ -101,8 +115,27 @@ const CartModel: Cart = {
 
 
     }),
-    RemoveProductThunk: thunk(async (actions, payload) => {
+
+
+    RemoveProductThunk: thunk(async (actions, payload, { getState }) => {
+    
+        let state = getState();
+
+        const index = IsInCart(state.CartItems, payload)
+
+        payload.quantity = state.CartItems[index].quantity - 1
+    
+        let res;
+        if (payload.quantity > 0) {
+            res = await CartRequest.updateCart(state.CartId, { products: [...state.CartItems.filter(item => item.productId != payload.productId), payload] })
+        } else {
+            res = await CartRequest.updateCart(state.CartId, { products: [...state.CartItems.filter(item => item.productId != payload.productId)] })
+        }
+       
+        actions.SetCartItem(res.data.attributes)
     }),
+    
+       
     incrementProductQuantity: action((state: CartState, payload) => {
     }),
 

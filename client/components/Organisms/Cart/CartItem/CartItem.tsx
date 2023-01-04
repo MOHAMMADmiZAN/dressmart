@@ -2,12 +2,13 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import { Divider, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import { Actions, useStoreActions } from 'easy-peasy';
+import { Actions, State, useStoreActions, useStoreState } from 'easy-peasy';
 import Image from 'next/image';
 import React, { memo } from 'react';
 import { CartType, ProductPayload } from '../../../../store/models/CartModel';
 import { CartItemStyle } from './CartItem.style';
 import GridRow from './GridRow';
+import { AuthType } from '../../../../store/models/AuthModel';
 
 
 
@@ -18,15 +19,16 @@ type CartItemProps = React.PropsWithChildren<{
 
 function CartItem({ item }: CartItemProps): JSX.Element {
 
-    const { AddProduct, decrementProductQuantity, RemoveProduct } = useStoreActions((actions: Actions<CartType>) => actions.Cart);
+    const { AddProduct, AddProductThunk, decrementProductQuantity, RemoveProductThunk, RemoveProduct } = useStoreActions((actions: Actions<CartType>) => actions.Cart);
 
+    const isAuth = useStoreState((state: State<AuthType>) => state.Auth.isAuth)
 
     const handleIncrease = () => {
-        AddProduct(item)
+        isAuth ? AddProductThunk(item) : AddProduct(item)
     }
 
     const handleDecrease = () => {
-        decrementProductQuantity(item)
+        isAuth ? RemoveProductThunk(item) : decrementProductQuantity(item)
     }
 
     const handleRemove = () => {
@@ -53,7 +55,7 @@ function CartItem({ item }: CartItemProps): JSX.Element {
                     price:
                 </Typography>
                 <Typography variant='subtitle2'>
-                   ৳{item.price}
+                    ৳{item.price}
                 </Typography>
             </GridRow>
             <Divider />
