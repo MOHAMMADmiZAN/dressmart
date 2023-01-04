@@ -17,8 +17,8 @@ a {
 
 
 ::-webkit-scrollbar {
-  width: 7px;
-  height: 12px;
+  width: 0px;
+  
 }
 
 ::-webkit-scrollbar-thumb {
