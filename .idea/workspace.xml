@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="cartFunction with bug ..">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/api/Cart.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Cart.api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/store/models/CartModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/models/CartModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/utils/Helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/utils/Helper.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,14 +83,8 @@
       <workItem from="1671981674516" duration="37356000" />
       <workItem from="1672140028810" duration="43000" />
       <workItem from="1672140103243" duration="94323000" />
-      <workItem from="1672425040742" duration="53967000" />
-    </task>
-    <task id="LOCAL-00042" summary="folder refactor">
-      <created>1672078141091</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1672078141091</updated>
+      <workItem from="1672425040742" duration="60561000" />
+      <workItem from="1672908384961" duration="3306000" />
     </task>
     <task id="LOCAL-00043" summary="folder refactor">
       <created>1672079231732</created>
@@ -431,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672687657822</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="cartFunction with bug ..">
+      <created>1672743477854</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1672743477854</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
