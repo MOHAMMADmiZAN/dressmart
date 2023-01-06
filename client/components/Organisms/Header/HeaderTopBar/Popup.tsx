@@ -46,6 +46,7 @@ function Popup() {
                     vertical: 'top',
                     horizontal: 'left',
                 }}
+                sx={{ maxWidth: '100%' }}
             >  {isAuth ?
                 <div>
                     <Nextlink href={'/dashboard'}  > <MenuItem onClick={handleClose} > Dashboard  </MenuItem></Nextlink>

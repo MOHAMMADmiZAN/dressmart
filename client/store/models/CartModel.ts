@@ -34,7 +34,7 @@ interface Cart {
     DeleteCartThunk: CartThunk<ProductPayload>;
     SetCartId: CartAction<string>;
     SetCartItem: CartAction<any>
-
+    DecreaseProductThunk: CartThunk<ProductPayload>
 }
 
 
@@ -117,7 +117,7 @@ const CartModel: Cart = {
     }),
 
 
-    RemoveProductThunk: thunk(async (actions, payload, { getState }) => {
+    DecreaseProductThunk: thunk(async (actions, payload, { getState }) => {
     
         let state = getState();
 
@@ -135,6 +135,11 @@ const CartModel: Cart = {
         actions.SetCartItem(res.data.attributes)
     }),
     
+
+    RemoveProductThunk: thunk(async (actions, payload, { getState }) => { 
+        
+    }),
+
        
     incrementProductQuantity: action((state: CartState, payload) => {
     }),

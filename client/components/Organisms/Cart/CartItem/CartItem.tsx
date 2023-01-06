@@ -19,7 +19,7 @@ type CartItemProps = React.PropsWithChildren<{
 
 function CartItem({ item }: CartItemProps): JSX.Element {
 
-    const { AddProduct, AddProductThunk, decrementProductQuantity, RemoveProductThunk, RemoveProduct } = useStoreActions((actions: Actions<CartType>) => actions.Cart);
+    const { AddProduct, AddProductThunk, decrementProductQuantity, DecreaseProductThunk, RemoveProductThunk, RemoveProduct } = useStoreActions((actions: Actions<CartType>) => actions.Cart);
 
     const isAuth = useStoreState((state: State<AuthType>) => state.Auth.isAuth)
 
@@ -28,7 +28,7 @@ function CartItem({ item }: CartItemProps): JSX.Element {
     }
 
     const handleDecrease = () => {
-        isAuth ? RemoveProductThunk(item) : decrementProductQuantity(item)
+        isAuth ? DecreaseProductThunk(item) : decrementProductQuantity(item)
     }
 
     const handleRemove = () => {
