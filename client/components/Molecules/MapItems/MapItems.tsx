@@ -1,3 +1,4 @@
+import Grid from '@mui/material/Grid'
 import React from 'react'
 
 
@@ -7,17 +8,17 @@ type MapItemsProps = React.PropsWithChildren<{
     other?: any
 }>
 
-function MapItems({ items, ItemComponent, ...other }: MapItemsProps) : JSX.Element {
+function MapItems({ items, ItemComponent, ...other }: MapItemsProps): JSX.Element {
     return (
-        <div>
-            <ul>
-                {items.map((item, i) => (
-                    <ItemComponent key={i} item={item} {...other} />
-                    )
+        <Grid container justifyContent={'space-between'} alignContent={'center'} >
 
-                )}
-            </ul>
-        </div>
+            {items.map((item, i) => (
+                <ItemComponent key={i} item={item} {...other} />
+            )
+
+            )}
+
+        </Grid>
     )
 }
 

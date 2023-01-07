@@ -25,22 +25,27 @@ let inputs = [
     {
         name: 'username',
         type: 'text',
+        fullWidth: true
     },
     {
         name: 'email',
         type: 'text',
+        fullWidth: true
     },
     {
         name: 'phone',
         type: 'text',
+        fullWidth: true
     },
     {
         name: 'password',
         type: 'password',
+        fullWidth: true
     },
     {
         name: 'confirmPassword',
         type: 'password',
+        fullWidth: true
     }
 ]
 
