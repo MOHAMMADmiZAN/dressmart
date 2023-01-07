@@ -6,8 +6,8 @@ import NavBar from "./NavBar/NavBar";
 function Header(): JSX.Element {
     return (
         <>
-            <HeaderTopBar/>
-            <NavBar/>
+            <HeaderTopBar />
+            <NavBar />
         </>
     );
 }
