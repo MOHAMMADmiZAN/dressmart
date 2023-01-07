@@ -1,6 +1,8 @@
 import {CartApi} from "./api";
-import jwt from "../utils/GetJwt";
-import {ProductPayload} from "../store/models/CartModel";
+import GetJwt from "../utils/GetJwt";
+import { ProductPayload } from "../store/models/CartModel";
+
+const jwt = GetJwt()
 
 CartApi.defaults.headers.common['Authorization'] = `Bearer ${jwt}`;
 

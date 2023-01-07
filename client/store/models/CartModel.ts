@@ -81,16 +81,21 @@ const CartModel: Cart = {
         }
         if (haveCartInDb) {
             const index = IsInCart(state.CartItems ,payload)
-            console.log(index)
+           
             if (index === -1) {
                 payload.quantity = 1
+                let res = await CartRequest.updateCart(state.CartId, { products: [...state.CartItems, payload] })
+                actions.SetCartItem(res.data.attributes)
             } else {
-                payload.quantity = state.CartItems[index].quantity + 1
+                state.CartItems[index].quantity = state.CartItems[index].quantity + 1
+                let res = await CartRequest.updateCart(state.CartId, { products: [...state.CartItems] })
+                actions.SetCartItem(res.data.attributes)
+                
             }
     
-            let res = await CartRequest.updateCart(state.CartId, { products: [ payload,...state.CartItems.filter(item => item.productId != payload.productId)] })
+            
            
-            actions.SetCartItem(res.data.attributes)
+            
             
            
         }
@@ -123,11 +128,11 @@ const CartModel: Cart = {
 
         const index = IsInCart(state.CartItems, payload)
 
-        payload.quantity = state.CartItems[index].quantity - 1
+        state.CartItems[index].quantity = state.CartItems[index].quantity - 1
     
         let res;
-        if (payload.quantity > 0) {
-            res = await CartRequest.updateCart(state.CartId, { products: [...state.CartItems.filter(item => item.productId != payload.productId), payload] })
+        if (state.CartItems[index].quantity > 0) {
+            res = await CartRequest.updateCart(state.CartId, { products: [...state.CartItems] })
         } else {
             res = await CartRequest.updateCart(state.CartId, { products: [...state.CartItems.filter(item => item.productId != payload.productId)] })
         }
@@ -137,7 +142,9 @@ const CartModel: Cart = {
     
 
     RemoveProductThunk: thunk(async (actions, payload, { getState }) => { 
-        
+        let state = getState();
+        let res = await CartRequest.updateCart(state.CartId, { products: [...state.CartItems.filter(item => item.productId != payload.productId)] })
+        actions.SetCartItem(res.data.attributes)
     }),
 
        

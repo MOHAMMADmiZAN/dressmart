@@ -32,7 +32,7 @@ function CartItem({ item }: CartItemProps): JSX.Element {
     }
 
     const handleRemove = () => {
-        RemoveProduct(item)
+        isAuth ? RemoveProductThunk(item) : RemoveProduct(item)
     }
 
     return (
