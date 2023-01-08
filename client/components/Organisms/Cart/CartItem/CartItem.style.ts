@@ -1,6 +1,6 @@
 export const CartItemStyle = {
     backgroundColor: '#FFFFFF',
-    margin: '5px',
-    borderRadius:'2px',
+    margin: '0px 5px',
+    borderRadius:'5px',
     maxWidth: '97%'
 }

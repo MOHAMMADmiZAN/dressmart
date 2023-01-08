@@ -46,7 +46,7 @@ function CartItem({ item }: CartItemProps): JSX.Element {
                     <Typography variant='h6'> {item.productName}</Typography> <Typography variant='caption' >{item.productModel}</Typography>
                 </Grid>
                 <Grid item >
-                    <Image height={70} width={70} src={item.thumbnailUrl} alt='thumbnail' />
+                    <Image height={80} width={80} src={item.thumbnailUrl} alt='thumbnail' />
                 </Grid >
             </GridRow>
             <Divider />
@@ -80,6 +80,7 @@ function CartItem({ item }: CartItemProps): JSX.Element {
                     ৳{item.price * item.quantity}
                 </Typography>
             </GridRow>
+            <Divider sx={{ color: 'black', backgroundColor: 'gray', border: '.1px solid gray' }} />
         </Grid >
     )
 }
