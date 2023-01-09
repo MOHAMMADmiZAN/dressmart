@@ -14,6 +14,35 @@ interface Path_Prams {
     id: string
 }
 
+export async function getStaticPaths() {
+    const res = await fetchProducts();
+
+    const paths = res.map((product: recentProduct) => ({
+        params: {id: product.id.toString()}
+    }))
+
+    return {
+        paths,
+        fallback: false
+    }
+
+
+}
+
+
+
+export async function getStaticProps(ctx: { params: Path_Prams; }) {
+    const {id} = ctx.params;
+    console.log(id);
+    const queryClient = new QueryClient()
+    await queryClient.prefetchQuery<singleProductResponse, Error>(['singleProduct'], () => getProductById(id))
+    return {
+        props: {
+            dehydratedState: dehydrate(queryClient),
+        },
+    }
+}
+
 
 const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
     const Route = useRouter();
@@ -37,45 +66,7 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
     );
 };
 
-export async function getStaticPaths() {
-    const res = await fetchProducts();
 
-    const paths = res.map((product: recentProduct) => ({
-        params: {id: product.id.toString()}
-    }));
-
-    return {
-        paths,
-        fallback: false
-    }
-
-
-}
-
-// export async function getStaticProps() {
-//     const prams: Path_Prams = ctx.params;
-//     const {id} = prams;
-//     const Product = await getProductById(id);
-//     console.log(Product);
-//     return {
-//         props: {
-//             Product
-//         }
-//     }
-//
-// }
-
-export async function getStaticProps(ctx: { params: Path_Prams; }) {
-    const {id} = ctx.params;
-    console.log(id);
-    const queryClient = new QueryClient()
-    await queryClient.prefetchQuery<singleProductResponse, Error>(['singleProduct'], () => getProductById(id))
-    return {
-        props: {
-            dehydratedState: dehydrate(queryClient),
-        },
-    }
-}
 
 
 export default SingleProduct;

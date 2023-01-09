@@ -1,6 +1,5 @@
 import React from 'react';
 import {Button, InputBase, Box, OutlinedInput} from "@mui/material";
-import {Textarea} from "@mui/joy";
 import {SubscribeFormStyle, SubscribeButtonStyle} from "./Subscriber.style";
 
 function Subscriber() {
