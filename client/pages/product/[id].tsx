@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useRouter} from "next/router";
 import {fetchProducts, getProductById, recentProduct, singleProductResponse} from "../../api/Product.api";
 import {dehydrate, useQuery} from "@tanstack/react-query";
@@ -16,7 +16,6 @@ interface Path_Prams {
 
 export async function getStaticPaths() {
     const res = await fetchProducts();
-
     const paths = res.map((product: recentProduct) => ({
         params: {id: product.id.toString()}
     }))
@@ -53,6 +52,11 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
         isError,
         error
     } = useQuery<singleProductResponse, Error>(['singleProduct'], () => getProductById(4));
+
+
+    useEffect(() => {
+        console.log(data);
+    },[data])
 
 
     return (

@@ -4,37 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="944e79d0-0595-4cd5-b39d-6df9f92fda24" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" />
+    <list default="true" id="944e79d0-0595-4cd5-b39d-6df9f92fda24" name="Changes" comment="extra some add">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/client/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/client/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/api/Brand.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Brand.api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/api/Category.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Category.api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/api/Order.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Order.api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/api/User.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/User.api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Atoms/OutlineBtn/OutlineBtn.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Atoms/OutlineBtn/OutlineBtn.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Form/Subscriber/Subscriber.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Form/Subscriber/Subscriber.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Logo/Logo.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Logo/Logo.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Shared/LinkIcon/LinkIcon.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Shared/LinkIcon/LinkIcon.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Star/Star.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Star/Star.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Footer/Footer.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Footer/Footer.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Footer/FooterBottom/FooterBottom.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Footer/FooterBottom/FooterBottom.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Header/Header.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Header/Header.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Hero/Hero.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Hero/Hero.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Products/ByBrandProduct/ByBrandProduct.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Products/ByBrandProduct/ByBrandProduct.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Products/ByCategoryProduct/ByCategoryProduct.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Products/ByCategoryProduct/ByCategoryProduct.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Products/ByPopularProduct/ByPopularProduct.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Products/ByPopularProduct/ByPopularProduct.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Products/ByRecentProduct/ByRecentProduct.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Products/ByRecentProduct/ByRecentProduct.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Products/Products.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Products/Products.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/templates/Admin/Admin.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/templates/Admin/Admin.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/templates/Admin/Admin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/templates/Admin/Admin.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/templates/Base/Base.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/templates/Base/Base.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/_document.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/product/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/product/[id].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/resource/assets.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +29,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -76,12 +53,24 @@
       <option name="presentableId" value="Default" />
       <updated>1673261592422</updated>
       <workItem from="1673261595023" duration="319000" />
-      <workItem from="1673261953710" duration="1366000" />
+      <workItem from="1673261953710" duration="2482000" />
     </task>
+    <task id="LOCAL-00001" summary="extra some add">
+      <created>1673263552348</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673263552348</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="extra some add" />
+    <option name="LAST_COMMIT_MESSAGE" value="extra some add" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
