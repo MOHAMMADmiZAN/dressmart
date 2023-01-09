@@ -4,6 +4,7 @@ import {fetchProducts, getProductById, recentProduct, singleProductResponse} fro
 import {dehydrate, useQuery} from "@tanstack/react-query";
 import {QueryClient} from "@tanstack/query-core";
 import Base from "../../components/templates/Base/Base";
+import {Card, CardHeader, Container} from "@mui/material";
 
 
 interface SINGLE_PRODUCT_PROPS {
@@ -70,7 +71,11 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
         <>
             <Base>
 
-                <p>{Product?.name}</p>
+               <Container>
+                   <Card sx={{my:'10px'}}>
+                       <CardHeader title={Product?.name}/>
+                   </Card>
+               </Container>
             </Base>
 
 
