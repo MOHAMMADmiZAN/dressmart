@@ -39,15 +39,15 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
 
 export async function getStaticPaths() {
     const res = await fetchProducts();
-    console.log(res);
 
     const paths = res.map((product: recentProduct) => ({
-        params: { id: product.id.toString() },
+        params: { id: product.id.toString() }
+    }));
 
-
-    }))
-
-    return { paths, fallback: false }
+    return {
+        paths,
+        fallback: false
+    }
 
 
 }

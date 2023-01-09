@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="single Product  dto response add and refactor">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/api/Product.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Product.api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/product/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/product/[id].tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,14 +83,7 @@
       <workItem from="1672140028810" duration="43000" />
       <workItem from="1672140103243" duration="94323000" />
       <workItem from="1672425040742" duration="60561000" />
-      <workItem from="1672908384961" duration="23785000" />
-    </task>
-    <task id="LOCAL-00046" summary="some change">
-      <created>1672148250314</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1672148250314</updated>
+      <workItem from="1672908384961" duration="24133000" />
     </task>
     <task id="LOCAL-00047" summary=" folder refactor">
       <created>1672150419583</created>
@@ -430,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673201120138</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="single Product  dto response add and refactor">
+      <created>1673259735457</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1673259735457</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
