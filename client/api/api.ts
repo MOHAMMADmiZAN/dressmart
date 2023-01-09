@@ -2,7 +2,8 @@ import axios, {AxiosInstance} from "axios";
 import jwt from "../utils/GetJwt";
 
 
-const baseURL = `http://localhost:1337/api/`
+const baseURL = process.env.BASE_URL || "http://127.0.0.1:1337/api/";
+
 
 
 export const ProductApi: AxiosInstance = axios.create({

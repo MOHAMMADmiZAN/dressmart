@@ -90,10 +90,8 @@ export const fetchProducts = async (): Promise<recentProductArray> => {
     }, []);
 }
 
-export const getProductById = async (id: number | string|undefined): Promise<singleProductResponse> => {
-
-
-    const res = await ProductApi.get(`/${id}?populate[category][populate]=thumbnail&populate=thumbnail&populate[brand][populate]=thumbnail&populate[variants][populate]=thumbnail`);
+export const getProductById = async (id: number | string): Promise<singleProductResponse> => {
+    let res = await ProductApi.get(`/${id}?populate[category][populate]=thumbnail&populate=thumbnail&populate[brand][populate]=thumbnail&populate[variants][populate]=thumbnail`);
     return {
         id: res.data.data.id,
         name: res.data.data.attributes.name,
