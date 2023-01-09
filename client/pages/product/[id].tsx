@@ -23,7 +23,7 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
         isLoading,
         isError,
         error
-    } = useQuery<singleProductResponse, Error>(['singleProduct'], () => getProductById(4));
+    } = useQuery<singleProductResponse, Error>(['singleProduct'], () => getProductById(id));
 
 
     return (
