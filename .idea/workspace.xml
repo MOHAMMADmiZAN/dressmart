@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="single Product  dto response add and refactor">
+    <list default="true" id="944e79d0-0595-4cd5-b39d-6df9f92fda24" name="Changes" comment="extra some add">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/product/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/product/[id].tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,466 +17,60 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_AUTO_UPDATE" value="true" />
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
-      </GitPushTagMode>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitToolBoxStore">
-    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2JAzeETedfpbYVFV4lopzBb9D3c" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2K5Phn4zpSwEXSUSlO2HzLPph1p" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "G:/Dressmart/client/public/assets/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "editing.templates",
     "ts.external.directory.path": "G:\\Dressmart\\client\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="G:\Dressmart\client\public\assets\img" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\Dressmart\client\components\Atoms" />
-      <recent name="G:\Dressmart\client\components\Molecules\Shared" />
-      <recent name="G:\Dressmart\client\components\Organisms\Auth" />
-      <recent name="G:\Dressmart\client\components\Organisms\Products" />
-      <recent name="G:\Dressmart\client\components\Organisms\Header" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="" />
-      <created>1671535769972</created>
+      <changelist id="944e79d0-0595-4cd5-b39d-6df9f92fda24" name="Changes" comment="" />
+      <created>1673261592422</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1671535769972</updated>
-      <workItem from="1671535772857" duration="6259000" />
-      <workItem from="1671563180448" duration="3451000" />
-      <workItem from="1671623474191" duration="5654000" />
-      <workItem from="1671680097767" duration="29433000" />
-      <workItem from="1671876292455" duration="21129000" />
-      <workItem from="1671963718316" duration="15041000" />
-      <workItem from="1671981674516" duration="37356000" />
-      <workItem from="1672140028810" duration="43000" />
-      <workItem from="1672140103243" duration="94323000" />
-      <workItem from="1672425040742" duration="60561000" />
-      <workItem from="1672908384961" duration="24133000" />
+      <updated>1673261592422</updated>
+      <workItem from="1673261595023" duration="319000" />
+      <workItem from="1673261953710" duration="2482000" />
     </task>
-    <task id="LOCAL-00047" summary=" folder refactor">
-      <created>1672150419583</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
+    <task id="LOCAL-00001" summary="extra some add">
+      <created>1673263552348</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1672150419583</updated>
+      <updated>1673263552348</updated>
     </task>
-    <task id="LOCAL-00048" summary="product Data refactor">
-      <created>1672153950652</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1672153950652</updated>
-    </task>
-    <task id="LOCAL-00049" summary="product Data refactor">
-      <created>1672157180555</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1672157180555</updated>
-    </task>
-    <task id="LOCAL-00050" summary="refactor">
-      <created>1672161241964</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1672161241965</updated>
-    </task>
-    <task id="LOCAL-00051" summary="getStaticProps add testing">
-      <created>1672169420608</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1672169420608</updated>
-    </task>
-    <task id="LOCAL-00052" summary="getStaticProps add testing">
-      <created>1672170083215</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1672170083215</updated>
-    </task>
-    <task id="LOCAL-00053" summary="getStaticProps add testing">
-      <created>1672170398814</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1672170398814</updated>
-    </task>
-    <task id="LOCAL-00054" summary="RatingStarViewComponent add">
-      <created>1672224836178</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1672224836178</updated>
-    </task>
-    <task id="LOCAL-00055" summary="schema change">
-      <created>1672225640848</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1672225640848</updated>
-    </task>
-    <task id="LOCAL-00056" summary="some Change">
-      <created>1672238543283</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1672238543283</updated>
-    </task>
-    <task id="LOCAL-00057" summary="some Change">
-      <created>1672247328103</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1672247328103</updated>
-    </task>
-    <task id="LOCAL-00058" summary="some Change">
-      <created>1672248397668</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1672248397668</updated>
-    </task>
-    <task id="LOCAL-00059" summary="some Change">
-      <created>1672248512691</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1672248512691</updated>
-    </task>
-    <task id="LOCAL-00060" summary="some Change">
-      <created>1672250358577</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1672250358577</updated>
-    </task>
-    <task id="LOCAL-00061" summary="order overLay btn change">
-      <created>1672255034287</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1672255034288</updated>
-    </task>
-    <task id="LOCAL-00062" summary="order overLay btn change=">
-      <created>1672255791436</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1672255791436</updated>
-    </task>
-    <task id="LOCAL-00063" summary="some change">
-      <created>1672286311258</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1672286311258</updated>
-    </task>
-    <task id="LOCAL-00064" summary="some change">
-      <created>1672286551630</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1672286551630</updated>
-    </task>
-    <task id="LOCAL-00065" summary="some change">
-      <created>1672286720834</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1672286720834</updated>
-    </task>
-    <task id="LOCAL-00066" summary="some change">
-      <created>1672287858376</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1672287858376</updated>
-    </task>
-    <task id="LOCAL-00067" summary="some change in product api">
-      <created>1672288001371</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1672288001371</updated>
-    </task>
-    <task id="LOCAL-00068" summary="some change in  api">
-      <created>1672288061256</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1672288061256</updated>
-    </task>
-    <task id="LOCAL-00069" summary="some change in  api">
-      <created>1672312525360</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1672312525360</updated>
-    </task>
-    <task id="LOCAL-00070" summary="some change in  ProductCad.style.ts">
-      <created>1672314983005</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1672314983005</updated>
-    </task>
-    <task id="LOCAL-00071" summary="issue auth">
-      <created>1672318076726</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1672318076726</updated>
-    </task>
-    <task id="LOCAL-00072" summary="issue auth">
-      <created>1672327123632</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1672327123632</updated>
-    </task>
-    <task id="LOCAL-00073" summary="issue auth">
-      <created>1672327185464</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1672327185464</updated>
-    </task>
-    <task id="LOCAL-00074" summary="issue auth">
-      <created>1672327780447</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1672327780447</updated>
-    </task>
-    <task id="LOCAL-00075" summary="cart refactor">
-      <created>1672333012036</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1672333012036</updated>
-    </task>
-    <task id="LOCAL-00076" summary="login register finalize">
-      <created>1672336470277</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1672336470277</updated>
-    </task>
-    <task id="LOCAL-00077" summary="login register finalize">
-      <created>1672336540770</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1672336540770</updated>
-    </task>
-    <task id="LOCAL-00078" summary="login register finalize">
-      <created>1672338365959</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1672338365959</updated>
-    </task>
-    <task id="LOCAL-00079" summary="cart init demo">
-      <created>1672368538714</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1672368538714</updated>
-    </task>
-    <task id="LOCAL-00080" summary="some change in pkg">
-      <created>1672408248768</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1672408248768</updated>
-    </task>
-    <task id="LOCAL-00081" summary="some change in pkg">
-      <created>1672424888586</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1672424888586</updated>
-    </task>
-    <task id="LOCAL-00082" summary="some change in cart and product">
-      <created>1672584012742</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1672584012742</updated>
-    </task>
-    <task id="LOCAL-00083" summary="change in MapItems.tsx">
-      <created>1672585478582</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1672585478582</updated>
-    </task>
-    <task id="LOCAL-00084" summary="change in cart Model">
-      <created>1672585980675</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1672585980675</updated>
-    </task>
-    <task id="LOCAL-00085" summary="some change">
-      <created>1672657195880</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1672657195880</updated>
-    </task>
-    <task id="LOCAL-00086" summary="some change">
-      <created>1672666312649</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1672666312650</updated>
-    </task>
-    <task id="LOCAL-00087" summary="some change">
-      <created>1672674879340</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1672674879340</updated>
-    </task>
-    <task id="LOCAL-00088" summary="some change">
-      <created>1672675224136</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1672675224136</updated>
-    </task>
-    <task id="LOCAL-00089" summary="some change">
-      <created>1672683746366</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1672683746366</updated>
-    </task>
-    <task id="LOCAL-00090" summary="cartFunction with bug ..">
-      <created>1672687657822</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1672687657822</updated>
-    </task>
-    <task id="LOCAL-00091" summary="cartFunction with bug ..">
-      <created>1672743477854</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1672743477854</updated>
-    </task>
-    <task id="LOCAL-00092" summary="cartFunction with bug ..">
-      <created>1673011180535</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1673011180535</updated>
-    </task>
-    <task id="LOCAL-00093" summary="Base">
-      <created>1673126261474</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1673126261474</updated>
-    </task>
-    <task id="LOCAL-00094" summary="single Product  dto response add and refactor">
-      <created>1673201120137</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1673201120138</updated>
-    </task>
-    <task id="LOCAL-00095" summary="single Product  dto response add and refactor">
-      <created>1673259735457</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1673259735457</updated>
-    </task>
-    <option name="localTasksCounter" value="96" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="folder refactor" />
-    <MESSAGE value=" folder refactor" />
-    <MESSAGE value="product Data refactor" />
-    <MESSAGE value="refactor" />
-    <MESSAGE value="getStaticProps add testing" />
-    <MESSAGE value="RatingStarViewComponent add" />
-    <MESSAGE value="schema change" />
-    <MESSAGE value="some Change" />
-    <MESSAGE value="order overLay btn change" />
-    <MESSAGE value="order overLay btn change=" />
-    <MESSAGE value="some change in product api" />
-    <MESSAGE value="some change in  api" />
-    <MESSAGE value="some change in  ProductCad.style.ts" />
-    <MESSAGE value="issue auth" />
-    <MESSAGE value="cart refactor" />
-    <MESSAGE value="login register finalize" />
-    <MESSAGE value="cart init demo" />
-    <MESSAGE value="some change in pkg" />
-    <MESSAGE value="some change in cart and product" />
-    <MESSAGE value="change in MapItems.tsx" />
-    <MESSAGE value="change in cart Model" />
-    <MESSAGE value="some change" />
-    <MESSAGE value="cartFunction with bug .." />
-    <MESSAGE value="Base" />
-    <MESSAGE value="single Product  dto response add and refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="single Product  dto response add and refactor" />
+    <MESSAGE value="extra some add" />
+    <option name="LAST_COMMIT_MESSAGE" value="extra some add" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
