@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="Base">
-      <change afterPath="$PROJECT_DIR$/client/pages/product/[id].tsx" afterDir="false" />
+    <list default="true" id="81b57f61-7dbd-4b90-b8dc-010f1ae2b79a" name="Changes" comment="single Product  dto response add and refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/api/Product.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Product.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/product/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/product/[id].tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,14 +85,7 @@
       <workItem from="1672140028810" duration="43000" />
       <workItem from="1672140103243" duration="94323000" />
       <workItem from="1672425040742" duration="60561000" />
-      <workItem from="1672908384961" duration="20231000" />
-    </task>
-    <task id="LOCAL-00045" summary="folder refactor">
-      <created>1672141130355</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1672141130355</updated>
+      <workItem from="1672908384961" duration="23785000" />
     </task>
     <task id="LOCAL-00046" summary="some change">
       <created>1672148250314</created>
@@ -430,7 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673126261474</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="single Product  dto response add and refactor">
+      <created>1673201120137</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1673201120138</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,7 +449,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="folder fixed" />
     <MESSAGE value="folder refactor" />
     <MESSAGE value=" folder refactor" />
     <MESSAGE value="product Data refactor" />
@@ -474,7 +473,8 @@
     <MESSAGE value="some change" />
     <MESSAGE value="cartFunction with bug .." />
     <MESSAGE value="Base" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base" />
+    <MESSAGE value="single Product  dto response add and refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="single Product  dto response add and refactor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

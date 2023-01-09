@@ -61,9 +61,6 @@ interface brand {
 
 
 export interface recentProductArray extends Array<recentProduct> {
-    rating: number;
-    thumbnail: string;
-
 }
 
 export interface VariantArray extends Array<variant> {
@@ -71,7 +68,7 @@ export interface VariantArray extends Array<variant> {
 }
 
 // recent products fetch api
-export const fetchProducts = async () => {
+export const fetchProducts = async (): Promise<recentProductArray> => {
     const res = await ProductApi.get("?populate=thumbnail");
     return res.data.data.reduce((acc: any, cur: any) => {
         const {id, attributes} = cur;
@@ -93,10 +90,10 @@ export const fetchProducts = async () => {
     }, []);
 }
 
-export const getProductById = async (id: number): Promise<singleProductResponse> => {
-    const res = await ProductApi.get(`/${id}?populate[category][populate]=thumbnail&populate=thumbnail&populate[brand][populate]=thumbnail&populate[variants][populate]=thumbnail`);
-    console.log(res.data.data.attributes);
+export const getProductById = async (id: number | string): Promise<singleProductResponse> => {
 
+
+    const res = await ProductApi.get(`/${id}?populate[category][populate]=thumbnail&populate=thumbnail&populate[brand][populate]=thumbnail&populate[variants][populate]=thumbnail`);
     return {
         id: res.data.data.id,
         name: res.data.data.attributes.name,
@@ -134,5 +131,6 @@ export const getProductById = async (id: number): Promise<singleProductResponse>
 
 
     }
+
 
 }
