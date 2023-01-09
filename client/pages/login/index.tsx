@@ -5,9 +5,7 @@ import LogIn from '../../components/Organisms/Auth/Login/Login';
 function Login(): JSX.Element {
     return (
         <>
-            <Base inner={[ <LogIn key={1} />]} >
-
-            </Base>
+            <Base inner={[<LogIn key={1} />]} />
         </>
     )
 }
