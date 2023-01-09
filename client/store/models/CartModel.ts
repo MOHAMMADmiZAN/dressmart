@@ -89,13 +89,13 @@ const CartModel: Cart = {
             }
 
             let res = await CartRequest.updateCart(state.CartId, { products: [ payload,...state.CartItems.filter(item => item.productId != payload.productId)] })
-            if (res.response.request.status>=200 && res.response.request.status<300) {
-                actions.AddProduct(payload)
-                return
-            }
+            // if (res.response.request.status>=200 && res.response.request.status<300) {
+            //     actions.AddProduct(payload)
+            //     return
+            // }
 
 
-            // actions.SetCartItem(res.data.attributes)
+            actions.SetCartItem(res.data.attributes)
             
            
         }
@@ -137,7 +137,7 @@ const CartModel: Cart = {
             res = await CartRequest.updateCart(state.CartId, { products: [...state.CartItems.filter(item => item.productId != payload.productId)] })
         }
        
-        // actions.SetCartItem(res.data.attributes)
+        actions.SetCartItem(res.data.attributes)
     }),
     
        

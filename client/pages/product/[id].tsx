@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
-import {useRouter} from "next/router";
-import {fetchProducts, getProductById, recentProduct, singleProductResponse} from "../../api/Product.api";
-import {dehydrate, useQuery} from "@tanstack/react-query";
-import {QueryClient} from "@tanstack/query-core";
+import React, { useEffect } from 'react';
+import { useRouter } from "next/router";
+import { fetchProducts, getProductById, recentProduct, singleProductResponse } from "../../api/Product.api";
+import { dehydrate, useQuery } from "@tanstack/react-query";
+import { QueryClient } from "@tanstack/query-core";
 
 interface SINGLE_PRODUCT_PROPS {
     Product: any;
@@ -17,7 +17,7 @@ interface Path_Prams {
 export async function getStaticPaths() {
     const res = await fetchProducts();
     const paths = res.map((product: recentProduct) => ({
-        params: {id: product.id.toString()}
+        params: { id: product.id.toString() }
     }))
 
     return {
@@ -31,7 +31,7 @@ export async function getStaticPaths() {
 
 
 export async function getStaticProps(ctx: { params: Path_Prams; }) {
-    const {id} = ctx.params;
+    const { id } = ctx.params;
     console.log(id);
     const queryClient = new QueryClient()
     await queryClient.prefetchQuery<singleProductResponse, Error>(['singleProduct'], () => getProductById(id))
@@ -56,7 +56,7 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
 
     useEffect(() => {
         console.log(data);
-    },[data])
+    }, [data])
 
 
     return (
