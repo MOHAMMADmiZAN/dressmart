@@ -54,7 +54,7 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
         AddProduct,
         decrementProductQuantity,
         AddProductThunk,
-        RemoveProductThunk
+        DecreaseProductThunk
     } = useStoreActions((actions: Actions<CartType>) => actions.Cart);
 
 
@@ -63,7 +63,7 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
     }
 
     const decreaseOrderCount = () => {
-        isAuth ? RemoveProductThunk(productState) : decrementProductQuantity(productState)
+        isAuth ? DecreaseProductThunk(productState) : decrementProductQuantity(productState)
     }
 
     // console.log(item)
