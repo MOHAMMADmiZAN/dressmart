@@ -1,8 +1,12 @@
 import React from 'react'
+import Base from '../../components/templates/Base/Base'
+import CheckOut from '../../components/Organisms/checkout/checkout';
 
 function Checkout() {
     return (
-        <div>Checkout</div>
+        <>
+            <Base inner={[<CheckOut key={1} />]} />
+        </>
     )
 }
 

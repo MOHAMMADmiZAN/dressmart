@@ -16,10 +16,12 @@ let inputs = [
     {
         name: 'email',
         type: 'text',
+        fullWidth: true
     },
     {
         name: 'password',
         type: 'password',
+        fullWidth: true
     }
 ]
 
