@@ -9,6 +9,7 @@ import { CartType } from '../../../store/models/CartModel';
 import EmptyCart from '../Cart/CartDrawer/EmptyCart';
 import CartItem from '../Cart/CartItem/CartItem';
 import GridRow from '../Cart/CartItem/GridRow';
+import { checkoutStyle, totalPriceStyle, priceStyle } from './checkout.style';
 
 let ContactInputs = [
     {
@@ -81,12 +82,19 @@ function CheckOut() {
                     <MapItems ItemComponent={Input} items={ShippingInputs} other={control} />
 
                 </Grid>
+
+                <Grid container item xs={12} sm={12} md={10} lg={10} xl={8} flexDirection={'column'} sx={totalPriceStyle} >
+                    <Typography variant='body1'> Your total payable amount is  </Typography>
+                    <Typography variant='h4' sx={priceStyle} >৳ {1212} </Typography>
+                    <Typography variant='h6'  > Details </Typography>
+                    <Typography variant='body1'  > You will get the delivery within 2-3 Days after confirmation.</Typography>
+                </Grid>
             </Grid>
-            <Grid container item xs={4.3} flexDirection={'column'} alignItems={'center'} sx={{ backgroundColor: 'primary.light', margin: '30px 20px', padding: '30px 5px', borderRadius: '10px' }} >
+            <Grid container item xs={4.3} flexDirection={'column'} alignItems={'center'} sx={checkoutStyle} >
 
-                <Typography variant='h6' sx={{ padding: '10px 0px' }}> Cart OverView</Typography>
+                <Typography variant='h6' sx={{ padding: '0px 0px 10px 0px' }}> Cart OverView</Typography>
 
-                <Grid xs={10}>
+                <Grid xs={12}>
                     {CartItems.length > 0 ?
                         < MapItems ItemComponent={CartItem} items={CartItems} /> :
                         <EmptyCart />
@@ -97,7 +105,7 @@ function CheckOut() {
                             Total:
                         </Typography>
                         <Typography sx={{ padding: '10px 0px' }} variant='h6'>
-                            ৳{2446}
+                            ৳ {2446}
                         </Typography>
                     </GridRow>
                     <GridRow>
@@ -105,7 +113,7 @@ function CheckOut() {
                             Shipping:
                         </Typography>
                         <Typography variant='h6' sx={{ padding: '10px 0px' }}>
-                            ৳{100}
+                            ৳ {100}
                         </Typography>
                     </GridRow>
                     <Divider />
@@ -114,7 +122,7 @@ function CheckOut() {
                             Payable:
                         </Typography>
                         <Typography variant='h5' sx={{ padding: '10px 0px' }}>
-                            ৳{10000}
+                            ৳ {10000}
                         </Typography>
                     </GridRow>
                 </Grid>
