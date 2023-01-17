@@ -56,8 +56,8 @@ export async function getStaticProps(ctx: { params: Path_Prams; }) {
 const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
 
     const Route = useRouter();
-    // @ts-ignore
-    const id: string = Route.query.id;
+
+    const id: unknown = Route.query.id;
 
     const {
         data: Product,

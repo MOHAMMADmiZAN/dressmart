@@ -20,3 +20,9 @@ export function generateId() {
 }
 
 
+// sanitize id type if unknown
+export function sanitizeId(id: unknown): number {
+    return typeof id === "string" ? parseInt(id) : id as number;
+
+
+}

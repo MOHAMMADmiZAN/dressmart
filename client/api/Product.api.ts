@@ -1,5 +1,6 @@
 // product fetch api
 import {ProductApi} from "./api";
+import {sanitizeId} from "../utils/Helper";
 
 export type recentProduct = {
     id: number;
@@ -47,6 +48,8 @@ export interface singleProductResponse {
 
 }
 
+declare type idType = string | number | unknown;
+
 interface category {
     id: number;
     name: string;
@@ -90,8 +93,8 @@ export const fetchProducts = async (): Promise<recentProductArray> => {
     }, []);
 }
 
-export const getProductById = async (id: number | string): Promise<singleProductResponse> => {
-    let res = await ProductApi.get(`/${id}?populate[category][populate]=thumbnail&populate=thumbnail&populate[brand][populate]=thumbnail&populate[variants][populate]=thumbnail`);
+export const getProductById = async (id: idType): Promise<singleProductResponse> => {
+    let res = await ProductApi.get(`/${sanitizeId(id)}?populate[category][populate]=thumbnail&populate=thumbnail&populate[brand][populate]=thumbnail&populate[variants][populate]=thumbnail`);
     return {
         id: res.data.data.id,
         name: res.data.data.attributes.name,
