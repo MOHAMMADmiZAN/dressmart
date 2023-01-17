@@ -9,12 +9,13 @@ import CssBaseline from '@mui/material/CssBaseline';
 import {theme} from '../components/Molecules/Theme/Theme.style';
 import {ThemeProvider} from '@mui/material';
 import CartBadge from "../components/Molecules/Shared/CartBadge/CartBadge";
+import React from "react";
 
 
 const queryClient = new QueryClient()
 
 
-function WaitForStateRehydration({children}: any): any {
+function WaitForStateRehydration({children}: { children: React.ReactElement }) : React.ReactElement | null {
     const isRehydrated = useStoreRehydrated()
     return isRehydrated ? children : null
 }
