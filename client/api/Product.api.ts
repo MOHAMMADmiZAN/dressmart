@@ -15,16 +15,16 @@ export type recentProduct = {
 }
 
 
-type variant = {
+interface variant  {
     id: number;
     color: string;
     stock: string;
     image: image;
 }
-type image = {
+interface image  {
     src: src;
 }
-type src = {
+interface src  {
     url: string;
     id: number;
 }
