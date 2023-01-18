@@ -15,7 +15,6 @@ type  fetchCartPayload = {
     quantity: number;
 }
 
-
 export class CartRequest {
     static async createCart(data: { products: ProductPayload[] }): Promise<unknown> {
         try {
@@ -42,7 +41,13 @@ export class CartRequest {
 
     // get a cart
     static async getCart(id: number): Promise<boolean> {
-        return id ? (await CartApi.get(`/${id}`)).data.data.length !== 0 : false;
+        try {
+            return id ? (await CartApi.get(`/${id}`)).data.data.length !== 0 : false;
+        } catch (e) {
+            return false;
+        }
+
+
     }
 
     // update a cart
