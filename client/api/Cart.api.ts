@@ -1,6 +1,6 @@
 import {CartApi} from "./api";
 import GetJwt from "../utils/GetJwt";
-import { ProductPayload } from "../store/models/CartModel";
+import {ProductPayload} from "../store/models/CartModel";
 
 const jwt = GetJwt()
 
@@ -40,7 +40,7 @@ export class CartRequest {
     }
 
     // get a cart
-    static async getCart(id: string): Promise<boolean> {
+    static async getCart(id: number): Promise<boolean> {
         if (id) {
             const cart = await CartApi.get(`/${id}`)
             console.log(cart)
@@ -48,13 +48,12 @@ export class CartRequest {
         } else {
             return false;
         }
-       
 
 
     }
 
     // update a cart
-    static async updateCart(id: string, data: { products: ProductPayload[] }) {
+    static async updateCart(id: number, data: { products: ProductPayload[] }) {
         try {
             const cart = await CartApi.put(`/${id}`, {data: data})
             return cart.data
@@ -64,7 +63,7 @@ export class CartRequest {
     }
 
     // delete a cart
-    static async deleteCart(id: string) {
+    static async deleteCart(id: number) {
         try {
             const cart = await CartApi.delete(`/${id}`)
             return cart.data
