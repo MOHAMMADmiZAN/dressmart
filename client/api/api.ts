@@ -1,6 +1,7 @@
 import axios, {AxiosInstance} from "axios";
-import jwt from "../utils/GetJwt";
+import GetJwt from "../utils/GetJwt";
 
+let jwt = GetJwt()
 
 const baseURL = process.env.BASE_URL || "http://127.0.0.1:1337/api/";
 
