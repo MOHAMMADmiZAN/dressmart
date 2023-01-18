@@ -41,15 +41,7 @@ export class CartRequest {
 
     // get a cart
     static async getCart(id: number): Promise<boolean> {
-        if (id) {
-            const cart = await CartApi.get(`/${id}`)
-            console.log(cart)
-            return cart.data.data.length !== 0;
-        } else {
-            return false;
-        }
-
-
+        return id ? (await CartApi.get(`/${id}`)).data.data.length !== 0 : false;
     }
 
     // update a cart
