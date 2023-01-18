@@ -73,6 +73,7 @@ const CartModel: Cart = {
     AddProductThunk: thunk(async (actions, payload, {getState}) => {
         let state = getState();
         let haveCartInDb = await CartRequest.getCart(state.CartId)
+        console.log(haveCartInDb)
         if (!haveCartInDb) {
             payload.quantity = 1
             let res = await CartRequest.createCart({products: [payload]})

@@ -1,6 +1,6 @@
 import {Action, action, State, Thunk, thunk} from 'easy-peasy';
 import {AuthRequest} from "../../api/Auth.api";
-import jwt from "../../utils/GetJwt";
+import GetJwt from "../../utils/GetJwt";
 
 export  type AuthType = {
     Auth: typeof AuthModel

@@ -3,6 +3,8 @@ import { TableCell, TableRow, TableBody } from '@mui/material';
 
 type Props = {}
 
+// TODO: need to implement whole table 
+
 const TabRow = (props: Props) => {
     return (
         <TableBody>
