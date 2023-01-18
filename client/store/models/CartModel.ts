@@ -73,16 +73,20 @@ const CartModel: Cart = {
     AddProductThunk: thunk(async (actions, payload, {getState}) => {
         let state = getState();
         let haveCartInDb = await CartRequest.getCart(state.CartId)
-        console.log(haveCartInDb)
         if (!haveCartInDb) {
             payload.quantity = 1
-            let res = await CartRequest.createCart({products: [payload]})
-            actions.AddProduct(res.ProductResponse)
-            actions.SetCartId(res.CartId.toString())
+            try {
+                let res = await CartRequest.createCart({products: [payload]})
+                actions.AddProduct(res.ProductResponse)
+                actions.SetCartId(res.CartId.toString())
+
+            }catch (e) {
+                console.log(e)
+            }
+
         }
         if (haveCartInDb) {
             const index = IsInCart(state.CartItems ,payload)
-
             if (index === -1) {
                 payload.quantity = 1
                 let res = await CartRequest.updateCart(state.CartId, { products: [...state.CartItems, payload] })

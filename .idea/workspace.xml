@@ -7,6 +7,7 @@
     <list default="true" id="9dc15fb6-e6a5-4872-9a74-13eb6796b93c" name="Changes" comment="cart Issue fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/api/Cart.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Cart.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/models/CartModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/models/CartModel.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +62,7 @@
       <workItem from="1673944805980" duration="8196000" />
       <workItem from="1674017968481" duration="5577000" />
       <workItem from="1674024115311" duration="7360000" />
-      <workItem from="1674038628707" duration="5348000" />
+      <workItem from="1674038628707" duration="6586000" />
     </task>
     <task id="LOCAL-00001" summary="type refactor">
       <created>1673955865349</created>
@@ -105,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674053192266</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="cart Issue fixed">
+      <created>1674053788388</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674053788388</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

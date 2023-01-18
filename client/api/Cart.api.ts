@@ -15,28 +15,27 @@ type  fetchCartPayload = {
     quantity: number;
 }
 
+interface createCartResponse {
+    CartId: number;
+    ProductResponse: fetchCartPayload;
+
+}
+
 export class CartRequest {
-    static async createCart(data: { products: ProductPayload[] }): Promise<unknown> {
-        try {
-            const cart = await CartApi.post("/", {data: data})
-            const ProductResponse = cart.data.products.reduce((acc: fetchCartPayload, cur: ProductPayload) => {
-                acc["productId"] = Number(cur.productId)
-                acc["productName"] = cur.productName
-                acc["productModel"] = cur.productModel
-                acc["thumbnailUrl"] = cur.thumbnailUrl
-                acc["price"] = Number(cur.price)
-                acc["quantity"] = Number(cur.quantity)
+    static async createCart(data: { products: ProductPayload[] }): Promise<createCartResponse> {
+        const cart = await CartApi.post("/", {data: data})
+        const ProductResponse = cart.data.products.reduce((acc: fetchCartPayload, cur: ProductPayload) => {
+            acc["productId"] = Number(cur.productId)
+            acc["productName"] = cur.productName
+            acc["productModel"] = cur.productModel
+            acc["thumbnailUrl"] = cur.thumbnailUrl
+            acc["price"] = Number(cur.price)
+            acc["quantity"] = Number(cur.quantity)
 
-                return acc
-            }, {})
-            return {
-                CartId: cart.data.id,
-                ProductResponse
-            }
+            return acc
+        }, {})
+        return {CartId: cart.data.id, ProductResponse: ProductResponse}
 
-        } catch (e) {
-            console.log(e)
-        }
     }
 
     // get a cart
