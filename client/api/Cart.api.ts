@@ -15,8 +15,9 @@ type  fetchCartPayload = {
     quantity: number;
 }
 
+
 export class CartRequest {
-    static async createCart(data: { products: ProductPayload[] }): Promise<any> {
+    static async createCart(data: { products: ProductPayload[] }): Promise<unknown> {
         try {
             const cart = await CartApi.post("/", {data: data})
             const ProductResponse = cart.data.products.reduce((acc: fetchCartPayload, cur: ProductPayload) => {
