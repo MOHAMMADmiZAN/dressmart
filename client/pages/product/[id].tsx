@@ -65,6 +65,8 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
         React.RefObject<HTMLButtonElement>[]
     >([]);
 
+    const [selectedColor, setSelectedColor] = useState<number>(0);
+
     const {
         data: Product,
         isLoading,
@@ -77,16 +79,18 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
 
     }, [Product?.variants, Product?.variants.length])
     useEffect(() => {
-            typeof Product?.variants[0].image === 'string' ? setProductImage(Product.variants[0].image) : setProductImage(Product ? Product.thumbnail : '')
-            if (colorBoxRefs.length > 0) {
-                let colorBoxRef = colorBoxRefs[0];
-                colorBoxRef.current?.focus();
-                colorBoxRef.current?.click();
-                categoryLinkRef.current?.setAttribute('style', `color: ${colorBoxRefs[0].current?.getAttribute('data-color')}`)
-            }
+        typeof Product?.variants[0].image === 'string' ? setProductImage(Product.variants[0].image) : setProductImage(Product ? Product.thumbnail : '')
+        if (colorBoxRefs.length > 0) {
+            let colorBoxRef = colorBoxRefs[0];
+            // colorBoxRef.current?.focus();
+            colorBoxRef.current?.click();
+            categoryLinkRef.current?.setAttribute('style', `color: ${colorBoxRef.current?.getAttribute('data-color')}`)
+            setSelectedColor(Number(colorBoxRef.current?.getAttribute('data-id')) || 0)
+
+        }
 
 
-        },[Product, colorBoxRefs, colorBoxRefs.length])
+    }, [Product, colorBoxRefs, colorBoxRefs.length])
 
     const handleVariantClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         const target = e.target as HTMLDivElement;
@@ -96,7 +100,7 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
         console.log(variantStock)
         const variantColor = target.getAttribute('data-color');
         categoryLinkRef.current?.setAttribute('style', `color: ${variantColor}`)
-        console.log(`clicked`)
+        setSelectedColor(Number(target.getAttribute('data-id')) || 0)
 
 
     }
@@ -172,15 +176,16 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
                                 <Divider/>
                                 <CardContent
                                     sx={{display: `flex`, alignItems: `center`, justifyContent: `space-between`}}>
-
-
                                     <Box sx={{m: '10px', display: 'flex', alignItems: `center`, p: `0 10px`}}>
                                         <Typography component={`h6`} variant={`subtitle1`}
                                                     sx={{mr: 1, fontWeight: 600}}> Choose Color:</Typography>
                                         {Product?.variants?.map((variant, index) => {
                                                 return (
                                                     <Box component={`button`} bgcolor={variant.color}
-                                                         sx={{...colorBtnStyle}}
+                                                         sx={{
+                                                             ...colorBtnStyle,
+                                                             transform: selectedColor === variant.id ? 'scale(1.3)' : 'scale(1)'
+                                                         }}
                                                          onClick={handleVariantClick} data-image={variant.image}
                                                          data-stock={variant.stock} key={variant.id}
                                                          data-color={variant.color}
