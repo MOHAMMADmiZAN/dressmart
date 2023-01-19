@@ -75,18 +75,18 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
     useLayoutEffect(() => {
         Product?.variants && setColorBoxRefs(Product.variants.map((_) => React.createRef<HTMLButtonElement>()))
 
-    }, [Product?.variants.length, Product, colorBoxRefs.length])
+    }, [Product?.variants, Product?.variants.length])
     useEffect(() => {
             typeof Product?.variants[0].image === 'string' ? setProductImage(Product.variants[0].image) : setProductImage(Product ? Product.thumbnail : '')
             if (colorBoxRefs.length > 0) {
                 let colorBoxRef = colorBoxRefs[0];
                 colorBoxRef.current?.focus();
+                colorBoxRef.current?.click();
                 categoryLinkRef.current?.setAttribute('style', `color: ${colorBoxRefs[0].current?.getAttribute('data-color')}`)
             }
 
 
-        },
-        [Product, Product?.variants, colorBoxRefs, colorBoxRefs.length])
+        },[Product, colorBoxRefs, colorBoxRefs.length])
 
     const handleVariantClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         const target = e.target as HTMLDivElement;
@@ -96,6 +96,7 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
         console.log(variantStock)
         const variantColor = target.getAttribute('data-color');
         categoryLinkRef.current?.setAttribute('style', `color: ${variantColor}`)
+        console.log(`clicked`)
 
 
     }
