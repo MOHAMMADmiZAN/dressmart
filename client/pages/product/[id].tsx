@@ -1,10 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 import {useRouter} from "next/router";
 import {fetchProducts, getProductById, recentProduct, singleProductResponse} from "../../api/Product.api";
 import {dehydrate, useQuery} from "@tanstack/react-query";
 import {QueryClient} from "@tanstack/query-core";
 import Base from "../../components/templates/Base/Base";
-import {Box, Card, CardMedia, Container, Grid, Typography} from "@mui/material";
+import {Box, Card, CardContent, CardMedia, Container, Divider, Grid, Typography} from "@mui/material";
+import Head from "next/head";
+import NextLink from "next/link";
 
 
 interface SINGLE_PRODUCT_PROPS {
@@ -56,8 +58,12 @@ export async function getStaticProps(ctx: { params: Path_Prams; }) {
 const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
 
     const Route = useRouter();
-
     const id: unknown = Route.query.id;
+    const categoryLinkRef = useRef<HTMLAnchorElement>(null);
+
+    const [colorBoxRefs, setColorBoxRefs] = useState<
+        React.RefObject<HTMLButtonElement>[]
+    >([]);
 
     const {
         data: Product,
@@ -66,11 +72,21 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
         error
     } = useQuery<singleProductResponse, Error>(['singleProduct', id], () => getProductById(id))
     const [productImage, setProductImage] = useState<string>('');
-    useEffect(() => {
-        setProductImage(Product ? Product.thumbnail : '')
-        console.log(Product)
+    useLayoutEffect(() => {
+        Product?.variants && setColorBoxRefs(Product.variants.map((_) => React.createRef<HTMLButtonElement>()))
 
-    }, [Product])
+    }, [Product?.variants.length, Product, colorBoxRefs.length])
+    useEffect(() => {
+            typeof Product?.variants[0].image === 'string' ? setProductImage(Product.variants[0].image) : setProductImage(Product ? Product.thumbnail : '')
+            if (colorBoxRefs.length > 0) {
+                let colorBoxRef = colorBoxRefs[0];
+                colorBoxRef.current?.focus();
+                categoryLinkRef.current?.setAttribute('style', `color: ${colorBoxRefs[0].current?.getAttribute('data-color')}`)
+            }
+
+
+        },
+        [Product, Product?.variants, colorBoxRefs, colorBoxRefs.length])
 
     const handleVariantClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         const target = e.target as HTMLDivElement;
@@ -79,9 +95,11 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
         const variantStock = target.getAttribute('data-stock');
         console.log(variantStock)
         const variantColor = target.getAttribute('data-color');
-        console.log(variantColor)
+        categoryLinkRef.current?.setAttribute('style', `color: ${variantColor}`)
+
 
     }
+
     const colorBtnStyle = {
         width: '15px',
         height: '15px',
@@ -93,6 +111,16 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
         "&:hover": {
             transform: 'scale(1.3)',
         },
+        "&:focus": {
+            transform: 'scale(1.3)',
+        },
+        "&:focus-visible": {
+            transform: 'scale(1.3)',
+            outline: 'none'
+        },
+        "&:active": {
+            transform: 'scale(1.3)',
+        }
 
     }
     const productImageStyle = {
@@ -107,6 +135,12 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
     return (
         <>
             <Base>
+                <Head>
+                    <title>{Product?.name || `Not Found`}</title>
+                    <meta name="description" content={Product?.metaData || `Not Found`}/>
+                    <meta name="keywords" content={Product?.metaTags || `Not Found`}/>
+                    <meta name="author" content="DressMart"/>
+                </Head>
                 <Container>
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={6}>
@@ -115,28 +149,71 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
                             </Card>
                         </Grid>
                         <Grid item xs={12} md={6} marginY={`10px`}>
-                            <Box>
-                                <Typography component={`h5`} variant={`h5`}
-                                            sx={{textTransform: `capitalize`}}>{Product?.name}</Typography>
-                                <Typography component={`h6`} variant={`h6`}>{Product?.model}</Typography>
-                                <Box component={`div`} display={`flex`} >
-                                    <Typography component={`del`} variant={`h6`}
-                                                sx={{color: '#949494',fontSize:'13px',mx:1}}>৳{Product?.regularPrice}</Typography>
-                                    <Typography component={`h6`} variant={`h6`}
-                                                sx={{color: 'primary.main', fontSize:'16px'}}>৳{Product?.salePrice}</Typography>
-                                </Box>
-                            </Box>
-                            <Box sx={{m: '10px', display: 'flex',}}>
+                            <Card>
+                                <CardContent>
+                                    <Typography component={`h2`} variant={`h2`} sx={{
+                                        textTransform: `capitalize`,
+                                        color: `primary.dark`,
+                                        p: `10px`,
+                                    }}>{Product?.name}</Typography>
+                                    <Box component={`div`} display={`flex`} p={`0 10px`} alignItems={`center`}>
+                                        <Typography component={`del`} variant={`subtitle1`} sx={{
+                                            color: '#949494',
+                                            fontSize: '13px',
+                                            mr: 1
+                                        }}>৳{Product?.regularPrice}</Typography>
+                                        <Typography component={`h6`} variant={`h6`} sx={{
+                                            color: 'primary.main',
+                                            fontSize: '16px'
+                                        }}>৳{Product?.salePrice}</Typography>
+                                    </Box>
+                                </CardContent>
+                                <Divider/>
+                                <CardContent
+                                    sx={{display: `flex`, alignItems: `center`, justifyContent: `space-between`}}>
 
-                                {Product?.variants?.map((variant) => {
+
+                                    <Box sx={{m: '10px', display: 'flex', alignItems: `center`, p: `0 10px`}}>
+                                        <Typography component={`h6`} variant={`subtitle1`}
+                                                    sx={{mr: 1, fontWeight: 600}}> Choose Color:</Typography>
+                                        {Product?.variants?.map((variant, index) => {
+                                                return (
+                                                    <Box component={`button`} bgcolor={variant.color}
+                                                         sx={{...colorBtnStyle}}
+                                                         onClick={handleVariantClick} data-image={variant.image}
+                                                         data-stock={variant.stock} key={variant.id}
+                                                         data-color={variant.color}
+                                                         data-id={variant.id} ref={colorBoxRefs[index]}/>
+                                                )
+                                            }
+                                        )}
+                                    </Box>
+                                    <Box sx={{m: '10px', display: 'flex', alignItems: `center`, p: `0 10px`}}>
+                                        <Typography component={`h6`} variant={`subtitle1`}
+                                                    sx={{mr: 1, fontWeight: 600}}> Category:</Typography>
+                                        <NextLink href={`/`} ref={categoryLinkRef}><Typography component={`h6`}
+                                                                                               variant={`h6`}>{Product?.category.name}</Typography></NextLink>
+                                    </Box>
+                                </CardContent>
+                                <Divider/>
+                                <CardContent sx={{
+                                    transition: `all .3s ease-in-out`,
+                                    cursor: `pointer`,
+                                    "&:hover": {bgcolor: '#FFFFF6'}
+                                }}>
+                                    <Typography component={`p`} variant={`h5`} sx={{p: `10px`,}}>Product
+                                        description:</Typography>
+
+                                    {Product?.description.split(`.`).map((para, index) => {
                                         return (
-                                            <Box component={`button`} bgcolor={variant.color} sx={{...colorBtnStyle}}
-                                                 onClick={handleVariantClick} data-image={variant.image}
-                                                 data-stock={variant.stock} key={variant.id} data-color={variant.color} data-id={variant.id}/>
+                                            <Typography component={`p`} variant={`h6`} key={index}
+                                                        sx={{p: `0 10px`}}>{para}</Typography>
                                         )
-                                    }
-                                )}
-                            </Box>
+                                    })}
+
+                                </CardContent>
+                                <Divider/>
+                            </Card>
                         </Grid>
                     </Grid>
                 </Container>
