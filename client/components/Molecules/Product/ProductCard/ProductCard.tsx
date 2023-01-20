@@ -3,6 +3,7 @@ import {Box, Card, CardContent, CardMedia, Typography} from "@mui/material";
 import Star from "../../Star/Star";
 import {cardOrderOverLay, CardOrderOverLayContent, productCardStyle} from "./ProductCard.style";
 import NextLink from "next/link";
+import {useRouter} from "next/router";
 
 interface ProductCardProps {
     ProductCardTitle: string,
@@ -30,9 +31,15 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
         ProductCardDiscountPrice,
         ProductID
     } = ProductCardProps;
+    const Router = useRouter();
 
+    const handleSingleProduct = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
 
-    // console.log(item)
+        console.log(ProductID);
+        console.log(`clicked`);
+
+        Router.push(`/product/${ProductID}`).then(r => console.log(r))
+    }
 
     return (
         <>
@@ -52,15 +59,15 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
                         ৳{ProductCardPrice}
                     </Typography>
                 </CardContent>
-                <Box sx={{...cardOrderOverLay}}>
-                    <CardOrderOverLayContent sx={{width: '100%', textAlign: `center`, flexDirection: 'column'}}>
+                <Box sx={{...cardOrderOverLay}} onClick={handleSingleProduct}>
+                    <CardOrderOverLayContent sx={{width: '100%', textAlign: `center`, flexDirection: 'column'}} >
                         <NextLink href={`/product/${ProductID}`}> <Typography variant={`h6`} sx={{
                             color: '#fff',
                             width: '100%',
                             fontSize: '16px',
                             height: '100%',
                         }}>
-                            Add To Shopping Cart
+                           Go to Product Details
                         </Typography></NextLink>
                     </CardOrderOverLayContent>
                 </Box>

@@ -64,14 +64,9 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = () => {
     const Route = useRouter();
     const id: unknown = Route.query.id;
     const categoryLinkRef = useRef<HTMLAnchorElement>(null);
-
-
-    const {
-        data: Product
-    } = useQuery<singleProductResponse, Error>(['singleProduct', id], () => getProductById(id))
+    const {data: Product} = useQuery<singleProductResponse, Error>(['singleProduct', id], () => getProductById(id))
 
     const [selectedColor, setSelectedColor] = useState<number>(0);
-
     const [productImage, setProductImage] = useState<string>('');
     useEffect(() => {
         if (Product?.variants?.length) {
@@ -140,8 +135,7 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = () => {
                                     <Box sx={{m: '10px', display: 'flex', alignItems: `center`, p: `0`}}>
                                         <Typography component={`h6`} variant={`subtitle1`}
                                                     sx={{mr: 1, fontWeight: 600}}> Category:</Typography>
-                                        <NextLink href={`/`} ref={categoryLinkRef}><Typography component={`h6`}
-                                                                                               variant={`h6`}>{Product?.category.name}</Typography></NextLink>
+                                        <NextLink href={`/`} ref={categoryLinkRef}><Typography component={`h6`} variant={`h6`}>{Product?.category.name}</Typography></NextLink>
                                     </Box>
                                 </CardContent>
                                 <Divider/>
