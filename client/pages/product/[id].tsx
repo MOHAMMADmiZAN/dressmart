@@ -7,6 +7,10 @@ import Base from "../../components/templates/Base/Base";
 import {Box, Card, CardContent, CardMedia, Container, Divider, Grid, Typography} from "@mui/material";
 import Head from "next/head";
 import NextLink from "next/link";
+import Star from "../../components/Molecules/Star/Star";
+import {State, useStoreState} from "easy-peasy";
+import {CartType} from "../../store/models/CartModel";
+import CartActions from "../../components/Organisms/Cart/CartActions/CartActions";
 
 
 interface SINGLE_PRODUCT_PROPS {
@@ -79,7 +83,11 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
 
     }, [Product?.variants, Product?.variants.length])
     useEffect(() => {
-        typeof Product?.variants[0].image === 'string' ? setProductImage(Product.variants[0].image) : setProductImage(Product ? Product.thumbnail : '')
+        if (Product?.variants?.length) {
+            typeof Product?.variants[0].image === 'string' ? setProductImage(Product.variants[0].image) : setProductImage(Product ? Product.thumbnail : '')
+        } else {
+            setProductImage(Product ? Product.thumbnail : '')
+        }
         if (colorBoxRefs.length > 0) {
             let colorBoxRef = colorBoxRefs[0];
             // colorBoxRef.current?.focus();
@@ -91,6 +99,11 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
 
 
     }, [Product, colorBoxRefs, colorBoxRefs.length])
+
+
+    const {CartItems} = useStoreState((state: State<CartType>) => state.Cart)
+    const index = CartItems.findIndex(item => item.productId === Product?.id)
+
 
     const handleVariantClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         const target = e.target as HTMLDivElement;
@@ -105,6 +118,7 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
 
     }
 
+
     const colorBtnStyle = {
         width: '15px',
         height: '15px',
@@ -115,17 +129,8 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
         m: '5px',
         "&:hover": {
             transform: 'scale(1.3)',
-        },
-        "&:focus": {
-            transform: 'scale(1.3)',
-        },
-        "&:focus-visible": {
-            transform: 'scale(1.3)',
-            outline: 'none'
-        },
-        "&:active": {
-            transform: 'scale(1.3)',
         }
+
 
     }
     const productImageStyle = {
@@ -156,11 +161,14 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
                         <Grid item xs={12} md={6} marginY={`10px`}>
                             <Card>
                                 <CardContent>
-                                    <Typography component={`h2`} variant={`h2`} sx={{
-                                        textTransform: `capitalize`,
-                                        color: `primary.dark`,
-                                        p: `10px`,
-                                    }}>{Product?.name}</Typography>
+                                    <Box display={`flex`} alignItems={`center`} justifyContent={`space-between`}>
+                                        <Typography component={`h2`} variant={`h2`} sx={{
+                                            textTransform: `capitalize`,
+                                            color: `primary.dark`, p: `5px`,
+                                        }}>{Product?.name}</Typography>
+                                        <Star rating={Product?.rating || 0}/>
+                                    </Box>
+
                                     <Box component={`div`} display={`flex`} p={`0 10px`} alignItems={`center`}>
                                         <Typography component={`del`} variant={`subtitle1`} sx={{
                                             color: '#949494',
@@ -176,7 +184,7 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
                                 <Divider/>
                                 <CardContent
                                     sx={{display: `flex`, alignItems: `center`, justifyContent: `space-between`}}>
-                                    <Box sx={{m: '10px', display: 'flex', alignItems: `center`, p: `0 10px`}}>
+                                    <Box sx={{m: '10px', display: 'flex', alignItems: `center`, p: `0`}}>
                                         <Typography component={`h6`} variant={`subtitle1`}
                                                     sx={{mr: 1, fontWeight: 600}}> Choose Color:</Typography>
                                         {Product?.variants?.map((variant, index) => {
@@ -194,7 +202,7 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
                                             }
                                         )}
                                     </Box>
-                                    <Box sx={{m: '10px', display: 'flex', alignItems: `center`, p: `0 10px`}}>
+                                    <Box sx={{m: '10px', display: 'flex', alignItems: `center`, p: `0`}}>
                                         <Typography component={`h6`} variant={`subtitle1`}
                                                     sx={{mr: 1, fontWeight: 600}}> Category:</Typography>
                                         <NextLink href={`/`} ref={categoryLinkRef}><Typography component={`h6`}
@@ -217,6 +225,13 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
                                         )
                                     })}
 
+                                </CardContent>
+                                <CardContent>
+                                    <CartActions productName={Product ? Product.name : ''}
+                                                 productId={Product ? Product.id : 0}
+                                                 productModel={Product ? Product.model : ''} thumbnailUrl={productImage}
+                                                 price={Product ? Product.salePrice : 0} variant={selectedColor}
+                                                 quantity={index === -1 ? 0 : CartItems[index].quantity}/>
                                 </CardContent>
                                 <Divider/>
                             </Card>
