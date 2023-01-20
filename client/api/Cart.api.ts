@@ -13,6 +13,7 @@ type  fetchCartPayload = {
     thumbnailUrl: string,
     price: number,
     quantity: number;
+    variant: number;
 }
 
 interface createCartResponse {

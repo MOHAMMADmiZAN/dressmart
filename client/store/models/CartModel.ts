@@ -13,6 +13,7 @@ export type ProductPayload = {
     thumbnailUrl: string,
     price: number,
     quantity: number;
+    variant: number;
 }
 
 type CartAction<T> = Action<Cart, T>
@@ -51,6 +52,7 @@ const CartModel: Cart = {
     AddProduct: action((state: CartState, payload) => {
 
         const index = IsInCart(state.CartItems, payload)
+        console.log(index)
 
         if (index === -1) {
             payload.quantity = 1

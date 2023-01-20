@@ -1,4 +1,4 @@
-import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {useRouter} from "next/router";
 import {fetchProducts, getProductById, recentProduct, singleProductResponse} from "../../api/Product.api";
 import {dehydrate, useQuery} from "@tanstack/react-query";
@@ -8,9 +8,9 @@ import {Box, Card, CardContent, CardMedia, Container, Divider, Grid, Typography}
 import Head from "next/head";
 import NextLink from "next/link";
 import Star from "../../components/Molecules/Star/Star";
-import {State, useStoreState} from "easy-peasy";
-import {CartType} from "../../store/models/CartModel";
 import CartActions from "../../components/Organisms/Cart/CartActions/CartActions";
+import {useCartItem} from "../../hooks/useCartItem";
+import SelectedVariant from "../../components/Molecules/Product/SelectedVariant/SelectedVariant";
 
 
 interface SINGLE_PRODUCT_PROPS {
@@ -59,80 +59,33 @@ export async function getStaticProps(ctx: { params: Path_Prams; }) {
 }
 
 
-const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
+const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = () => {
 
     const Route = useRouter();
     const id: unknown = Route.query.id;
     const categoryLinkRef = useRef<HTMLAnchorElement>(null);
 
-    const [colorBoxRefs, setColorBoxRefs] = useState<
-        React.RefObject<HTMLButtonElement>[]
-    >([]);
 
-    const [selectedColor, setSelectedColor] = useState<number>(0);
+    const [selectedColor] = useState<number>(0);
 
     const {
-        data: Product,
-        isLoading,
-        isError,
-        error
+        data: Product
     } = useQuery<singleProductResponse, Error>(['singleProduct', id], () => getProductById(id))
-    const [productImage, setProductImage] = useState<string>('');
-    useLayoutEffect(() => {
-        Product?.variants && setColorBoxRefs(Product.variants.map((_) => React.createRef<HTMLButtonElement>()))
 
-    }, [Product?.variants, Product?.variants.length])
+    const [productImage, setProductImage] = useState<string>('');
     useEffect(() => {
         if (Product?.variants?.length) {
             typeof Product?.variants[0].image === 'string' ? setProductImage(Product.variants[0].image) : setProductImage(Product ? Product.thumbnail : '')
         } else {
             setProductImage(Product ? Product.thumbnail : '')
         }
-        if (colorBoxRefs.length > 0) {
-            let colorBoxRef = colorBoxRefs[0];
-            // colorBoxRef.current?.focus();
-            colorBoxRef.current?.click();
-            categoryLinkRef.current?.setAttribute('style', `color: ${colorBoxRef.current?.getAttribute('data-color')}`)
-            setSelectedColor(Number(colorBoxRef.current?.getAttribute('data-id')) || 0)
-
-        }
 
 
-    }, [Product, colorBoxRefs, colorBoxRefs.length])
+    }, [Product])
 
 
-    const {CartItems} = useStoreState((state: State<CartType>) => state.Cart)
-    const index = CartItems.findIndex(item => item.productId === Product?.id)
+    const {item, index} = useCartItem(Product ? Product.id : 0)
 
-
-    const handleVariantClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        const target = e.target as HTMLDivElement;
-        const variantImage = target.getAttribute('data-image');
-        setProductImage(variantImage ? variantImage : '')
-        const variantStock = target.getAttribute('data-stock');
-        console.log(variantStock)
-        const variantColor = target.getAttribute('data-color');
-        categoryLinkRef.current?.setAttribute('style', `color: ${variantColor}`)
-        setSelectedColor(Number(target.getAttribute('data-id')) || 0)
-
-
-    }
-
-
-    const colorBtnStyle = {
-        width: '15px',
-        height: '15px',
-        borderRadius: '50%',
-        border: 'none',
-        cursor: 'pointer',
-        transition: 'all .3s ease-in-out',
-        m: '5px',
-        "&:hover": {
-            transform: 'scale(1.3)',
-        }
-
-
-    }
     const productImageStyle = {
         width: '100%',
         height: 'auto',
@@ -184,29 +137,12 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
                                 <Divider/>
                                 <CardContent
                                     sx={{display: `flex`, alignItems: `center`, justifyContent: `space-between`}}>
-                                    <Box sx={{m: '10px', display: 'flex', alignItems: `center`, p: `0`}}>
-                                        <Typography component={`h6`} variant={`subtitle1`}
-                                                    sx={{mr: 1, fontWeight: 600}}> Choose Color:</Typography>
-                                        {Product?.variants?.map((variant, index) => {
-                                                return (
-                                                    <Box component={`button`} bgcolor={variant.color}
-                                                         sx={{
-                                                             ...colorBtnStyle,
-                                                             transform: selectedColor === variant.id ? 'scale(1.3)' : 'scale(1)'
-                                                         }}
-                                                         onClick={handleVariantClick} data-image={variant.image}
-                                                         data-stock={variant.stock} key={variant.id}
-                                                         data-color={variant.color}
-                                                         data-id={variant.id} ref={colorBoxRefs[index]}/>
-                                                )
-                                            }
-                                        )}
-                                    </Box>
+                                    <SelectedVariant Product={Product} categoryLinkRef={categoryLinkRef}
+                                                     setProductImage={setProductImage}/>
                                     <Box sx={{m: '10px', display: 'flex', alignItems: `center`, p: `0`}}>
                                         <Typography component={`h6`} variant={`subtitle1`}
                                                     sx={{mr: 1, fontWeight: 600}}> Category:</Typography>
-                                        <NextLink href={`/`} ref={categoryLinkRef}><Typography component={`h6`}
-                                                                                               variant={`h6`}>{Product?.category.name}</Typography></NextLink>
+                                        <NextLink href={`/`} ref={categoryLinkRef}><Typography component={`h6`} variant={`h6`}>{Product?.category.name}</Typography></NextLink>
                                     </Box>
                                 </CardContent>
                                 <Divider/>
@@ -217,7 +153,6 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
                                 }}>
                                     <Typography component={`p`} variant={`h5`} sx={{p: `10px`,}}>Product
                                         description:</Typography>
-
                                     {Product?.description.split(`.`).map((para, index) => {
                                         return (
                                             <Typography component={`p`} variant={`h6`} key={index}
@@ -227,11 +162,11 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = (props) => {
 
                                 </CardContent>
                                 <CardContent>
-                                    <CartActions productName={Product ? Product.name : ''}
-                                                 productId={Product ? Product.id : 0}
-                                                 productModel={Product ? Product.model : ''} thumbnailUrl={productImage}
-                                                 price={Product ? Product.salePrice : 0} variant={selectedColor}
-                                                 quantity={index === -1 ? 0 : CartItems[index].quantity}/>
+                                    <CartActions productName={Product?.name as string}
+                                                 productId={ Product?.id as number}
+                                                 productModel={Product?.model as string} thumbnailUrl={productImage}
+                                                 price={Product?.salePrice as number} variant={selectedColor}
+                                                 quantity={index === -1 ? 0 : item.quantity} rating={Product?.rating}/>
                                 </CardContent>
                                 <Divider/>
                             </Card>

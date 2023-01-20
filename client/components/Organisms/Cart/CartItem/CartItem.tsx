@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import { Actions, State, useStoreActions, useStoreState } from 'easy-peasy';
 import Image from 'next/image';
-import React, { memo } from 'react';
+import React, {memo, useEffect} from 'react';
 import { CartType, ProductPayload } from '../../../../store/models/CartModel';
 import { CartItemStyle } from './CartItem.style';
 import GridRow from './GridRow';
@@ -34,6 +34,9 @@ function CartItem({ item }: CartItemProps): JSX.Element {
     const handleRemove = () => {
         isAuth ? RemoveProductThunk(item) : RemoveProduct(item)
     }
+    useEffect(() => {
+        console.log(item)
+    })
 
     return (
         <Grid container sx={CartItemStyle} direction="column" >
