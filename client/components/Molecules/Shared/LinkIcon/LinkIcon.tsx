@@ -1,7 +1,8 @@
 import React from 'react';
-import {Link,Button} from '@mui/material';
+import {Button} from '@mui/material';
 // import memo
 import {memo} from 'react';
+import NextLink from "next/link";
 
 interface LinkIconProps {
     href: string;
@@ -11,9 +12,9 @@ interface LinkIconProps {
 function LinkIcon(LinkIconProps: LinkIconProps): JSX.Element {
     return (
         <>
-            <Link href={LinkIconProps.href}>
+            <NextLink href={LinkIconProps.href}>
                 <Button sx={{color: '#D4AF37'}}> {LinkIconProps.icon}</Button>
-            </Link>
+            </NextLink>
         </>
     );
 }

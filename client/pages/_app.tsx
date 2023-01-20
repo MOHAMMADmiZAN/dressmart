@@ -6,7 +6,7 @@ import {QueryClient} from "@tanstack/query-core";
 import {Hydrate, QueryClientProvider} from "@tanstack/react-query";
 import {ReactQueryDevtools} from '@tanstack/react-query-devtools'
 import CssBaseline from '@mui/material/CssBaseline';
-import {theme} from '../components/Molecules/Theme/Theme.style';
+import {theme} from '../Theme/Theme.style';
 import {ThemeProvider} from '@mui/material';
 import CartBadge from "../components/Molecules/Shared/CartBadge/CartBadge";
 import React, {useEffect} from "react";
