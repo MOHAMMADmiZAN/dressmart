@@ -1,0 +1,90 @@
+Index: client/pages/_app.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import '../styles/globals.css'\r\nimport type {AppProps} from 'next/app'\r\nimport {StoreProvider, useStoreRehydrated} from \"easy-peasy\";\r\nimport store from \"../store/store\";\r\nimport {QueryClient} from \"@tanstack/query-core\";\r\nimport {Hydrate, QueryClientProvider} from \"@tanstack/react-query\";\r\nimport {ReactQueryDevtools} from '@tanstack/react-query-devtools'\r\nimport CssBaseline from '@mui/material/CssBaseline';\r\nimport {theme} from '../components/Molecules/Theme/Theme.style';\r\nimport {ThemeProvider} from '@mui/material';\r\nimport CartBadge from \"../components/Molecules/Shared/CartBadge/CartBadge\";\r\nimport React from \"react\";\r\n\r\n\r\nconst queryClient = new QueryClient()\r\n\r\n\r\nfunction WaitForStateRehydration({children}: { children: React.ReactElement }) : React.ReactElement | null {\r\n    const isRehydrated = useStoreRehydrated()\r\n    return isRehydrated ? children : null\r\n}\r\n\r\nexport default function App({Component, pageProps}: AppProps) {\r\n    return (\r\n        <ThemeProvider theme={theme}>\r\n            <StoreProvider store={store}>\r\n                <WaitForStateRehydration>\r\n                    <QueryClientProvider client={queryClient}>\r\n                        <Hydrate state={pageProps.dehydratedState}>\r\n                            <CssBaseline/>\r\n                            <Component {...pageProps} />\r\n                            <CartBadge isGlobalCart={true} styles={{color: '#fff'}}/>\r\n                        </Hydrate>\r\n                        <ReactQueryDevtools initialIsOpen={false}/>\r\n                    </QueryClientProvider>\r\n                </WaitForStateRehydration>\r\n            </StoreProvider>\r\n        </ThemeProvider>\r\n    )\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/client/pages/_app.tsx b/client/pages/_app.tsx
+--- a/client/pages/_app.tsx	(revision 0571f7758c4d24e83e1fdbd0c9372fbce9c23d45)
++++ b/client/pages/_app.tsx	(date 1674041460835)
+@@ -9,7 +9,8 @@
+ import {theme} from '../components/Molecules/Theme/Theme.style';
+ import {ThemeProvider} from '@mui/material';
+ import CartBadge from "../components/Molecules/Shared/CartBadge/CartBadge";
+-import React from "react";
++import React, {useEffect} from "react";
++import GetJwt from "../utils/GetJwt";
+ 
+ 
+ const queryClient = new QueryClient()
+@@ -21,6 +22,9 @@
+ }
+ 
+ export default function App({Component, pageProps}: AppProps) {
++    useEffect(()=>{
++        GetJwt()
++    },[])
+     return (
+         <ThemeProvider theme={theme}>
+             <StoreProvider store={store}>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"9dc15fb6-e6a5-4872-9a74-13eb6796b93c\" name=\"Changes\" comment=\"type refactor and id sanatize\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/git_toolbox_prj.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/client/api/Product.api.ts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/client/api/Product.api.ts\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/client/pages/product/[id].tsx\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/client/pages/product/[id].tsx\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/client/utils/Helper.ts\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/client/utils/Helper.ts\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PUSH_TAGS\">\r\n      <GitPushTagMode>\r\n        <option name=\"argument\" value=\"--tags\" />\r\n        <option name=\"title\" value=\"All\" />\r\n      </GitPushTagMode>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitToolBoxStore\">\r\n    <option name=\"projectConfigVersion\" value=\"5\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2K5k4OqmdxIVbgoaaNnkb7AoxbY\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;ts.external.directory.path&quot;: &quot;G:\\\\Dressmart\\\\client\\\\node_modules\\\\typescript\\\\lib&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"9dc15fb6-e6a5-4872-9a74-13eb6796b93c\" name=\"Changes\" comment=\"\" />\r\n      <created>1673271640984</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1673271640984</updated>\r\n      <workItem from=\"1673271643884\" duration=\"7979000\" />\r\n      <workItem from=\"1673944805980\" duration=\"8196000\" />\r\n      <workItem from=\"1674017968481\" duration=\"5577000\" />\r\n      <workItem from=\"1674024115311\" duration=\"7360000\" />\r\n      <workItem from=\"1674038628707\" duration=\"1766000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"type refactor\">\r\n      <created>1673955865349</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673955865349</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"type refactor and id sanatize\">\r\n      <created>1673961568419</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673961568419</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"type refactor\" />\r\n    <MESSAGE value=\"type refactor and id sanatize\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"type refactor and id sanatize\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 0571f7758c4d24e83e1fdbd0c9372fbce9c23d45)
++++ b/.idea/workspace.xml	(date 1674050979538)
+@@ -4,12 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="9dc15fb6-e6a5-4872-9a74-13eb6796b93c" name="Changes" comment="type refactor and id sanatize">
+-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
++    <list default="true" id="9dc15fb6-e6a5-4872-9a74-13eb6796b93c" name="Changes" comment="singleProductAdd">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/client/api/Product.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Product.api.ts" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/client/pages/product/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/product/[id].tsx" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/client/utils/Helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/utils/Helper.ts" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/client/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/_app.tsx" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -64,7 +61,7 @@
+       <workItem from="1673944805980" duration="8196000" />
+       <workItem from="1674017968481" duration="5577000" />
+       <workItem from="1674024115311" duration="7360000" />
+-      <workItem from="1674038628707" duration="1766000" />
++      <workItem from="1674038628707" duration="2898000" />
+     </task>
+     <task id="LOCAL-00001" summary="type refactor">
+       <created>1673955865349</created>
+@@ -80,7 +77,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1673961568419</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="singleProductAdd">
++      <created>1674040969208</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1674040969208</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -89,6 +93,7 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="type refactor" />
+     <MESSAGE value="type refactor and id sanatize" />
+-    <option name="LAST_COMMIT_MESSAGE" value="type refactor and id sanatize" />
++    <MESSAGE value="singleProductAdd" />
++    <option name="LAST_COMMIT_MESSAGE" value="singleProductAdd" />
+   </component>
+ </project>
+\ No newline at end of file
