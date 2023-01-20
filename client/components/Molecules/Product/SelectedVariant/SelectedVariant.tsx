@@ -8,11 +8,13 @@ interface SELECTED_VARIANT_PROPS {
     categoryLinkRef?: React.RefObject<HTMLAnchorElement>,
     ProductImage?: string,
     setProductImage?: (arg0: string) => void
+    selectedColor?: number,
+    setSelectedColor?: (arg0: number) => void
 
 
 }
 
-const SelectedVariant: React.FC<SELECTED_VARIANT_PROPS> = ({Product, categoryLinkRef, setProductImage}) => {
+const SelectedVariant: React.FC<SELECTED_VARIANT_PROPS> = ({Product, categoryLinkRef, setProductImage,setSelectedColor,selectedColor}) => {
     const [colorBoxRefs, setColorBoxRefs] = useState<
         React.RefObject<HTMLButtonElement>[]
     >([]);
@@ -21,19 +23,21 @@ const SelectedVariant: React.FC<SELECTED_VARIANT_PROPS> = ({Product, categoryLin
 
     }, [Product?.variants, Product?.variants.length])
 
-    const [selectedColor, setSelectedColor] = useState<number>(0);
+
     useEffect(() => {
         if (colorBoxRefs.length > 0) {
             let colorBoxRef = colorBoxRefs[0];
             // colorBoxRef.current?.focus();
             colorBoxRef.current?.click();
             categoryLinkRef?.current?.setAttribute('style', `color: ${colorBoxRef.current?.getAttribute('data-color')}`)
-            setSelectedColor(Number(colorBoxRef.current?.getAttribute('data-id')) || 0)
-            console.log(`render`)
+            if (setSelectedColor) {
+                setSelectedColor(Number(colorBoxRef.current?.getAttribute('data-id')) || 0)
+            }
+
 
         }
 
-    }, [categoryLinkRef, colorBoxRefs])
+    }, [categoryLinkRef, colorBoxRefs, setSelectedColor])
 
     const handleVariantClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         const target = e.target as HTMLDivElement;
@@ -44,7 +48,9 @@ const SelectedVariant: React.FC<SELECTED_VARIANT_PROPS> = ({Product, categoryLin
         target.getAttribute('data-stock');
         const variantColor = target.getAttribute('data-color');
         categoryLinkRef?.current?.setAttribute('style', `color: ${variantColor}`)
-        setSelectedColor(Number(target.getAttribute('data-id')) || 0)
+        if (setSelectedColor) {
+            setSelectedColor(Number(target.getAttribute('data-id')) || 0)
+        }
 
 
     }

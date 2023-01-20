@@ -66,11 +66,11 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = () => {
     const categoryLinkRef = useRef<HTMLAnchorElement>(null);
 
 
-    const [selectedColor] = useState<number>(0);
-
     const {
         data: Product
     } = useQuery<singleProductResponse, Error>(['singleProduct', id], () => getProductById(id))
+
+    const [selectedColor, setSelectedColor] = useState<number>(0);
 
     const [productImage, setProductImage] = useState<string>('');
     useEffect(() => {
@@ -82,10 +82,7 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = () => {
 
 
     }, [Product])
-
-
-    const {item, index} = useCartItem(Product ? Product.id : 0)
-
+    const {item, index} = useCartItem(selectedColor)
     const productImageStyle = {
         width: '100%',
         height: 'auto',
@@ -138,11 +135,13 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = () => {
                                 <CardContent
                                     sx={{display: `flex`, alignItems: `center`, justifyContent: `space-between`}}>
                                     <SelectedVariant Product={Product} categoryLinkRef={categoryLinkRef}
-                                                     setProductImage={setProductImage}/>
+                                                     setProductImage={setProductImage} selectedColor={selectedColor}
+                                                     setSelectedColor={setSelectedColor}/>
                                     <Box sx={{m: '10px', display: 'flex', alignItems: `center`, p: `0`}}>
                                         <Typography component={`h6`} variant={`subtitle1`}
                                                     sx={{mr: 1, fontWeight: 600}}> Category:</Typography>
-                                        <NextLink href={`/`} ref={categoryLinkRef}><Typography component={`h6`} variant={`h6`}>{Product?.category.name}</Typography></NextLink>
+                                        <NextLink href={`/`} ref={categoryLinkRef}><Typography component={`h6`}
+                                                                                               variant={`h6`}>{Product?.category.name}</Typography></NextLink>
                                     </Box>
                                 </CardContent>
                                 <Divider/>
@@ -163,7 +162,7 @@ const SingleProduct: React.FC<SINGLE_PRODUCT_PROPS> = () => {
                                 </CardContent>
                                 <CardContent>
                                     <CartActions productName={Product?.name as string}
-                                                 productId={ Product?.id as number}
+                                                 productId={Product?.id as number}
                                                  productModel={Product?.model as string} thumbnailUrl={productImage}
                                                  price={Product?.salePrice as number} variant={selectedColor}
                                                  quantity={index === -1 ? 0 : item.quantity} rating={Product?.rating}/>

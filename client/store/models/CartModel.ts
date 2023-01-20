@@ -41,7 +41,7 @@ interface Cart {
 
 // To find the index of the product in the cart
 const IsInCart = (cartItems: Cart["CartItems"], payload: ProductPayload) => {
-    return cartItems.findIndex((v) => v.productId === payload.productId)
+    return cartItems.findIndex((v) => v.variant === payload.variant)
 }
 
 
@@ -64,7 +64,7 @@ const CartModel: Cart = {
     }),
 
     RemoveProduct: action((state: CartState, payload) => {
-        state.CartItems = state.CartItems.filter(item => item.productId != payload.productId)
+        state.CartItems = state.CartItems.filter(item => item.variant != payload.variant)
         state.CartId = 0
     }),
 
@@ -141,7 +141,7 @@ const CartModel: Cart = {
         if (state.CartItems[index].quantity > 0) {
             res = await CartRequest.updateCart(state.CartId, {products: [...state.CartItems]})
         } else {
-            res = await CartRequest.updateCart(state.CartId, {products: [...state.CartItems.filter(item => item.productId != payload.productId)]})
+            res = await CartRequest.updateCart(state.CartId, {products: [...state.CartItems.filter(item => item.variant != payload.variant)]})
         }
        
         actions.SetCartItem(res.data.attributes)
@@ -150,7 +150,7 @@ const CartModel: Cart = {
 
     RemoveProductThunk: thunk(async (actions, payload, { getState }) => {
         let state = getState();
-        let res = await CartRequest.updateCart(state.CartId, {products: [...state.CartItems.filter(item => item.productId != payload.productId)]})
+        let res = await CartRequest.updateCart(state.CartId, {products: [...state.CartItems.filter(item => item.variant != payload.variant)]})
         actions.SetCartItem(res.data.attributes)
     }),
 
@@ -168,7 +168,7 @@ const CartModel: Cart = {
             state.CartItems[index].quantity = state.CartItems[index].quantity - 1
             state.CartItems = [...state.CartItems]
         } else {
-            state.CartItems = state.CartItems.filter(item => item.productId != payload.productId)
+            state.CartItems = state.CartItems.filter(item => item.variant != payload.variant)
         }
 
 

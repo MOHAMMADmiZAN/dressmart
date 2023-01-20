@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dc15fb6-e6a5-4872-9a74-13eb6796b93c" name="Changes" comment="need some in single product and cartAction and functions">
-      <change afterPath="$PROJECT_DIR$/client/components/Molecules/Product/SelectedVariant/SelectedVariant.style.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Molecules/Product/SelectedVariant/SelectedVariant.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/hooks/useCartItem.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/api/Cart.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Cart.api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Cart/CartActions/CartActions.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Cart/CartActions/CartActions.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Cart/CartActions/CartActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Cart/CartActions/CartActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Cart/CartItem/CartItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Cart/CartItem/CartItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Product/SelectedVariant/SelectedVariant.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Product/SelectedVariant/SelectedVariant.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/hooks/useCartItem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/useCartItem.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/product/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/product/[id].tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/store/models/CartModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/models/CartModel.ts" afterDir="false" />
     </list>
@@ -70,7 +65,7 @@
       <workItem from="1674017968481" duration="5577000" />
       <workItem from="1674024115311" duration="7360000" />
       <workItem from="1674038628707" duration="23406000" />
-      <workItem from="1674194026349" duration="14923000" />
+      <workItem from="1674194026349" duration="17704000" />
     </task>
     <task id="LOCAL-00001" summary="type refactor">
       <created>1673955865349</created>
@@ -163,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674211489002</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="need some in single product and cartAction and functions">
+      <created>1674222601351</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1674222601351</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
