@@ -1,7 +1,13 @@
- export const checkoutStyle = { backgroundColor: '#fff7d1', margin: '20px 20px', padding: '15px 0px', borderRadius: '10px' }
+export const checkoutStyle = {
+    backgroundColor: '#F8F8F8',
+    margin: '20px 10px',
+    padding: '15px 0px',
+    borderRadius: '10px',
+    minWidth:'auto'
+}
 
 export const totalPriceStyle = {
-    backgroundColor: '#fff7d1',
+    backgroundColor: '#F8F8F8',
     padding: '20px',
     margin: '50px 0px',
     alignItems: 'center',
@@ -9,7 +15,7 @@ export const totalPriceStyle = {
 }
 
 export const priceStyle = {
-    fontWeight: '800',
+    fontWeight: '600',
     padding: '10px',
     color:'#4098c4'
     

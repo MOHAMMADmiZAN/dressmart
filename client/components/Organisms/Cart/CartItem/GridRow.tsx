@@ -1,6 +1,5 @@
-import React from 'react'
 import Grid from '@mui/material/Grid';
-import Image from 'next/image';
+import React from 'react';
 
 type AppProps = { children: React.ReactNode }
 
