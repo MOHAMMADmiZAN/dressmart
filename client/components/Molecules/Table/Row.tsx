@@ -1,21 +1,20 @@
 import React from 'react'
 import { TableCell, TableRow, TableBody } from '@mui/material';
+import MapItems from '../MapItems/MapItems';
+import Column from './Column';
+import MapObjItems from '../MapItems/MapObjItems';
 
-type Props = {}
+type Props = { item: string[] }
 
 // TODO: need to implement whole table 
 
 const TabRow = (props: Props) => {
     return (
-        <TableBody>
-            <TableRow>
-                <TableCell>Dessert (100g serving)</TableCell>
-                <TableCell align="right">Calories</TableCell>
-                <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                <TableCell align="right">Protein&nbsp;(g)</TableCell>
-            </TableRow>
-        </TableBody>
+        <TableRow>
+            <MapObjItems ItemComponent={Column} item={props.item} />
+
+        </TableRow>
+
     )
 }
 

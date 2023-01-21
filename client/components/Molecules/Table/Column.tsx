@@ -1,11 +1,11 @@
 import TableCell from '@mui/material/TableCell'
 import React from 'react'
 
-type Props = {}
-// TODO: Will remove static data and add dynamic data by props collection
-const Column = (props: Props) => {
+type ColProps = { item: string | number }
+
+const Column = (props: ColProps) => {
     return (
-        <TableCell align="right">Calories</TableCell>
+        <TableCell align="center">{props.item}</TableCell>
     )
 }
 
