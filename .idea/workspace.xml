@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dc15fb6-e6a5-4872-9a74-13eb6796b93c" name="Changes" comment="type refactor and id sanatize">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+    <list default="true" id="9dc15fb6-e6a5-4872-9a74-13eb6796b93c" name="Changes" comment="some in single product and cartAction and functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/api/Product.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Product.api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/product/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/product/[id].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/utils/Helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/utils/Helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +49,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Dressmart\client" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,7 +66,8 @@
       <workItem from="1673944805980" duration="8196000" />
       <workItem from="1674017968481" duration="5577000" />
       <workItem from="1674024115311" duration="7360000" />
-      <workItem from="1674038628707" duration="1766000" />
+      <workItem from="1674038628707" duration="23406000" />
+      <workItem from="1674194026349" duration="21208000" />
     </task>
     <task id="LOCAL-00001" summary="type refactor">
       <created>1673955865349</created>
@@ -80,7 +83,112 @@
       <option name="project" value="LOCAL" />
       <updated>1673961568419</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="singleProductAdd">
+      <created>1674040969208</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674040969208</updated>
+    </task>
+    <task id="LOCAL-00004" summary="cart Issue fixed">
+      <created>1674052045801</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674052045801</updated>
+    </task>
+    <task id="LOCAL-00005" summary="cart Issue fixed">
+      <created>1674052738815</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674052738815</updated>
+    </task>
+    <task id="LOCAL-00006" summary="cart Issue fixed">
+      <created>1674053192266</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674053192266</updated>
+    </task>
+    <task id="LOCAL-00007" summary="cart Issue fixed">
+      <created>1674053788388</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674053788388</updated>
+    </task>
+    <task id="LOCAL-00008" summary="cart Issue fixed">
+      <created>1674054898376</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674054898376</updated>
+    </task>
+    <task id="LOCAL-00009" summary="single page init">
+      <created>1674131838144</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674131838144</updated>
+    </task>
+    <task id="LOCAL-00010" summary="single page init">
+      <created>1674135017556</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674135017556</updated>
+    </task>
+    <task id="LOCAL-00011" summary="single page init">
+      <created>1674137393797</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674137393797</updated>
+    </task>
+    <task id="LOCAL-00012" summary="need some in single product and cartAction and functions">
+      <created>1674211390821</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674211390821</updated>
+    </task>
+    <task id="LOCAL-00013" summary="need some in single product and cartAction and functions">
+      <created>1674211489002</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674211489002</updated>
+    </task>
+    <task id="LOCAL-00014" summary="need some in single product and cartAction and functions">
+      <created>1674222601351</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1674222601351</updated>
+    </task>
+    <task id="LOCAL-00015" summary="need some in single product and cartAction and functions">
+      <created>1674228993360</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1674228993360</updated>
+    </task>
+    <task id="LOCAL-00016" summary="some in single product and cartAction and functions">
+      <created>1674230207340</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1674230207340</updated>
+    </task>
+    <task id="LOCAL-00017" summary="some in single product and cartAction and functions">
+      <created>1674231589359</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1674231589359</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -89,6 +197,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="type refactor" />
     <MESSAGE value="type refactor and id sanatize" />
-    <option name="LAST_COMMIT_MESSAGE" value="type refactor and id sanatize" />
+    <MESSAGE value="singleProductAdd" />
+    <MESSAGE value="cart Issue fixed" />
+    <MESSAGE value="single page init" />
+    <MESSAGE value="need some in single product and cartAction and functions" />
+    <MESSAGE value="some in single product and cartAction and functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="some in single product and cartAction and functions" />
   </component>
 </project>

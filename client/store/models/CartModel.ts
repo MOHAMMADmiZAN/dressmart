@@ -13,6 +13,7 @@ export type ProductPayload = {
     thumbnailUrl: string,
     price: number,
     quantity: number;
+    variant: number;
 }
 
 type CartAction<T> = Action<Cart, T>
@@ -20,7 +21,7 @@ type CartThunk<T> = Thunk<Cart, T>
 type CartState = State<Cart>;
 
 interface Cart {
-    CartId: string;
+    CartId: number;
     CartItems: Array<ProductPayload>;
     AddProduct: CartAction<ProductPayload>;
     RemoveProduct: CartAction<ProductPayload>;
@@ -40,17 +41,18 @@ interface Cart {
 
 // To find the index of the product in the cart
 const IsInCart = (cartItems: Cart["CartItems"], payload: ProductPayload) => {
-    return cartItems.findIndex((v) => v.productId === payload.productId)
+    return cartItems.findIndex((v) => v.variant === payload.variant)
 }
 
 
 const CartModel: Cart = {
-    CartId: " ",
+    CartId: 0,
     CartItems: [],
 
     AddProduct: action((state: CartState, payload) => {
 
         const index = IsInCart(state.CartItems, payload)
+        console.log(index)
 
         if (index === -1) {
             payload.quantity = 1
@@ -62,8 +64,8 @@ const CartModel: Cart = {
     }),
 
     RemoveProduct: action((state: CartState, payload) => {
-        state.CartItems = state.CartItems.filter(item => item.productId != payload.productId)
-        state.CartId = " "
+        state.CartItems = state.CartItems.filter(item => item.variant != payload.variant)
+        state.CartId = 0
     }),
 
     SetCartItem: action((state: CartState, payload) => {
@@ -73,23 +75,27 @@ const CartModel: Cart = {
     AddProductThunk: thunk(async (actions, payload, {getState}) => {
         let state = getState();
         let haveCartInDb = await CartRequest.getCart(state.CartId)
-        console.log(haveCartInDb)
         if (!haveCartInDb) {
             payload.quantity = 1
-            let res = await CartRequest.createCart({products: [payload]})
-            actions.AddProduct(res.ProductResponse)
-            actions.SetCartId(res.CartId.toString())
+            try {
+                let res = await CartRequest.createCart({products: [payload]})
+                actions.AddProduct(res.ProductResponse)
+                actions.SetCartId(res.CartId.toString())
+
+            }catch (e) {
+                console.log(e)
+            }
+
         }
         if (haveCartInDb) {
             const index = IsInCart(state.CartItems ,payload)
-
             if (index === -1) {
                 payload.quantity = 1
                 let res = await CartRequest.updateCart(state.CartId, { products: [...state.CartItems, payload] })
                 actions.SetCartItem(res.data.attributes)
             } else {
                 state.CartItems[index].quantity = state.CartItems[index].quantity + 1
-                let res = await CartRequest.updateCart(state.CartId, { products: [...state.CartItems] })
+                let res = await CartRequest.updateCart(state.CartId, {products: [...state.CartItems]})
                 actions.SetCartItem(res.data.attributes)
 
             }
@@ -133,9 +139,9 @@ const CartModel: Cart = {
     
         let res;
         if (state.CartItems[index].quantity > 0) {
-            res = await CartRequest.updateCart(state.CartId, { products: [...state.CartItems] })
+            res = await CartRequest.updateCart(state.CartId, {products: [...state.CartItems]})
         } else {
-            res = await CartRequest.updateCart(state.CartId, { products: [...state.CartItems.filter(item => item.productId != payload.productId)] })
+            res = await CartRequest.updateCart(state.CartId, {products: [...state.CartItems.filter(item => item.variant != payload.variant)]})
         }
        
         actions.SetCartItem(res.data.attributes)
@@ -144,7 +150,7 @@ const CartModel: Cart = {
 
     RemoveProductThunk: thunk(async (actions, payload, { getState }) => {
         let state = getState();
-        let res = await CartRequest.updateCart(state.CartId, { products: [...state.CartItems.filter(item => item.productId != payload.productId)] })
+        let res = await CartRequest.updateCart(state.CartId, {products: [...state.CartItems.filter(item => item.variant != payload.variant)]})
         actions.SetCartItem(res.data.attributes)
     }),
 
@@ -162,7 +168,7 @@ const CartModel: Cart = {
             state.CartItems[index].quantity = state.CartItems[index].quantity - 1
             state.CartItems = [...state.CartItems]
         } else {
-            state.CartItems = state.CartItems.filter(item => item.productId != payload.productId)
+            state.CartItems = state.CartItems.filter(item => item.variant != payload.variant)
         }
 
 
@@ -178,7 +184,7 @@ const CartModel: Cart = {
     DeleteCartThunk: thunk(async (actions, payload) => {
     }),
     SetCartId: action((state: CartState, payload) => {
-        state.CartId = payload
+        state.CartId = Number(payload)
     })
 
 }
