@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9dc15fb6-e6a5-4872-9a74-13eb6796b93c" name="Changes" comment="some in single product and cartAction and functions">
+      <change afterPath="$PROJECT_DIR$/client/components/Organisms/Product/Product.style.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/Organisms/Product/Product.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/Organisms/Products/ByCategoryAndBrandProduct/ByCategoryAndBrandProduct.style.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/Organisms/Products/ByCategoryAndBrandProduct/ByCategoryAndBrandProduct.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/Cart.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Cart.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/api/Product.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/api/Product.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Atoms/OutlineBtn/OutlineBtn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Atoms/OutlineBtn/OutlineBtn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Product/ProductCard/ProductCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Product/SelectedVariant/SelectedVariant.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Product/SelectedVariant/SelectedVariant.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Cart/CartActions/CartActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Cart/CartActions/CartActions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Cart/CartItem/CartItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Cart/CartItem/CartItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Cart/CartItem/GridRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Cart/CartItem/GridRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/product/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/product/[id].tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +41,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2K5k4OqmdxIVbgoaaNnkb7AoxbY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -40,6 +55,11 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -67,7 +87,7 @@
       <workItem from="1674017968481" duration="5577000" />
       <workItem from="1674024115311" duration="7360000" />
       <workItem from="1674038628707" duration="23406000" />
-      <workItem from="1674194026349" duration="21208000" />
+      <workItem from="1674194026349" duration="37206000" />
     </task>
     <task id="LOCAL-00001" summary="type refactor">
       <created>1673955865349</created>
@@ -188,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674231589359</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="some in single product and cartAction and functions">
+      <created>1674232718640</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1674232718640</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

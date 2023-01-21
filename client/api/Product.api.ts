@@ -15,16 +15,18 @@ export type recentProduct = {
 }
 
 
-interface variant  {
+interface variant {
     id: number;
     color: string;
     stock: string;
     image: image;
 }
-interface image  {
+
+interface image {
     src: src;
 }
-interface src  {
+
+interface src {
     url: string;
     id: number;
 }
@@ -134,4 +136,27 @@ export const getProductById = async (id: idType): Promise<singleProductResponse>
     }
 
 
+}
+
+// product fetch by category and brand name
+export const getProductByCategoryAndBrand = async (category: string, brand: string): Promise<recentProductArray> => {
+    const res = await ProductApi.get(`?filters[brand][name][$eq]=${brand}&filters[category][name][$eq]=${category}&populate=thumbnail`);
+    return res.data.data.reduce((acc: any, cur: any) => {
+        const {id, attributes} = cur;
+
+        acc.push({
+            id,
+            name: attributes.name,
+            model: attributes.model,
+            slug: attributes.slug,
+            regularPrice: attributes.regular_price,
+            salePrice: attributes.sell_price,
+            thumbnail: attributes.thumbnail.data[0].attributes.url,
+            rating: attributes.avarage_rating
+
+        })
+
+        return acc;
+
+    }, []);
 }

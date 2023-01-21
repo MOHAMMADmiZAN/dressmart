@@ -33,12 +33,16 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
     } = ProductCardProps;
     const Router = useRouter();
 
+
     const handleSingleProduct = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-
-        console.log(ProductID);
-        console.log(`clicked`);
-
         Router.push(`/product/${ProductID}`).then(r => console.log(r))
+
+
+        Router.events.on('routeChangeComplete', () => {
+
+            console.log('routeChangeComplete')
+
+        })
     }
 
     return (
@@ -60,14 +64,14 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
                     </Typography>
                 </CardContent>
                 <Box sx={{...cardOrderOverLay}} onClick={handleSingleProduct}>
-                    <CardOrderOverLayContent sx={{width: '100%', textAlign: `center`, flexDirection: 'column'}} >
-                        <NextLink href={`/product/${ProductID}`}> <Typography variant={`h6`} sx={{
+                    <CardOrderOverLayContent sx={{width: '100%', textAlign: `center`, flexDirection: 'column'}}>
+                        <NextLink href={`/product/${ProductID}`} prefetch> <Typography variant={`h6`} sx={{
                             color: '#fff',
                             width: '100%',
                             fontSize: '16px',
                             height: '100%',
                         }}>
-                           Go to Product Details
+                            Go to Product Details
                         </Typography></NextLink>
                     </CardOrderOverLayContent>
                 </Box>

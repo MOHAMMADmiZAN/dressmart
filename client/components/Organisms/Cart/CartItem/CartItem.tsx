@@ -9,6 +9,7 @@ import { CartType, ProductPayload } from '../../../../store/models/CartModel';
 import { CartItemStyle } from './CartItem.style';
 import GridRow from './GridRow';
 import { AuthType } from '../../../../store/models/AuthModel';
+import CartActions from "../CartActions/CartActions";
 
 
 
@@ -23,20 +24,12 @@ function CartItem({ item }: CartItemProps): JSX.Element {
 
     const isAuth = useStoreState((state: State<AuthType>) => state.Auth.isAuth)
 
-    const handleIncrease = () => {
-        isAuth ? AddProductThunk(item) : AddProduct(item)
-    }
 
-    const handleDecrease = () => {
-        isAuth ? DecreaseProductThunk(item) : decrementProductQuantity(item)
-    }
 
     const handleRemove = () => {
         isAuth ? RemoveProductThunk(item) : RemoveProduct(item)
     }
-    useEffect(() => {
-        console.log(item)
-    })
+
 
     return (
         <Grid container sx={CartItemStyle} direction="column" >
@@ -67,11 +60,8 @@ function CartItem({ item }: CartItemProps): JSX.Element {
                     quantity:
                 </Typography>
 
-                <Grid item>
-                    <Button onClick={handleDecrease} sx={{ padding: '0px' }} >-</Button>
-                    <Typography sx={{ display: 'inline' }} variant='subtitle2'> {item.quantity} </Typography>
-                    <Button onClick={handleIncrease} sx={{ padding: '0px' }} size='small'>+</Button>
-                    <Button onClick={handleRemove} sx={{ padding: '0px' }} size='small'><DeleteForeverIcon sx={{ color: 'red' }} /> </Button>
+                <Grid item justifyContent={`space-between`}>
+                   <CartActions productName={item.productName} productId={item.productId} productModel={item.productModel} thumbnailUrl={item.thumbnailUrl} price={item.price} quantity={item.quantity} variant={item.variant}  BtnSxObj={{minWidth:'10px',height:'30px'}} isDel={true} />
                 </Grid>
             </GridRow >
             <Divider />
@@ -83,7 +73,7 @@ function CartItem({ item }: CartItemProps): JSX.Element {
                     ৳{item.price * item.quantity}
                 </Typography>
             </GridRow>
-            <Divider sx={{ color: 'black', backgroundColor: 'gray', border: '.1px solid gray' }} />
+            <Divider sx={{ color: 'black', backgroundColor: 'gray', border: '1px solid gray' }} />
         </Grid >
     )
 }

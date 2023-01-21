@@ -38,22 +38,11 @@ export class CartRequest {
         return {CartId: cart.data.id, ProductResponse: ProductResponse}
 
     }
-
-    // get a cart
-<<<<<<< HEAD
-    static async getCart(id: string): Promise<boolean> {
-        
-        if (id && id !== ' ') {
-            const cart = await CartApi.get(`/${id}`)
-            console.log(cart)
-            return cart.data.data.length !== 0;
-        } else {
-=======
     static async getCart(id: number): Promise<boolean> {
         try {
             return id ? (await CartApi.get(`/${id}`)).data.data.length !== 0 : false;
         } catch (e) {
->>>>>>> 162f26508ba391cfe40484ef06abf707c1c429de
+
             return false;
         }
 

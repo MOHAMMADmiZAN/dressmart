@@ -5,7 +5,7 @@ type AppProps = { children: React.ReactNode }
 
 function GridRow({ children }: AppProps) {
     return (
-        <Grid container item justifyContent='space-between' sx={{ padding: '5px 10px', flexWrap: 'nowrap' }} >
+        <Grid container item justifyContent='space-between' p={`5px 10px`} flexWrap={`nowrap`}  alignItems={`center`}>
             {children}
         </Grid >
     )

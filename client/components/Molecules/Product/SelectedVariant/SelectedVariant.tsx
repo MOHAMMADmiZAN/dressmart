@@ -1,4 +1,4 @@
-import React, {useEffect, useLayoutEffect, useState} from 'react';
+import React, {memo, useEffect, useLayoutEffect, useState} from 'react';
 import {Box, Typography} from "@mui/material";
 import {colorBtnStyle} from "./SelectedVariant.style";
 import {singleProductResponse} from "../../../../api/Product.api";
@@ -81,4 +81,4 @@ const SelectedVariant: React.FC<SELECTED_VARIANT_PROPS> = ({Product, categoryLin
     );
 };
 
-export default SelectedVariant;
+export default memo(SelectedVariant);

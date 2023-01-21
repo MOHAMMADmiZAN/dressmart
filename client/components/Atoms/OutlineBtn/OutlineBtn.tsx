@@ -7,7 +7,8 @@ interface OutlineBtnProps {
     OutlineBtnLinkText?: string,
     OutlineBtnOnClick?: () => void,
     OutlineBtnIcon?: React.ReactNode,
-    isDisable?: boolean
+    isDisable?: boolean,
+    sxObj?: object
 
 
 }
@@ -19,11 +20,12 @@ function OutlineBtn(OutlineBtnProps: OutlineBtnProps): JSX.Element {
         OutlineBtnText,
         OutlineBtnLinkText,
         OutlineBtnLink,
-        isDisable
+        isDisable,
+        sxObj
     } = OutlineBtnProps;
 
     return (
-        <Button size={"small"} sx={[{color:'primary.main'}]} variant={`outlined`} onClick={OutlineBtnOnClick} disabled={isDisable}>
+        <Button size={"small"} sx={[{color: 'primary.main', ...sxObj}]} variant={`outlined`} onClick={OutlineBtnOnClick} disabled={isDisable}>
             {OutlineBtnIcon}
             {OutlineBtnText}
         </Button>
