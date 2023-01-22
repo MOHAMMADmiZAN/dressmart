@@ -10,13 +10,13 @@ import TableCell from '@mui/material/TableCell'
 type Props = {
     head: Array<string>,
     content: Array<object>,
-    bgcolor?: string
+    bgColor?: string
 }
 
-function Tab({ head, content, bgcolor }: Props) {
+function Tab({ head, content, bgColor }: Props) {
     return (
         <TableContainer component={Paper}>
-            <Table bgcolor={bgcolor} aria-label="simple table">
+            <Table bgcolor={bgColor} aria-label="simple table">
                 <TableHead>
                     <TableRow >
 

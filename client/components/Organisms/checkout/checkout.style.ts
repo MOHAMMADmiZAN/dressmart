@@ -1,10 +1,10 @@
-export const checkoutStyle = {
-    backgroundColor: '#F8F8F8',
-    margin: '20px 10px',
-    padding: '15px 0px',
-    borderRadius: '10px',
-    minWidth:'auto'
-}
+// export const checkoutStyle = {
+//     backgroundColor: '#F8F8F8',
+//     margin: '20px 10px',
+//     padding: '15px 0px',
+//     borderRadius: '10px',
+//     minWidth:'auto'
+// }
 
 export const totalPriceStyle = {
     backgroundColor: '#F8F8F8',

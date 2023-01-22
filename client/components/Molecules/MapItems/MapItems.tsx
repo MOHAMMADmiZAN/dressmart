@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {memo} from 'react'
 
 
 type MapItemsProps = React.PropsWithChildren<{
@@ -21,4 +21,4 @@ function MapItems({ items, ItemComponent, ...other }: MapItemsProps): JSX.Elemen
     )
 }
 
-export default MapItems
+export default memo(MapItems)

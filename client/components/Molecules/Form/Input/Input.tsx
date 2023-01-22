@@ -1,6 +1,6 @@
 
 import { TextField } from "@mui/material";
-import React, { InputHTMLAttributes } from "react";
+import React, {InputHTMLAttributes, memo} from "react";
 import {
     Controller
 } from "react-hook-form";
@@ -21,11 +21,10 @@ type InputFieldProps = InputHTMLAttributes<HTMLInputElement> & {
 
 
 const Input: React.FC<InputFieldProps> = ({ item, other }) => {
-    console.log(item)
+
     const { name, type, fullWidth, value, style } = item;
 
     let label = name.charAt(0).toUpperCase() + name.slice(1);
-    console.log(fullWidth)
     return (
 
         <Controller
@@ -60,4 +59,4 @@ const Input: React.FC<InputFieldProps> = ({ item, other }) => {
     );
 };
 
-export default Input
+export default memo(Input);

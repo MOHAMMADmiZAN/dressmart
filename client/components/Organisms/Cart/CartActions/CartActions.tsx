@@ -92,10 +92,8 @@ const CartActions: React.FC<CART_ACTIONS_PROPS> = ({
         <Box display={`flex`} alignItems={`center`}>
             <OutlineBtn OutlineBtnIcon={<AddIcon/>} OutlineBtnOnClick={increaseOrderCount} sxObj={BtnSxObj}/>
             <Typography variant={`h6`} sx={{m: 2, color: 'primary.main'}}>{quantity}</Typography>
-            <OutlineBtn OutlineBtnIcon={<RemoveIcon/>} OutlineBtnOnClick={decreaseOrderCount} isDisable={quantity === 0}
-                        sxObj={BtnSxObj}/>
-            {isDel && <Button onClick={handleRemove} sx={{padding: '0px'}} size='small'><DeleteForeverIcon
-                sx={{color: 'red'}}/> </Button>}
+            <OutlineBtn OutlineBtnIcon={<RemoveIcon/>} OutlineBtnOnClick={decreaseOrderCount} isDisable={quantity === 0} sxObj={BtnSxObj}/>
+            {isDel && <Button onClick={handleRemove} sx={{padding: '0px'}} size='small'><DeleteForeverIcon sx={{color: 'red'}}/> </Button>}
         </Box>
     );
 };
