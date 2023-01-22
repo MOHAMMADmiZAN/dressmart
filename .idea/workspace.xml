@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9dc15fb6-e6a5-4872-9a74-13eb6796b93c" name="Changes" comment="single page work done for now">
-      <change afterPath="$PROJECT_DIR$/client/hooks/useAuth.ts" afterDir="false" />
+    <list default="true" id="9dc15fb6-e6a5-4872-9a74-13eb6796b93c" name="Changes" comment="some thing change in cart and checkout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/Theme/Theme.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/Theme/Theme.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Form/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Form/Input/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Molecules/MapItems/MapItems.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/MapItems/MapItems.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Table/Table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Cart/CartActions/CartActions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Cart/CartActions/CartActions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Cart/CartDrawer/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Cart/CartDrawer/Cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Cart/CartItem/CartItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Cart/CartItem/CartItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Products/Products.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Products/Products.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/checkout/checkout.style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/checkout/checkout.style.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Organisms/checkout/checkout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/checkout/checkout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/hooks/useCartItem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/hooks/useCartItem.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/utils/Helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/utils/Helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Molecules/Form/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Molecules/Form/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Organisms/Product/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Organisms/Product/Product.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +78,8 @@
       <workItem from="1674038628707" duration="23406000" />
       <workItem from="1674194026349" duration="41195000" />
       <workItem from="1674379780625" duration="8568000" />
-      <workItem from="1674388685463" duration="385000" />
+      <workItem from="1674388685463" duration="691000" />
+      <workItem from="1674389601991" duration="9099000" />
     </task>
     <task id="LOCAL-00001" summary="type refactor">
       <created>1673955865349</created>
@@ -231,7 +221,28 @@
       <option name="project" value="LOCAL" />
       <updated>1674295483125</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="some thing change in cart and checkout">
+      <created>1674389137533</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1674389137533</updated>
+    </task>
+    <task id="LOCAL-00022" summary="some thing change in cart and checkout">
+      <created>1674395613279</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1674395613279</updated>
+    </task>
+    <task id="LOCAL-00023" summary="some thing change in cart and checkout">
+      <created>1674409108425</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1674409108425</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +257,7 @@
     <MESSAGE value="need some in single product and cartAction and functions" />
     <MESSAGE value="some in single product and cartAction and functions" />
     <MESSAGE value="single page work done for now" />
-    <option name="LAST_COMMIT_MESSAGE" value="single page work done for now" />
+    <MESSAGE value="some thing change in cart and checkout" />
+    <option name="LAST_COMMIT_MESSAGE" value="some thing change in cart and checkout" />
   </component>
 </project>

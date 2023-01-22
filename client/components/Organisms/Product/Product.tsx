@@ -30,6 +30,13 @@ const Product: React.FC<PRODUCT_PROPS> = ({Product}) => {
     }, [Product])
     const {item, index} = useCartItem(selectedColor)
 
+    const  handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+
+    }
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+
+    }
+
     return (
         <>
             {

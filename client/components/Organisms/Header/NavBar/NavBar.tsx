@@ -42,7 +42,7 @@ function NavBar() {
                         <Logo />
                     </Grid>
                     <Grid item={true} md={6} >
-                        <Search handleChange={handleChange} handleSubmit={handleSubmit} />
+                        <Search handleSearch={handleChange} handleSubmit={handleSubmit} />
                     </Grid>
                     <Grid item={true} sm={2} textAlign={`right`} mr={5}>
                         <LinkIcon href={`/`} icon={<FavoriteBorderIcon />} />
