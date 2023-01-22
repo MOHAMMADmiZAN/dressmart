@@ -13,6 +13,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import {useCartItem} from "../../../hooks/useCartItem";
 import useAuth from "../../../hooks/useAuth";
+import GridRow from "../Cart/CartItem/GridRow";
 
 let ContactInputs = [
     {
@@ -196,36 +197,33 @@ function CheckOut() {
                                     }
                                 </Grid>
                                 <Divider/>
-                                <Grid item={true} md={12} justifyContent={`center`}>
+                                <GridRow >
                                     <Typography sx={{padding: '10px 0px'}} variant='h6'>
                                         Total:
                                     </Typography>
                                     <Typography sx={{padding: '10px 0px', color: '#4098c4'}} variant='h6'>
                                         ৳ {checkOut.subtotal}
                                     </Typography>
-                                </Grid>
-                                <Grid item={true} md={12}>
+                                </GridRow>
+                                <GridRow>
                                     <Typography variant='h6' sx={{padding: '10px 0px'}}>
                                         Shipping:
                                     </Typography>
                                     <Typography variant='h6' sx={{padding: '10px 0px', color: '#4098c4'}}>
                                         ৳ {checkOut.shipping}
                                     </Typography>
-                                </Grid>
+                                </GridRow>
                                 <Divider/>
-                                <Grid item={true} md={12}>
+                                <GridRow>
                                     <Typography variant='h5' sx={{padding: '10px 0px'}}>
                                         Payable:
                                     </Typography>
                                     <Typography variant='h5' sx={{padding: '10px 0px', color: '#4098c4'}}>
                                         ৳ {checkOut.total}
                                     </Typography>
-                                </Grid>
+                                </GridRow>
                             </Grid>
-                            <Grid container justifyContent={'center'}>
-                                <Grid item={true} xs={12} sm={12} md={10} lg={10} xl={8} justifyContent={`center`}>
-                                </Grid>
-                            </Grid>
+
                         </CardContent>
                     </Card>
 
