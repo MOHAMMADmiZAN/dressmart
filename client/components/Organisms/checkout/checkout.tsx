@@ -1,12 +1,11 @@
 import Grid from '@mui/material/Grid'
-import React, {memo, useCallback, useEffect, useState} from 'react'
+import React, {memo, useEffect, useState} from 'react'
 import {Divider, Typography} from '@mui/material';
 import MapItems from '../../Molecules/MapItems/MapItems';
 import Input from '../../Molecules/Form/Input/Input';
 import {useForm} from 'react-hook-form';
 import EmptyCart from '../Cart/CartDrawer/EmptyCart';
 import CartItem from '../Cart/CartItem/CartItem';
-import GridRow from '../Cart/CartItem/GridRow';
 import {priceStyle, totalPriceStyle} from './checkout.style';
 import Tab from '../../Molecules/Table/Table';
 
@@ -110,37 +109,36 @@ function CheckOut() {
         ]
     })
 
+
     useEffect(() => {
-        let subtotal = 0
-        let shipping = 0
-        if (items.length !== 0) {
-            items.forEach(item => {
-                subtotal += item.price * item.quantity
-            })
-            shipping += 100
-            setCheckOut({...checkOut, shipping, subtotal, total: subtotal + checkOut.shipping})
-            setTable({
-                ...table,
-                tableContent: [
-                    {
-                        title: 'Total',
-                        value: `${subtotal}`
-                    },
-                    {
-                        title: 'Shipping',
-                        value: `${shipping}`
-                    }
-                ]
-            })
+        let subtotal = 0;
+        let shipping = 0;
+        let total = 0;
 
+        items.map(item => {
+            subtotal += item.price * item.quantity
+        });
+        shipping += items.length ? 100 : 0;
+        total = subtotal + shipping;
 
-        }
-
-
-    }, [checkOut,items, table])
+        setCheckOut({...checkOut, shipping, subtotal, total});
+        setTable({
+            ...table,
+            tableContent: [
+                {
+                    title: 'Total',
+                    value: `${total}`
+                },
+                {
+                    title: 'Shipping',
+                    value: `${shipping}`
+                }
+            ]
+        });
 
 
 
+    }, [items])
 
 
     const {control, handleSubmit, formState: {errors}} = useForm({
@@ -167,7 +165,6 @@ function CheckOut() {
                                     <Typography sx={{margin: '10px 5px'}} variant='h6'> Shipping Info</Typography>
                                     <MapItems ItemComponent={Input} items={ShippingInputs} other={control}/>
                                 </Grid>
-
                                 <Grid item xs={12} sm={12} md={10} lg={10} xl={8} flexDirection={'column'}
                                       sx={totalPriceStyle}>
                                     <Typography variant='body1'> Your total payable amount is </Typography>
@@ -191,43 +188,47 @@ function CheckOut() {
                                         marginY={`20px`}> Cart OverView</Typography>
                             <Divider sx={{borderBottomWidth: `2px`}}/>
 
-                            <Grid container={true} justifyContent={`center`}>
-                                <Grid item={true} xs={12} sm={12} md={10} lg={10} xl={8} justifyContent={`center`}>
+                            <Grid container={true} justifyContent={`center`} flexWrap={`wrap`}>
+                                <Grid item={true} xs={12} sm={12} md={10} lg={10} justifyContent={`center`}>
                                     {items.length > 0 ?
                                         <MapItems ItemComponent={CartItem} items={items}/> :
                                         <EmptyCart/>
                                     }
                                 </Grid>
-
-                                <GridRow>
+                                <Divider/>
+                                <Grid item={true} md={12} justifyContent={`center`}>
                                     <Typography sx={{padding: '10px 0px'}} variant='h6'>
                                         Total:
                                     </Typography>
                                     <Typography sx={{padding: '10px 0px', color: '#4098c4'}} variant='h6'>
                                         ৳ {checkOut.subtotal}
                                     </Typography>
-                                </GridRow>
-                                <GridRow>
+                                </Grid>
+                                <Grid item={true} md={12}>
                                     <Typography variant='h6' sx={{padding: '10px 0px'}}>
                                         Shipping:
                                     </Typography>
                                     <Typography variant='h6' sx={{padding: '10px 0px', color: '#4098c4'}}>
                                         ৳ {checkOut.shipping}
                                     </Typography>
-                                </GridRow>
+                                </Grid>
                                 <Divider/>
-                                <GridRow>
+                                <Grid item={true} md={12}>
                                     <Typography variant='h5' sx={{padding: '10px 0px'}}>
                                         Payable:
                                     </Typography>
                                     <Typography variant='h5' sx={{padding: '10px 0px', color: '#4098c4'}}>
                                         ৳ {checkOut.total}
                                     </Typography>
-                                </GridRow>
-
+                                </Grid>
+                            </Grid>
+                            <Grid container justifyContent={'center'}>
+                                <Grid item={true} xs={12} sm={12} md={10} lg={10} xl={8} justifyContent={`center`}>
+                                </Grid>
                             </Grid>
                         </CardContent>
                     </Card>
+
                 </Grid>
             </Grid>
         </>

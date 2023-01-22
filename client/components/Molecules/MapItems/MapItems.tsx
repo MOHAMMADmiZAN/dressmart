@@ -7,14 +7,13 @@ type MapItemsProps = React.PropsWithChildren<{
     other?: any
 }>
 
-function MapItems({ items, ItemComponent, ...other }: MapItemsProps): JSX.Element {
+function MapItems({items, ItemComponent, ...other}: MapItemsProps): JSX.Element {
     return (
         <>
 
-            {items.map((item, i) => (
-                <ItemComponent key={i} item={item} {...other} />
-            )
-
+            {items.length && items.map((item, i) => (
+                    <ItemComponent key={i} item={item} {...other} />
+                )
             )}
 
         </>
