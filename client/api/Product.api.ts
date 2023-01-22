@@ -160,3 +160,35 @@ export const getProductByCategoryAndBrand = async (category: string, brand: stri
 
     }, []);
 }
+
+
+
+export const getFilterdProducts = async (url:string): Promise<recentProductArray|undefined> => {
+    try {
+      const res = await ProductApi.get(
+        `/?${url}&populate[0]=thumbnail&populate[1]=variants`
+        )
+        console.log(res.data.data)
+      return res.data.data.reduce((acc: any, cur: any) => {
+        const {id, attributes} = cur;
+
+        acc.push({
+            id,
+            name: attributes.name,
+            model: attributes.model,
+            slug: attributes.slug,
+            regularPrice: attributes.regular_price,
+            salePrice: attributes.sell_price,
+            thumbnail: attributes.thumbnail.data[0].attributes.url,
+            rating: attributes.avarage_rating
+
+        })
+console.log(acc)
+        return acc;
+
+    }, []);
+    } catch (e) {
+        console.log(e)
+    //   toast(e.response.data.error.message)
+    }
+  }

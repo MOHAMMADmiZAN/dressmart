@@ -1,38 +1,39 @@
 import Grid from '@mui/material/Grid'
-import React, {memo, useCallback, useEffect, useState} from 'react'
-import {Divider, Typography} from '@mui/material';
+import React, { memo, useCallback, useEffect, useState } from 'react'
+import { Divider, Typography } from '@mui/material';
 import MapItems from '../../Molecules/MapItems/MapItems';
 import Input from '../../Molecules/Form/Input/Input';
-import {useForm} from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import EmptyCart from '../Cart/CartDrawer/EmptyCart';
 import CartItem from '../Cart/CartItem/CartItem';
 import GridRow from '../Cart/CartItem/GridRow';
-import {priceStyle, totalPriceStyle} from './checkout.style';
+import { priceStyle, totalPriceStyle } from './checkout.style';
 import Tab from '../../Molecules/Table/Table';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import {useCartItem} from "../../../hooks/useCartItem";
+import { useCartItem } from "../../../hooks/useCartItem";
 import useAuth from "../../../hooks/useAuth";
 
 let ContactInputs = [
     {
         name: 'name',
         type: 'text',
-        fullWidth: true
+        fullWidth: true,
+        style: { maxWidth: '97.4%' }
     },
     {
         name: 'email',
         type: 'text',
         fullWidth: true,
-        style: {maxWidth: '48%'}
+        style: { maxWidth: '48%' }
 
     },
     {
         name: 'phone',
         type: 'text',
         fullWidth: true,
-        style: {maxWidth: '48%'}
+        style: { maxWidth: '48%' }
     }
 ]
 
@@ -40,24 +41,26 @@ let ShippingInputs = [
     {
         name: 'address',
         type: 'text',
-        fullWidth: true
+        fullWidth: true,
+        style: { maxWidth: '97.4%' }
     },
     {
         name: 'city',
         type: 'text',
         fullWidth: true,
-        style: {maxWidth: '48%'}
+        style: { maxWidth: '48%' }
     },
     {
         name: 'phone',
         type: 'text',
         fullWidth: true,
-        style: {maxWidth: '48%'}
+        style: { maxWidth: '48%' }
     },
     {
         name: 'note',
         type: 'text',
-        fullWidth: true
+        fullWidth: true,
+        style: { maxWidth: '97.4%' }
     }
 ]
 
@@ -86,8 +89,8 @@ interface tableContent {
 
 function CheckOut() {
 
-    const {items} = useCartItem()
-    const {user} = useAuth()
+    const { items } = useCartItem()
+    const { user } = useAuth()
     const [checkOut, setCheckOut] = useState<checkOutState>({
         subtotal: 0,
         shipping: 0,
@@ -118,7 +121,7 @@ function CheckOut() {
                 subtotal += item.price * item.quantity
             })
             shipping += 100
-            setCheckOut({...checkOut, shipping, subtotal, total: subtotal + checkOut.shipping})
+            setCheckOut({ ...checkOut, shipping, subtotal, total: subtotal + checkOut.shipping })
             setTable({
                 ...table,
                 tableContent: [
@@ -137,13 +140,13 @@ function CheckOut() {
         }
 
 
-    }, [checkOut,items, table])
+    }, [items, checkOut, table])
 
 
 
 
 
-    const {control, handleSubmit, formState: {errors}} = useForm({
+    const { control, handleSubmit, formState: { errors } } = useForm({
         defaultValues: {
             email: '',
 
@@ -155,29 +158,29 @@ function CheckOut() {
             <Grid container justifyContent={'space-around'}>
                 <Grid item={true} xs={7} flexDirection={'column'} alignItems={'center'} marginY={`10px`}>
                     <Card>
-                        <CardContent sx={{padding: '0'}}>
-                            <Typography variant='h5' sx={{color: 'primary.main', textAlign: `center`}} marginY={`20px`}>Checkout
+                        <CardContent sx={{ padding: '0' }}>
+                            <Typography variant='h5' sx={{ color: 'primary.main', textAlign: `center` }} marginY={`20px`}>Checkout
                                 Info</Typography>
-                            <Divider sx={{borderBottomWidth: `2px`}}/>
+                            <Divider sx={{ borderBottomWidth: `2px` }} />
                             <Grid container justifyContent={'center'}>
                                 <Grid item xs={12} sm={12} md={10} lg={10} xl={8} justifyContent={`space-between`}>
-                                    <Typography sx={{margin: '10px 5px'}} variant='h6'>Contact Info</Typography>
-                                    <MapItems ItemComponent={Input} items={ContactInputs} other={control}/>
+                                    <Typography sx={{ margin: '10px 5px' }} variant='h6'>Contact Info</Typography>
+                                    <MapItems ItemComponent={Input} items={ContactInputs} other={control} />
 
-                                    <Typography sx={{margin: '10px 5px'}} variant='h6'> Shipping Info</Typography>
-                                    <MapItems ItemComponent={Input} items={ShippingInputs} other={control}/>
+                                    <Typography sx={{ margin: '10px 5px' }} variant='h6'> Shipping Info</Typography>
+                                    <MapItems ItemComponent={Input} items={ShippingInputs} other={control} />
                                 </Grid>
 
                                 <Grid item xs={12} sm={12} md={10} lg={10} xl={8} flexDirection={'column'}
-                                      sx={totalPriceStyle}>
+                                    sx={totalPriceStyle}>
                                     <Typography variant='body1'> Your total payable amount is </Typography>
                                     <Typography variant='h4' sx={priceStyle}>৳ {checkOut.total} </Typography>
 
                                     <Typography variant='h6'> Details </Typography>
 
-                                    <Tab head={table.tableHead} content={table.tableContent} bgColor={'#F8F8F8'}/>
+                                    <Tab head={table.tableHead} content={table.tableContent} bgColor={'#F8F8F8'} />
 
-                                    <Typography variant='body1' sx={{pt: `10px`}}> You will get the delivery within 2-3
+                                    <Typography variant='body1' sx={{ pt: `10px` }}> You will get the delivery within 2-3
                                         Days after confirmation.</Typography>
                                 </Grid>
                             </Grid>
@@ -186,41 +189,41 @@ function CheckOut() {
                 </Grid>
                 <Grid item lg={3} flexDirection={'column'} alignItems={'center'} sx={{}} marginY={`10px`}>
                     <Card>
-                        <CardContent sx={{padding: `0`}}>
-                            <Typography variant='h5' sx={{color: 'primary.main', textAlign: `center`}}
-                                        marginY={`20px`}> Cart OverView</Typography>
-                            <Divider sx={{borderBottomWidth: `2px`}}/>
+                        <CardContent sx={{ padding: `0` }}>
+                            <Typography variant='h5' sx={{ color: 'primary.main', textAlign: `center` }}
+                                marginY={`20px`}> Cart OverView</Typography>
+                            <Divider sx={{ borderBottomWidth: `2px` }} />
 
                             <Grid container={true} justifyContent={`center`}>
                                 <Grid item={true} xs={12} sm={12} md={10} lg={10} xl={8} justifyContent={`center`}>
                                     {items.length > 0 ?
-                                        <MapItems ItemComponent={CartItem} items={items}/> :
-                                        <EmptyCart/>
+                                        <MapItems ItemComponent={CartItem} items={items} /> :
+                                        <EmptyCart />
                                     }
                                 </Grid>
 
                                 <GridRow>
-                                    <Typography sx={{padding: '10px 0px'}} variant='h6'>
+                                    <Typography sx={{ padding: '10px 0px' }} variant='h6'>
                                         Total:
                                     </Typography>
-                                    <Typography sx={{padding: '10px 0px', color: '#4098c4'}} variant='h6'>
+                                    <Typography sx={{ padding: '10px 0px', color: '#4098c4' }} variant='h6'>
                                         ৳ {checkOut.subtotal}
                                     </Typography>
                                 </GridRow>
                                 <GridRow>
-                                    <Typography variant='h6' sx={{padding: '10px 0px'}}>
+                                    <Typography variant='h6' sx={{ padding: '10px 0px' }}>
                                         Shipping:
                                     </Typography>
-                                    <Typography variant='h6' sx={{padding: '10px 0px', color: '#4098c4'}}>
+                                    <Typography variant='h6' sx={{ padding: '10px 0px', color: '#4098c4' }}>
                                         ৳ {checkOut.shipping}
                                     </Typography>
                                 </GridRow>
-                                <Divider/>
+                                <Divider />
                                 <GridRow>
-                                    <Typography variant='h5' sx={{padding: '10px 0px'}}>
+                                    <Typography variant='h5' sx={{ padding: '10px 0px' }}>
                                         Payable:
                                     </Typography>
-                                    <Typography variant='h5' sx={{padding: '10px 0px', color: '#4098c4'}}>
+                                    <Typography variant='h5' sx={{ padding: '10px 0px', color: '#4098c4' }}>
                                         ৳ {checkOut.total}
                                     </Typography>
                                 </GridRow>
