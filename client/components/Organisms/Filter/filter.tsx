@@ -1,10 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
 import { useRouter } from 'next/router';
 import React from 'react'
-
 import { Grid } from '@mui/material';
 import { getFilterdProducts, recentProduct, recentProductArray } from '../../../api/Product.api';
 import ProductCard from '../../Molecules/Product/ProductCard/ProductCard';
+import LoadingSkeleton from '../Skeleton/skeleton';
 
 
 function Filter() {
@@ -13,7 +13,7 @@ function Filter() {
 
     const slug = router.query.slug as string
 
-    const nameTags = slug.split('-')
+    const nameTags = slug?.split('-')
 
     let url = '';
     nameTags?.map((tags: string) => {
@@ -27,9 +27,8 @@ function Filter() {
         queryFn: () => getFilterdProducts(url),
     });
 
-
-    if (isLoading || !filteredProducts) {
-        return <div>loading... </div>
+    if (isLoading || !filteredProducts || slug === 'undefined') {
+        return <LoadingSkeleton />
     }
 
     return (
