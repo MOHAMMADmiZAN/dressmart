@@ -28,6 +28,7 @@ function NavBar() {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement | HTMLButtonElement>) => {
         event.preventDefault()
         console.log(filterValue)
+
         if (filterValue !== '') {
             const words = filterValue.split(' ');
             const joined = words.join('-')

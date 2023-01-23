@@ -13,11 +13,11 @@ function Filter() {
 
     const slug = router.query.slug as string
 
-    const nameTags = slug.split('-')
+    const nameTags = slug?.split('-')
 
     let url = '';
     nameTags?.map((tags: string) => {
-        url += `filters[$or][0][name][$containsi]=${tags}&filters[$or][1][model][$containsi]=${tags}&filters[$or][2][brand][name][$containsi]=${tags}&filters[$or][3][fabric_details][$containsi]=${tags}&]`
+        url += `filters[$or][0][name][$containsi]=${tags}&filters[$or][1][model][$containsi]=${tags}&filters[$or][2][brand][name][$containsi]=${tags}&filters[$or][3][fabric_details][$containsi]=${tags}&filters[$or][4][category][name][$containsi]=${tags}&`
     });
 
     url = url.slice(0, -1);

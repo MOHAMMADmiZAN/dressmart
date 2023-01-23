@@ -11,12 +11,13 @@ interface SEARCH_PROPS {
 
 }
 
+
 const Search: React.FC<SEARCH_PROPS> = ({ handleSearch, handleSubmit }) => {
     return (
         <>
             <Paper component={`form`} sx={{ ...searchForm }} onSubmit={handleSubmit}>
                 <InputBase sx={{ ml: 1, flex: 1, }} placeholder="Search Product" inputProps={{ 'aria-label': 'Search Product' }} autoFocus={true} onChange={handleSearch} />
-                <IconButton type="button" sx={{ p: '10px' }} aria-label="search" onSubmit={handleSubmit} >
+                <IconButton type="submit" sx={{ p: '10px' }} aria-label="search" >
                     <SearchIcon sx={{ color: '#D4AF37' }} />
                 </IconButton>
             </Paper>
