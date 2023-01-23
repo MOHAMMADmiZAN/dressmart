@@ -193,7 +193,7 @@ function CheckOut() {
                             <Divider sx={{ borderBottomWidth: `2px` }} />
 
                             <Grid container={true} justifyContent={`center`} flexWrap={`wrap`}>
-                                <Grid item={true} xs={12} sm={12} md={10} lg={10} justifyContent={`center`}>
+                                <Grid item={true} xs={12} sm={12} md={10} lg={10} justifyContent={`center`} sx={{ maxHeight: '608px', overflow: 'auto' }}>
                                     {items.length > 0 ?
                                         <MapItems ItemComponent={CartItem} items={items} /> :
                                         <EmptyCart />

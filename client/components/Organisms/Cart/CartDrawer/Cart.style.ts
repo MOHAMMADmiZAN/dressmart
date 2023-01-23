@@ -16,7 +16,7 @@ export const HeadTitleStyle = {
 
 
 export const DrawerStyle = {
-      width: 350,
+    width: 350,
     '& .MuiDrawer-paper': {
         width: 350,
         backgroundColor: 'primary.light',
