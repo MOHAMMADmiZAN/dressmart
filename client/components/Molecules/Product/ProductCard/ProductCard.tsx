@@ -1,8 +1,8 @@
-import React, {memo} from 'react';
+import React, {memo, useLayoutEffect} from 'react';
 import {Box, Card, CardContent, CardMedia, Typography} from "@mui/material";
 import Star from "../../Star/Star";
 import {cardOrderOverLay, CardOrderOverLayContent, productCardStyle} from "./ProductCard.style";
-import NextLink from "next/link";
+import Link from "next/link";
 import {useRouter} from "next/router";
 
 interface ProductCardProps {
@@ -17,6 +17,7 @@ interface ProductCardProps {
     ProductCardLink?: string,
     ProductCardLinkText?: string,
     ProductID: number,
+    ImageStyle?: object
 
 }
 
@@ -29,28 +30,21 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
         ProductCardImage,
         ProductCardRating,
         ProductCardDiscountPrice,
-        ProductID
+        ProductID,
+        ImageStyle
     } = ProductCardProps;
     const Router = useRouter();
 
 
     const handleSingleProduct = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         Router.push(`/product/${ProductID}`).then(r => console.log(r))
-
-
-        Router.events.on('routeChangeComplete', () => {
-
-            console.log('routeChangeComplete')
-
-        })
     }
-
     return (
         <>
             <Card sx={{...productCardStyle}}>
                 <CardMedia
                     component={`img`}
-                    sx={{height: '200px', width: '100%'}}
+                    sx={{height: '200px', width: '100%',...ImageStyle}}
                     image={ProductCardImage}
                     alt={ProductCardTitle}
                 />
@@ -65,14 +59,14 @@ function ProductCard(ProductCardProps: ProductCardProps): JSX.Element {
                 </CardContent>
                 <Box sx={{...cardOrderOverLay}} onClick={handleSingleProduct}>
                     <CardOrderOverLayContent sx={{width: '100%', textAlign: `center`, flexDirection: 'column'}}>
-                        <NextLink href={`/product/${ProductID}`} prefetch> <Typography variant={`h6`} sx={{
+                        <Link href={`/product/${ProductID}`}> <Typography variant={`h6`} sx={{
                             color: '#fff',
                             width: '100%',
                             fontSize: '16px',
                             height: '100%',
                         }}>
                             Go to Product Details
-                        </Typography></NextLink>
+                        </Typography></Link>
                     </CardOrderOverLayContent>
                 </Box>
             </Card>

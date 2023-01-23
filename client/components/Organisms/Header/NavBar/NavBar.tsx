@@ -7,6 +7,7 @@ import LinkIcon from "../../../Molecules/Shared/LinkIcon/LinkIcon";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import CartBadge from "../../../Molecules/Shared/CartBadge/CartBadge";
 import { useRouter } from 'next/router';
+import LinearProgress from '@mui/material/LinearProgress';
 
 
 
@@ -14,21 +15,31 @@ function NavBar() {
 
     const router = useRouter()
 
-    const [filterValue, setfilterValue] = useState('')
+    const [filterValue, setFilterValue] = useState('')
+    const [loading,setLoading] = useState<boolean>(false)
+
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { value } = event.target
         console.log(value)
-        setfilterValue(value)
+        setFilterValue(value)
     }
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement | HTMLButtonElement>) => {
         event.preventDefault()
         console.log(filterValue)
+
         if (filterValue !== '') {
             const words = filterValue.split(' ');
             const joined = words.join('-')
-            router.push(`/filter/${joined}`)
+            router.push(`/filter/${joined}`).then(r => console.log(r))
+            router.events.on('routeChangeStart', () => {
+                setLoading(true)
+            });
+            router.events.on('routeChangeComplete', () => {
+                setLoading(false)
+            });
+
         } else {
             alert('Set a value to filter')
         }
@@ -49,6 +60,7 @@ function NavBar() {
                         <CartBadge />
                     </Grid>
                 </Grid>
+                {loading && <LinearProgress />}
             </Paper>
         </>
     );
