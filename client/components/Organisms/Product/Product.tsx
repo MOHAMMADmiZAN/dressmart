@@ -98,8 +98,7 @@ const Product: React.FC<PRODUCT_PROPS> = ({Product}) => {
                                         description:</Typography>
                                     {Product.description.split(`.`).map((para, index) => {
                                         return (
-                                            <Typography component={`p`} variant={`h6`} key={index}
-                                                        sx={{p: `0 10px`}}>{para}</Typography>
+                                            <Typography component={`p`} variant={`h6`} key={index} sx={{p: `0 10px`}}>{para}</Typography>
                                         )
                                     })}
 
